@@ -15,60 +15,6 @@
 	License: GPL-2.0+
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-/* # Table of Contents
-- HTML5 Reset
-	- Baseline Normalize
-	- Box Sizing
-	- Float Clearing
-- Defaults
-	- Typographical Elements
-	- Headings
-	- Objects
-	- Gallery
-	- Forms
-	- Tables
-	- Screen Reader Text
-- Structure and Layout
-	- Site Containers
-	- Column Widths and Positions
-	- Column Classes
-- Common Classes
-	- Avatar
-	- Genesis
-	- Search Form
-	- Titles
-	- WordPress
-- Widgets
-	- Featured Content
-- Plugins
-	- Genesis eNews Extended
-	- Jetpack
-- Skip Links
-- Site Header
-	- Title Area
-	- Widget Area
-- Site Navigation
-	- Accessible Menu
-	- Site Header Navigation
-	- After Header Navigation
-	- Footer Navigation
-- Content Area
-	- Entries
-	- Entry Meta
-	- Pagination
-	- Comments
-- Sidebars
-- Footer Widgets
-- Site Footer
-- Media Queries
-	- Max-width: 1340px
-	- Max-width: 1200px
-	- Max-width: 1023px
-	- Max-width: 860px
-- Print Styles
-*/
-/* # HTML5 Reset
----------------------------------------------------------------------------------------------------- */
 /* ## Baseline Normalize
 --------------------------------------------- */
 /* normalize.css v4.1.1 | MIT License | http://necolas.github.io/normalize.css/ */
@@ -263,6 +209,8 @@ textarea {
   font: inherit;
 }
 
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
 /* ## Box Sizing
 --------------------------------------------- */
 html,
@@ -728,142 +676,6 @@ th:first-child {
   position: relative;
 }
 
-/* # Structure and Layout
----------------------------------------------------------------------------------------------------- */
-/* ## Site Containers
---------------------------------------------- */
-.site-inner,
-.wrap {
-  margin: 0 auto;
-  max-width: 1280px;
-}
-
-.site-inner {
-  clear: both;
-  padding-top: 40px;
-  word-wrap: break-word;
-}
-
-.landing-page .site-inner {
-  max-width: 800px;
-}
-
-/* ## Column Widths and Positions
---------------------------------------------- */
-/* ### Wrapping div for .content and .sidebar-primary */
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  width: 1060px;
-}
-
-.content-sidebar-sidebar .content-sidebar-wrap {
-  float: left;
-}
-
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-  float: right;
-}
-
-/* ### Content */
-.content {
-  float: right;
-  width: 880px;
-}
-
-.content-sidebar .content,
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content {
-  float: left;
-}
-
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
-  width: 660px;
-}
-
-.full-width-content .content {
-  width: 100%;
-}
-
-/* ### Primary Sidebar */
-.sidebar-primary {
-  float: right;
-  width: 360px;
-}
-
-.sidebar-content .sidebar-primary,
-.sidebar-sidebar-content .sidebar-primary {
-  float: left;
-}
-
-/* ### Secondary Sidebar */
-.sidebar-secondary {
-  float: left;
-  width: 180px;
-}
-
-.content-sidebar-sidebar .sidebar-secondary {
-  float: right;
-}
-
-/* ## Column Classes
---------------------------------------------- */
-/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
-.five-sixths,
-.four-sixths,
-.one-fourth,
-.one-half,
-.one-sixth,
-.one-third,
-.three-fourths,
-.three-sixths,
-.two-fourths,
-.two-sixths,
-.two-thirds {
-  float: left;
-  margin-left: 2.564102564102564%;
-}
-
-.one-half,
-.three-sixths,
-.two-fourths {
-  width: 48.717948717948715%;
-}
-
-.one-third,
-.two-sixths {
-  width: 31.623931623931625%;
-}
-
-.four-sixths,
-.two-thirds {
-  width: 65.81196581196582%;
-}
-
-.one-fourth {
-  width: 23.076923076923077%;
-}
-
-.three-fourths {
-  width: 74.35897435897436%;
-}
-
-.one-sixth {
-  width: 14.52991452991453%;
-}
-
-.five-sixths {
-  width: 82.90598290598291%;
-}
-
-.first {
-  clear: both;
-  margin-left: 0;
-}
-
 /* # Common Classes
 ---------------------------------------------------------------------------------------------------- */
 /* ## Avatar
@@ -1171,6 +983,142 @@ img.alignright,
   outline: #ccc solid 1px;
 }
 
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+/* ## Site Containers
+--------------------------------------------- */
+.site-inner,
+.wrap {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.site-inner {
+  clear: both;
+  padding-top: 40px;
+  word-wrap: break-word;
+}
+
+.landing-page .site-inner {
+  max-width: 800px;
+}
+
+/* ## Column Widths and Positions
+--------------------------------------------- */
+/* ### Wrapping div for .content and .sidebar-primary */
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  width: 1060px;
+}
+
+.content-sidebar-sidebar .content-sidebar-wrap {
+  float: left;
+}
+
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  float: right;
+}
+
+/* ### Content */
+.content {
+  float: right;
+  width: 880px;
+}
+
+.content-sidebar .content,
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content {
+  float: left;
+}
+
+.content-sidebar-sidebar .content,
+.sidebar-content-sidebar .content,
+.sidebar-sidebar-content .content {
+  width: 660px;
+}
+
+.full-width-content .content {
+  width: 100%;
+}
+
+/* ### Primary Sidebar */
+.sidebar-primary {
+  float: right;
+  width: 360px;
+}
+
+.sidebar-content .sidebar-primary,
+.sidebar-sidebar-content .sidebar-primary {
+  float: left;
+}
+
+/* ### Secondary Sidebar */
+.sidebar-secondary {
+  float: left;
+  width: 180px;
+}
+
+.content-sidebar-sidebar .sidebar-secondary {
+  float: right;
+}
+
+/* ## Column Classes
+--------------------------------------------- */
+/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+  float: left;
+  margin-left: 2.564102564102564%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+  width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+  width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+  width: 65.81196581196582%;
+}
+
+.one-fourth {
+  width: 23.076923076923077%;
+}
+
+.three-fourths {
+  width: 74.35897435897436%;
+}
+
+.one-sixth {
+  width: 14.52991452991453%;
+}
+
+.five-sixths {
+  width: 82.90598290598291%;
+}
+
+.first {
+  clear: both;
+  margin-left: 0;
+}
+
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
@@ -1371,6 +1319,51 @@ img.alignright,
   padding: 0 20px 10px;
 }
 
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+.footer-widgets {
+  background-color: #fff;
+  font-size: 18px;
+  font-size: 1.8rem;
+  clear: both;
+  padding: 60px 0;
+}
+
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+  width: 380px;
+}
+
+.footer-widgets-1 {
+  margin-right: 70px;
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+  float: left;
+}
+
+.footer-widgets-3 {
+  float: right;
+}
+
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+.site-footer {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
 /* ## Entries
@@ -1466,6 +1459,19 @@ p.entry-meta {
   color: #fff;
 }
 
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+.sidebar {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+}
+
+.sidebar .widget {
+  background-color: #fff;
+  padding: 40px;
+}
+
 /* ## Comments
 --------------------------------------------- */
 .comment-respond,
@@ -1523,64 +1529,6 @@ p.entry-meta {
 
 .entry-pings .reply {
   display: none;
-}
-
-/* # Sidebars
----------------------------------------------------------------------------------------------------- */
-.sidebar {
-  font-size: 16px;
-  font-size: 1.6rem;
-  margin-bottom: 40px;
-}
-
-.sidebar .widget {
-  background-color: #fff;
-  padding: 40px;
-}
-
-/* # Footer Widgets
----------------------------------------------------------------------------------------------------- */
-.footer-widgets {
-  background-color: #fff;
-  font-size: 18px;
-  font-size: 1.8rem;
-  clear: both;
-  padding: 60px 0;
-}
-
-.footer-widgets-1,
-.footer-widgets-2,
-.footer-widgets-3 {
-  width: 380px;
-}
-
-.footer-widgets-1 {
-  margin-right: 70px;
-}
-
-.footer-widgets-1,
-.footer-widgets-2 {
-  float: left;
-}
-
-.footer-widgets-3 {
-  float: right;
-}
-
-/* # Site Footer
----------------------------------------------------------------------------------------------------- */
-.site-footer {
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 1;
-  padding: 60px 0;
-  text-align: center;
-}
-
-.site-footer p {
-  margin-bottom: 0;
 }
 
 /* # Media Queries
