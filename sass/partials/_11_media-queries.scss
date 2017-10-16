@@ -145,8 +145,8 @@
     .menu-toggle,
     .sub-menu-toggle {
         border-width: 0;
-        background-color: #fff;
-        color: #333;
+        background-color: $white;
+        color: $base-dark;
         display: block;
         margin: 0 auto;
         overflow: hidden;
@@ -160,7 +160,7 @@
     }
 
     .menu-toggle {
-        border-top: 1px solid #eee;
+        border-top: 1px solid $primary-color;
         line-height: 20px;
         position: relative;
         right: 0;
@@ -253,14 +253,14 @@
     .js nav button:hover,
     .js .menu-toggle:hover,
     .js .nav-primary {
-        background-color: #fff;
-        color: #000;
+        background-color: $white;
+        color: $base-dark;
     }
 
     .js nav button:focus,
     .js .menu-toggle:focus {
-        background-color: #fff;
-        color: #c3251d;
+        background-color: $white;
+        color: $primary-color;
     }
 
     .footer-widgets-1,
@@ -342,7 +342,7 @@
     *:after {
         background: transparent !important;
         box-shadow: none !important;
-        color: #000 !important;
+        color: $base-dark !important;
         text-shadow: none !important;
     }
 
@@ -391,7 +391,7 @@
 
     blockquote,
     pre {
-        border: 1px solid #999;
+        border: 1px solid $third-dark;
         page-break-inside: avoid;
     }
 
