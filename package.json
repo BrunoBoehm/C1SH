@@ -1,0 +1,29 @@
+{
+  "name": "c1sh_v1.0.0",
+  "version": "1.0.0",
+  "description": "C1SH theme building",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoBoehm/C1SH.git"
+  },
+  "author": "Bruno Boehm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoBoehm/C1SH/issues"
+  },
+  "homepage": "https://github.com/BrunoBoehm/C1SH#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.9.0"
+  }
+}
