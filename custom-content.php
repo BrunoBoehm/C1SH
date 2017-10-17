@@ -88,18 +88,45 @@ function cush_custom_page() {
 					$i = 0;
 					foreach($posts as $post) {
 						if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
-							echo '<div class="post">';
-							echo 	'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) . '">';
-							echo 	'<h4>' . $post->post_title . '</h4>';
-							echo '</div>';
+						echo 	'<div class="post">';
+						echo 		'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) . '" alt="" title="">';
+						echo 		'<h4>' . $post->post_title . '</h4>';
+						echo 	'</div>';
 						echo '</div>';
 						$i++;
 					}
 				echo '</section>';	
 			} elseif ( get_row_layout() == '2_blocks' ) {
-
+				echo '<section class="post-selection">';
+					$blocks = get_sub_field('2_blocks');
+					$i = 0;
+					foreach($blocks as $block) {
+						if ( $i == 0 ){ echo '<div class="one-half first">'; } else { echo '<div class="one-half">'; }
+						echo 	'<div class="cta-block">';
+						// print_r($block);
+						echo		'<div class="cta-block-img">';
+						echo			'<img src="' . $block['image']['url'] . '" alt="' . $block['image']['alt'] . '" title="' . $block['image']['description'] . '">';
+						echo		'</div>';
+						echo		'<div class="cta-block-content">';
+						echo			'<h4>' . $block['title'] . '</h4>';
+						echo			'<p>' . $block['text'] . '</p>';
+						echo			'<a href="' . $block['button_link']['url'] . '">' . $block['button_text'] . '</a>';
+						echo		'</div>';
+						echo 	'</div>';
+						echo '</div>';
+						$i++;
+					}
+				echo '</section>';
 			} elseif ( get_row_layout() == 'video_cta_banner' ) {
-				
+				$video_cta_banner_code = get_sub_field('banner_slug');
+				$video_cta_banner = get_field($video_cta_banner_code, 'option');
+				// print_r($video_cta_banner);
+				echo '<section class="video-cta-banner">';
+				echo 	'<div class="video-cta-banner-video">' . $video_cta_banner['video_link'] . '</div>';
+				echo 	'<h3>' . $video_cta_banner['title'] . '</h3>';
+				echo 	'<div class="video-cta-banner-video-html">' . $video_cta_banner['html'] . '</div>';
+				echo 	'<a href="' . $video_cta_banner['btn_link']['url'] . '" title="' . $video_cta_banner['btn_link']['title'] . '">' . $video_cta_banner['btn_text'] . '</a>';
+				echo '</section>';
 			}
 		}
 	};
