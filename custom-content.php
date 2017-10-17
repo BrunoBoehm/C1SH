@@ -49,7 +49,7 @@ function cush_custom_page() {
 		while ( have_rows('content_blocks') ){
 			the_row();
 			if( get_row_layout() == 'text_block' ){
-				echo '<section class"text-block">';
+				echo '<section class="text-block">';
 				if( get_sub_field('icon') ) {
 					echo '<img src="' . get_sub_field('icon')['url'] . '">';
 					echo '<h3>' . get_sub_field('title') . '</h3>';
@@ -81,6 +81,7 @@ function cush_custom_page() {
 						echo '</div>';
 						$i++;
 					}
+				echo '<div class="clearfix"></div>';	
 				echo '</section>';
 			} elseif ( get_row_layout() == 'post_selection' ) {
 				echo '<section class="post-selection">';
@@ -95,9 +96,10 @@ function cush_custom_page() {
 						echo '</div>';
 						$i++;
 					}
+					echo '<div class="clearfix"></div>';	
 				echo '</section>';	
 			} elseif ( get_row_layout() == '2_blocks' ) {
-				echo '<section class="post-selection">';
+				echo '<section class="2-blocks">';
 					$blocks = get_sub_field('2_blocks');
 					$i = 0;
 					foreach($blocks as $block) {
@@ -116,6 +118,7 @@ function cush_custom_page() {
 						echo '</div>';
 						$i++;
 					}
+				echo '<div class="clearfix"></div>';	
 				echo '</section>';
 			} elseif ( get_row_layout() == 'video_cta_banner' ) {
 				$video_cta_banner_code = get_sub_field('banner_slug');
@@ -147,7 +150,16 @@ function cush_custom_page() {
 		echo 	'<div class="one-third">';
 		echo 		'<span class="kpi-count">' . $kpi_banner['stories_count'] . '</span>';
 		echo 		'<p class="kpi-text">' . $kpi_banner['stories_text'] . '</p>';
-		echo 	'</div>';				
+		echo 	'</div>';
+		echo 	'<div class="clearfix"></div>';				
+		echo '</section>';
+	}
+
+	$main_cta_banner = get_field('main_cta_banner', 'option');
+	if ( $main_cta_banner ) {
+		echo '<section class="main-cta-banner">';
+		echo 	'<h3>' . $main_cta_banner['title'] . '</h3>';
+		echo 	'<a href="' . $main_cta_banner['btn_link']['url'] . '">' . $main_cta_banner['btn_text'] . '</a>';
 		echo '</section>';
 	}
 
