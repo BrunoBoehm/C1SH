@@ -114,3 +114,29 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+//* Add ACF Options Page
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Banners Settings',
+		'menu_title'	=> 'Banner Settings',
+		'menu_slug' 	=> 'banner-settings',
+		'capability'	=> 'edit_posts'
+	));;
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Video CTA Banner',
+		'menu_title'	=> 'Video CTA Banner',
+		'parent_slug'	=> 'banner-settings',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'KPI Banner',
+		'menu_title'	=> 'KPI Banner',
+		'parent_slug'	=> 'banner-settings',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Join Us Banner',
+		'menu_title'	=> 'Join Us Banner',
+		'parent_slug'	=> 'banner-settings',
+	));
+}
