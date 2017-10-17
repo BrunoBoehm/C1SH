@@ -43,7 +43,67 @@ function cush_custom_page() {
 			echo '</div>';
 			// print_r(get_sub_field('btn_text'));
 		} 
-	}
+	};
+
+	if( have_rows('content_blocks') ){
+		while ( have_rows('content_blocks') ){
+			the_row();
+			if( get_row_layout() == 'text_block' ){
+				echo '<section class"text-block">';
+				if( get_sub_field('icon') ) {
+					echo '<img src="' . get_sub_field('icon')['url'] . '">';
+					echo '<h3>' . get_sub_field('title') . '</h3>';
+				} else {
+					echo '<h2>' . get_sub_field('title') . '</h2>';
+				}
+				echo '<p>' . get_sub_field('text') . '</p>';
+				echo '</section>';
+			} elseif ( get_row_layout() == 'quote_block' ) {
+				echo '<section class"quote-block">';
+				echo 	'<img src="' . get_sub_field('image')['url'] . '">';
+				echo 	'<p>' . get_sub_field('text');
+				echo	'<span>' . get_sub_field('autho') . '</span></p>';
+				echo '</section>';
+			} elseif ( get_row_layout() == '3_blurbs' ) {
+				echo '<section class="3-blurbs">';
+					// print_r(get_sub_field('3_blurbs'));
+					$blurbs = get_sub_field('3_blurbs');
+					$i = 0;
+					foreach($blurbs as $blurb) {
+						// print_r($blurb);
+						if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
+						echo 	'<div class="blurb">';
+						echo 		'<img src="' . $blurb['image']['url'] . '">';
+						echo 		'<h4>' . $blurb['title'] . '</h4>';
+						echo 		'<p>' . $blurb['text'] . '</p>';
+						echo		'<a href="' . $blurb['btn_link']['url'] . '" title="' . $blurb['btn_link']['title'] . '">' . $blurb['btn_text'] . '</a>';
+						echo 	'</div>';
+						echo '</div>';
+						$i++;
+					}
+				echo '</section>';
+			} elseif ( get_row_layout() == 'post_selection' ) {
+				echo '<section class="post-selection">';
+					$posts = get_sub_field('post_selection');
+					$i = 0;
+					foreach($posts as $post) {
+						if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
+							echo '<div class="post">';
+							echo 	'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($post->ID)) . '">';
+							echo 	'<h4>' . $post->post_title . '</h4>';
+							echo '</div>';
+						echo '</div>';
+						$i++;
+					}
+				echo '</section>';	
+			} elseif ( get_row_layout() == '2_blocks' ) {
+
+			} elseif ( get_row_layout() == 'video_cta_banner' ) {
+				
+			}
+		}
+	};
+
 }
 
 // Build the page
