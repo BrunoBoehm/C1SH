@@ -46,7 +46,7 @@ function cush_custom_page() {
 			// print_r(get_sub_field('btn_text'));
 		} 
 	};
-
+	
 	if( have_rows('content_blocks') ){
 		while ( have_rows('content_blocks') ){
 			the_row();
@@ -124,10 +124,10 @@ function cush_custom_page() {
 					}
 				echo '<div class="clearfix"></div>';	
 				echo '</section>';
-			} elseif ( get_row_layout() == 'video_cta_banner' ) {
+			} elseif ( get_row_layout() == 'video_cta_banner_slug' ) {
 				$video_cta_banner_code = get_sub_field('banner_slug');
 				$video_cta_banner = get_field($video_cta_banner_code, 'option');
-				// print_r($video_cta_banner);
+				// print_r($video_cta_banner_code);
 				echo '<section class="video-cta-banner">';
 				echo 	'<div class="video-cta-banner-video">' . $video_cta_banner['video_link'] . '</div>';
 				echo 	'<h3>' . $video_cta_banner['title'] . '</h3>';
