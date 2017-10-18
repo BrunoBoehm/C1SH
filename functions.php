@@ -140,3 +140,87 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'banner-settings',
 	));
 }
+
+/**
+ * Register additional post type.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function cush_custom_posts_init() {
+
+	// Action
+	$action_labels = array(
+		'name'               => __( 'Actions'),
+		'singular_name'      => __( 'Action'),
+		'menu_name'          => __( 'Actions'),
+		'name_admin_bar'     => __( 'Action'),
+		'add_new'            => __( 'Ajouter'),
+		'add_new_item'       => __( 'Ajouter action'),
+		'new_item'           => __( 'Nouvelle action'),
+		'edit_item'          => __( 'Editer action'),
+		'view_item'          => __( 'Voir action'),
+		'all_items'          => __( 'Toutes les actions'),
+		'search_items'       => __( 'Rechercher les actions')
+	);
+
+	$action_args = array(
+		'labels'             => $action_labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'actions' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'menu_icon'			 => 'dashicons-awards', 
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'taxonomies'		 => array('category', 'post_tag')
+	);
+
+	register_post_type('action', $action_args);
+
+	// Institution
+	$institution_args = array(
+		'label'              => 'Institutions',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'institutions' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'menu_icon'			 => 'dashicons-building', 
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'taxonomies'		 => array('category', 'post_tag')
+	);
+
+	register_post_type('institution', $institution_args);
+
+	// Contagion
+	$contagion_args = array(
+		'label'              => 'Contagions',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'contagions' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'menu_icon'			 => 'dashicons-megaphone', 
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'taxonomies'		 => array('category', 'post_tag')
+	);
+
+	register_post_type('contagion', $contagion_args);
+
+}
+add_action('init', 'cush_custom_posts_init');
