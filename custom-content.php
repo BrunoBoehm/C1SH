@@ -112,7 +112,9 @@ function cush_custom_page() {
 						echo		'<div class="cta-block-content">';
 						echo			'<h4>' . $block['title'] . '</h4>';
 						echo			'<p>' . $block['text'] . '</p>';
-						echo			'<a href="' . $block['button_link']['url'] . '">' . $block['button_text'] . '</a>';
+						if ( $block['button_link'] && $block['button_text'] ) {
+							echo			'<a href="' . $block['button_link']['url'] . '">' . $block['button_text'] . '</a>';
+						}
 						echo		'</div>';
 						echo 	'</div>';
 						echo '</div>';
@@ -129,6 +131,20 @@ function cush_custom_page() {
 				echo 	'<h3>' . $video_cta_banner['title'] . '</h3>';
 				echo 	'<div class="video-cta-banner-video-html">' . $video_cta_banner['html'] . '</div>';
 				echo 	'<a href="' . $video_cta_banner['btn_link']['url'] . '" title="' . $video_cta_banner['btn_link']['title'] . '">' . $video_cta_banner['btn_text'] . '</a>';
+				echo '</section>';
+			} elseif ( get_row_layout() == 'list' ) {
+				echo '<section class="list">';
+				while( have_rows('list_item') ) {
+					the_row();
+					echo '<div class="list-item">';
+					echo	'<img src="' . get_sub_field('image')['url'] . '">';
+					echo	'<h5>' . get_sub_field('title') . '</h5>';
+					echo	'<p>' . get_sub_field('text') . '</p>';
+					if ( get_sub_field('btn_link') ) {
+						echo	'<a href="' . get_sub_field('btn_link')['url'] . '">' . get_sub_field('btn_text') . '</a>';	
+					}
+					echo '</div>';
+				}
 				echo '</section>';
 			}
 		}
