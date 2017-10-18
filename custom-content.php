@@ -38,7 +38,9 @@ function cush_custom_page() {
 			echo 	'</div>';
 			echo 	'<div class="wrap">';
 			echo		'<h1>' . get_sub_field('title') . '</h1>';
-			echo		'<a href="' . get_sub_field('btn_link')['url'] . '">' . get_sub_field('btn_text') . '</a>';
+			if ( get_sub_field('btn_link') && get_sub_field('btn_text') ) {
+				echo	'<a href="' . get_sub_field('btn_link')['url'] . '">' . get_sub_field('btn_text') . '</a>';				
+			}
 			echo 	'</div>';
 			echo '</div>';
 			// print_r(get_sub_field('btn_text'));
