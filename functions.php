@@ -155,10 +155,11 @@ function cush_custom_posts_init() {
 		'menu_name'          => __( 'Actions'),
 		'name_admin_bar'     => __( 'Action'),
 		'add_new'            => __( 'Ajouter'),
-		'add_new_item'       => __( 'Ajouter action'),
+		'add_new_item'       => __( 'Ajouter une nouvelle action'),
 		'new_item'           => __( 'Nouvelle action'),
 		'edit_item'          => __( 'Editer action'),
 		'view_item'          => __( 'Voir action'),
+		'view_items'         => __( 'Voir les actions'),
 		'all_items'          => __( 'Toutes les actions'),
 		'search_items'       => __( 'Rechercher les actions')
 	);
@@ -176,15 +177,30 @@ function cush_custom_posts_init() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'menu_icon'			 => 'dashicons-awards', 
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'page-attributes' ),
 		'taxonomies'		 => array('category', 'post_tag')
 	);
 
 	register_post_type('action', $action_args);
 
 	// Institution
+	$institution_labels = array(
+		'name'               => __( 'Institutions'),
+		'singular_name'      => __( 'Institution'),
+		'menu_name'          => __( 'Institutions'),
+		'name_admin_bar'     => __( 'Institution'),
+		'add_new'            => __( 'Ajouter'),
+		'add_new_item'       => __( 'Ajouter une nouvelle institution'),
+		'new_item'           => __( 'Nouvelle institution'),
+		'edit_item'          => __( 'Editer institution'),
+		'view_item'          => __( 'Voir institution'),
+		'view_items'         => __( 'Voir les institutions'),
+		'all_items'          => __( 'Toutes les institutions'),
+		'search_items'       => __( 'Rechercher les institutions')
+	);
+
 	$institution_args = array(
-		'label'              => 'Institutions',
+		'labels'              => $institution_labels,
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
@@ -203,8 +219,23 @@ function cush_custom_posts_init() {
 	register_post_type('institution', $institution_args);
 
 	// Contagion
+	$contagion_labels = array(
+		'name'               => __( 'Contagions'),
+		'singular_name'      => __( 'Contagion'),
+		'menu_name'          => __( 'Contagions'),
+		'name_admin_bar'     => __( 'Contagion'),
+		'add_new'            => __( 'Ajouter'),
+		'add_new_item'       => __( 'Ajouter une nouvelle contagion'),
+		'new_item'           => __( 'Nouvelle contagion'),
+		'edit_item'          => __( 'Editer contagion'),
+		'view_item'          => __( 'Voir contagion'),
+		'view_items'         => __( 'Voir les contagions'),
+		'all_items'          => __( 'Toutes les contagions'),
+		'search_items'       => __( 'Rechercher les contagions')
+	);
+
 	$contagion_args = array(
-		'label'              => 'Contagions',
+		'labels'              => $contagion_labels,
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
