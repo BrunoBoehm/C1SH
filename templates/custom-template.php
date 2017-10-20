@@ -193,9 +193,9 @@ if( have_rows('content_blocks') ){
                 // Query Args
                 if ( $items_type == 'action' ) {
                     $args = array( 
-                        'post_type' => $items_type,
-                        'posts_per_page' => $feed_length,
-                        'meta_query'	=> array(
+                        'post_type'         => $items_type,
+                        'posts_per_page'    => $feed_length,
+                        'meta_query'	    => array(
                             'relation'		=> 'AND',
                             array(
                                 'key'	 	=> 'milestone_level',
@@ -233,14 +233,13 @@ if( have_rows('content_blocks') ){
 
                         if ( $items_type == 'action' ) {
                             $milestone_level = get_field('milestone_level');
-                            // print_r($milestone_level);
                             if ( $milestone_level == 'primary' ) {
                         echo        '<div class="feed-item primary-feed-item">';
                             } elseif ( $milestone_level == 'secondary' ) {
                         echo        '<div class="feed-item secondary-feed-item">';
-                            } else {
-                        echo        '<div class="feed-item">';    
                             }
+                        } else {
+                        echo        '<div class="feed-item">';    
                         }
                         
                         if ( $items_type !== 'contagion' && has_post_thumbnail() ){ 
@@ -268,13 +267,12 @@ if( have_rows('content_blocks') ){
                         $i++;
                     }
                     echo '<div class="clearfix"></div>';
-                    echo '<section>';
+                    echo '<section>'; // end of section
                 } else {
                     // no posts found
                 }
                 /* Restore original Post Data */
                 wp_reset_postdata();
-
                 break;
 
         }   // end Switch
