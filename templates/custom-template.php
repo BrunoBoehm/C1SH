@@ -178,7 +178,31 @@ if( have_rows('content_blocks') ){
 
             /*
             *
-            * Feed as selection between action/contagion/institution/author
+            * User list
+            * 
+            */                        
+            case 'user_list':
+                echo '<section class="user-list">';
+                $i = 0;
+                while ( have_rows('user_list') ) {
+                    if ( $i == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
+                    the_row();
+                    echo    '<div class="list-single-user">';
+                    echo        '<div class="single-user-avatar">' . get_sub_field('single_user')['user_avatar'] . '</div>';
+                    echo        '<div class="single-user-meta">';
+                    echo            '<h5>' . get_sub_field('single_user')['user_firstname'] . ' ' . get_sub_field('single_user')['user_lastname'] . '</h5>';
+                    echo        '</div>';
+                    echo    '</div>'; // end of .list-single-user
+                    echo '</div>'; // end of columns
+                    $i++;
+                }
+                echo '<div class="clearfix"></div>';
+                echo '</section>';
+                break;
+
+            /*
+            *
+            * Feed as selection between action/contagion/institution
             * 
             */                        
             case 'feed':
@@ -267,7 +291,7 @@ if( have_rows('content_blocks') ){
                         $i++;
                     }
                     echo '<div class="clearfix"></div>';
-                    echo '<section>'; // end of section
+                    echo '</section>'; // end of section
                 } else {
                     // no posts found
                 }
