@@ -155,6 +155,11 @@ if( have_rows('content_blocks') ){
                 }
                 break;
 
+            /*
+            *
+            * List as repeater of "list_item"
+            * 
+            */                        
             case 'list':
                 echo '<section class="list">';
                 while( have_rows('list_item') ) {
@@ -169,6 +174,107 @@ if( have_rows('content_blocks') ){
                     echo '</div>';
                 }
                 echo '</section>';
+                break;
+
+            /*
+            *
+            * Feed as selection between action/contagion/institution/author
+            * 
+            */                        
+            case 'feed':
+                $items_type = get_sub_field('post_type');
+                $feed_length = get_sub_field('feed_length');
+                $layout_type = strtolower(get_sub_field('layout_type'));
+
+                // echo '<pre>';
+                // print_r(get_sub_field('post_type'));
+                // echo '</pre>';
+
+                // Query Args
+                if ( $items_type == 'action' ) {
+                    $args = array( 
+                        'post_type' => $items_type,
+                        'posts_per_page' => $feed_length,
+                        'meta_query'	=> array(
+                            'relation'		=> 'AND',
+                            array(
+                                'key'	 	=> 'milestone_level',
+                                'value'	  	=> array('primary', 'secondary'),
+                                'compare' 	=> 'IN',
+                            )
+                        )    
+                    );
+                } else {
+                    $args = array( 
+                        'post_type' => $items_type,
+                        'posts_per_page' => $feed_length
+                    );
+                }
+
+                // The Query
+                $the_query = new WP_Query( $args );
+
+                // The Loop
+                if ( $the_query->have_posts() ) {
+                    echo '<section class="feed feed-' . $layout_type . '">';
+                    $i = 0;
+                    while ( $the_query->have_posts() ) {
+                        $the_query->the_post();
+
+                        if ( $layout_type == 'timeline' ) {
+                        echo    '<div class="timeline-item">';
+                        } else {  
+                            if ( $i == 0 ){ 
+                        echo    '<div class="one-third first">'; 
+                            } else { 
+                        echo    '<div class="one-third">'; 
+                            }
+                        }
+
+                        if ( $items_type == 'action' ) {
+                            $milestone_level = get_field('milestone_level');
+                            // print_r($milestone_level);
+                            if ( $milestone_level == 'primary' ) {
+                        echo        '<div class="feed-item primary-feed-item">';
+                            } elseif ( $milestone_level == 'secondary' ) {
+                        echo        '<div class="feed-item secondary-feed-item">';
+                            } else {
+                        echo        '<div class="feed-item">';    
+                            }
+                        }
+                        
+                        if ( $items_type !== 'contagion' && has_post_thumbnail() ){ 
+                                        the_post_thumbnail( 'medium_large' ); 
+                        }
+                        echo            '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+                        if ( $items_type == 'action' ) {
+                        echo            '<h6>' . get_the_date('Y') . '</h6>';
+                        echo            '<h5>';
+                                            the_tags( '<span class="tag">', '', '</span>' );
+                        echo            '</h5>';
+                        }
+                        $related_institutions = get_field('related_institution');
+                        if ( $related_institutions ) {
+                            echo        '<h6>';
+                            foreach( $related_institutions as $related_institution ){
+                            echo            '<a href="' . get_the_permalink($related_institution->ID) . '">' . get_the_title($related_institution->ID) . '</a>';
+                            }
+                            echo        '<h6>';
+                        }
+                        echo            '<p>' . get_the_excerpt() . '</p>';
+                        echo        '</div>'; // end of feed-item
+
+                        echo    '</div>'; // end of timeline-item or one-third
+                        $i++;
+                    }
+                    echo '<div class="clearfix"></div>';
+                    echo '<section>';
+                } else {
+                    // no posts found
+                }
+                /* Restore original Post Data */
+                wp_reset_postdata();
+
                 break;
 
         }   // end Switch
