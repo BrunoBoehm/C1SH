@@ -2,29 +2,6 @@
 
 /*
 *
-* Hero Slider : ACF Repeater (hero_slider)
-* 
-*/
-if( have_rows('hero_slider') ) {
-    while( have_rows('hero_slider') ) {
-        the_row();
-        echo '<div class="hero-section overlay">';
-        echo 	'<div class="wp-custom-header">';
-        echo		'<img src="' . get_sub_field('image')['url'] . '">';			
-        echo 	'</div>';
-        echo 	'<div class="wrap">';
-        echo		'<h1>' . get_sub_field('title') . '</h1>';
-        if ( get_sub_field('link') ) {
-            echo	'<a href="' . get_sub_field('link')['url'] . '">' . get_sub_field('link')['title'] . '</a>';				
-        }
-        echo 	'</div>';
-        echo '</div>';
-        // print_r(get_sub_field('btn_text'));
-    } 
-};
-
-/*
-*
 * Content Blocks : ACF Flexible Content (content_blocks)
 * 
 */
@@ -164,19 +141,18 @@ if( have_rows('content_blocks') ){
 
             /*
             *
-            * Video CTA Banner Slug (video_cta_banner) with subfield: banner_slug
+            * Video CTA Banner Slug (custom_banner) with subfield: custom_banner_slug
             * 
             */             
             case 'custom_banner':
-                $video_cta_banner_code = get_sub_field('custom_banner_slug');
-                $video_cta_banner = get_field($video_cta_banner_code, 'option');
-                // print_r($video_cta_banner_code);
-                echo '<section class="video-cta-banner">';
-                echo 	'<div class="video-cta-banner-video">' . $video_cta_banner['video_link'] . '</div>';
-                echo 	'<h3>' . $video_cta_banner['title'] . '</h3>';
-                echo 	'<div class="video-cta-banner-video-html">' . $video_cta_banner['html'] . '</div>';
-                echo 	'<a href="' . $video_cta_banner['btn_link']['url'] . '" title="' . $video_cta_banner['btn_link']['title'] . '">' . $video_cta_banner['btn_text'] . '</a>';
-                echo '</section>';
+                $banner_code = get_sub_field('custom_banner_slug');
+                if ( $banner_code == 'kpi_banner' ) {
+                    get_template_part('templates/kpi-banner-template');
+                } elseif( $banner_code == 'main_cta_banner' ) {
+                    get_template_part('templates/cta-banner-template');
+                } elseif( $banner_code == 'video_cta_banner' ) {
+                    get_template_part('templates/video-cta-banner-template');
+                }
                 break;
 
             case 'list':

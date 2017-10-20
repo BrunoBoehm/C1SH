@@ -29,10 +29,10 @@ add_action( 'cush_content_area', 'cush_custom_page' );
 
 function cush_custom_page() {
 
-	//* Partial located in /templates folder
-	get_template_part( 'templates/custom-template' );
+	//* Partials located in /templates folder
+	get_template_part( 'templates/hero-template' );
 
-	get_template_part( 'templates/banner-template' );
+	get_template_part( 'templates/custom-template' );
 
 }
 
