@@ -3,7 +3,8 @@
 $kpi_banner = get_field('kpi_banner', 'option');
 if ( $kpi_banner ) {
     // var_dump($kpi_banner);
-    echo '<section class="kpi-banner">';
+    echo '<div class="kpi-banner">';
+    echo '<div class="wrap">';
     echo 	'<h3>' . $kpi_banner['title'] . '</h3>';
     echo 	'<div class="one-third first">';
     echo 		'<span class="kpi-count">' . $kpi_banner['members_count'] . '</span>';
@@ -17,6 +18,7 @@ if ( $kpi_banner ) {
     echo 		'<span class="kpi-count">' . $kpi_banner['stories_count'] . '</span>';
     echo 		'<p class="kpi-text">' . $kpi_banner['stories_text'] . '</p>';
     echo 	'</div>';
-    echo 	'<div class="clearfix"></div>';				
-    echo '</section>';
+    echo 	'<div class="clearfix"></div>';
+    echo '</div>';
+    echo '</div>';
 }

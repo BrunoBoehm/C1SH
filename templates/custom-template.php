@@ -33,7 +33,8 @@ if( have_rows('content_blocks') ){
             * 
             */
             case 'text_block':
-                echo '<section class="text-block">';
+                echo '<div class="text-block">';
+                echo '<div class="wrap">';
                 if( get_sub_field('icon') ) {
                     echo '<img src="' . get_sub_field('icon')['url'] . '">';
                     echo '<h3>' . get_sub_field('title') . '</h3>';
@@ -41,7 +42,8 @@ if( have_rows('content_blocks') ){
                     echo '<h2>' . get_sub_field('title') . '</h2>';
                 }
                 echo '<p>' . get_sub_field('text') . '</p>';
-                echo '</section>';
+                echo '</div>';
+                echo '</div>';
                 break;
 
             /*
@@ -50,11 +52,13 @@ if( have_rows('content_blocks') ){
             * 
             */
             case 'quote_block':
-                echo '<section class"quote-block">';
+                echo '<div class"quote-block">';
+                echo '<div class="wrap">';
                 echo 	'<img src="' . get_sub_field('image')['url'] . '">';
                 echo 	'<p>' . get_sub_field('text');
                 echo	'<span>' . get_sub_field('autho') . '</span></p>';
-                echo '</section>';
+                echo '</div>';
+                echo '</div>';
                 break;
 
             /*
@@ -63,7 +67,8 @@ if( have_rows('content_blocks') ){
             * 
             */            
             case '3_blurbs':
-                echo '<section class="3-blurbs">';
+                echo '<div class="3-blurbs">';
+                echo '<div class="wrap">';
                     $i = 0;
                     while( have_rows('3_blurbs') ) {
                         the_row();
@@ -79,8 +84,9 @@ if( have_rows('content_blocks') ){
                         echo '</div>';
                         $i++;
                     }
-                echo '<div class="clearfix"></div>';	
-                echo '</section>';
+                echo '<div class="clearfix"></div>';
+                echo '</div>';	
+                echo '</div>';
                 break;
 
             /*
@@ -89,7 +95,8 @@ if( have_rows('content_blocks') ){
             * 
             */              
             case 'post_selection':
-                echo '<section class="post-selection">';
+                echo '<div class="post-selection">';
+                echo '<div class="wrap">';
                     $posts = get_sub_field('post_selection');
                     if ($posts) {
                         $i = 0;
@@ -106,7 +113,8 @@ if( have_rows('content_blocks') ){
                         }
                     }
                     echo '<div class="clearfix"></div>';	
-                echo '</section>';	
+                echo '</div>';	
+                echo '</div>';	
                 break;
 
             /*
@@ -115,7 +123,8 @@ if( have_rows('content_blocks') ){
             * 
             */                
             case 'dual_blocks':
-                echo '<section class="2-blocks">';
+                echo '<div class="2-blocks">';
+                echo '<div class="wrap">';
                     $i = 0;
                     while ( have_rows('dual_block_item') ) {
                         the_row();
@@ -136,7 +145,8 @@ if( have_rows('content_blocks') ){
                         $i++;
                     }
                 echo '<div class="clearfix"></div>';	
-                echo '</section>';
+                echo '</div>';
+                echo '</div>';
                 break;
 
             /*
@@ -161,7 +171,8 @@ if( have_rows('content_blocks') ){
             * 
             */                        
             case 'list':
-                echo '<section class="list">';
+                echo '<div class="list">';
+                echo '<div class="wrap">';
                 while( have_rows('list_item') ) {
                     the_row();
                     echo '<div class="list-item">';
@@ -173,7 +184,8 @@ if( have_rows('content_blocks') ){
                     }
                     echo '</div>';
                 }
-                echo '</section>';
+                echo '</div>';
+                echo '</div>';
                 break;
 
             /*
@@ -182,7 +194,8 @@ if( have_rows('content_blocks') ){
             * 
             */                        
             case 'user_list':
-                echo '<section class="user-list">';
+                echo '<div class="user-list">';
+                echo '<div class="wrap">';
                 $i = 0;
                 while ( have_rows('user_list') ) {
                     if ( $i == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
@@ -197,7 +210,8 @@ if( have_rows('content_blocks') ){
                     $i++;
                 }
                 echo '<div class="clearfix"></div>';
-                echo '</section>';
+                echo '</div>';
+                echo '</div>';
                 break;
 
             /*
@@ -240,7 +254,8 @@ if( have_rows('content_blocks') ){
 
                 // The Loop
                 if ( $the_query->have_posts() ) {
-                    echo '<section class="feed feed-' . $layout_type . '">';
+                    echo '<div class="feed feed-' . $layout_type . '">';
+                    echo '<div class="wrap">';
                     $i = 0;
                     while ( $the_query->have_posts() ) {
                         $the_query->the_post();
@@ -291,7 +306,8 @@ if( have_rows('content_blocks') ){
                         $i++;
                     }
                     echo '<div class="clearfix"></div>';
-                    echo '</section>'; // end of section
+                    echo '</div>'; // end of wrap
+                    echo '</div>'; // end of section
                 } else {
                     // no posts found
                 }
