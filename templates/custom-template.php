@@ -67,13 +67,13 @@ if( have_rows('content_blocks') ){
             * 
             */            
             case '3_blurbs':
-                echo '<div class="3-blurbs">';
+                echo '<div class="three-blurbs">';
                 echo '<div class="wrap">';
                     $i = 0;
                     while( have_rows('3_blurbs') ) {
                         the_row();
                         if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
-                        echo 	'<div class="blurb">';
+                        echo 	'<div class="blurb tile-shadow">';
                         echo 		'<img src="' . get_sub_field('image')['url'] . '">';
                         echo 		'<h4>' . get_sub_field('title') . '</h4>';
                         echo 		'<p>' . get_sub_field('text') . '</p>';
