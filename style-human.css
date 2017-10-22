@@ -1477,6 +1477,23 @@ img.alignright,
           box-shadow: 0 2rem 5rem -2.5rem rgba(0, 0, 0, 0.1), 0rem 0.3rem 0.5rem -0.4rem rgba(0, 0, 0, 0.2);
 }
 
+/* ## Sections : Post Selection
+--------------------------------------------- */
+.post-selection {
+  padding: 40px 0;
+}
+.post-selection .post {
+  text-align: center;
+}
+.post-selection .post img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 /* ## Entries
 --------------------------------------------- */
 .entry {
