@@ -2,7 +2,10 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: $third-light;
+	background-color: rgba(255, 255, 255, 0.92);
+	position: fixed;
+	z-index: 5;
+	width: 100%;
 }
 
 .site-header > .wrap {

@@ -126,6 +126,16 @@ h1 {
 h2 {
 	font-size: 30px;
 	font-size: 3rem;
+	text-transform: uppercase;
+	font-weight: 300;
+
+	&:after {
+		content: "";
+		display: block;
+		width: 100px;
+		margin: 15px auto 15px;
+		border-top: 1px solid $primary-color;
+	}
 }
 
 h3 {

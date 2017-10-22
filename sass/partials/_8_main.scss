@@ -1,6 +1,70 @@
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
 
+.site-inner.full {
+	max-width: none;
+	padding: 0;
+}
+
+
+/* ## Hero Sections
+--------------------------------------------- */
+.hero-section {
+	position: relative;
+	// background-position: center;
+	// background-size: cover;
+	padding: 25vh 0;
+	text-align: center;
+
+	.wp-custom-header {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: 0 auto;
+		// height: 100%;
+		// width: 100%;
+		// object-fit: cover;
+		// object-position: center;
+		// overflow: hidden;
+		z-index: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.wrap {
+		position: relative;
+
+		h1 {
+			color: white;
+		}
+	}
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+}
+
+/* ## Sections : Text Blocks
+--------------------------------------------- */
+
+.text-block {
+	padding: 40px 0;
+	text-align: center;
+
+	p {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+}
+
 /* ## Entries
 --------------------------------------------- */
 
