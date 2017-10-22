@@ -1494,6 +1494,62 @@ img.alignright,
      object-position: center;
 }
 
+/* ## Sections : Two/Dual Blocks
+--------------------------------------------- */
+.two-blocks {
+  background-color: rgba(62, 62, 62, 0.87);
+  padding: 40px 0;
+  position: relative;
+}
+.two-blocks .cta-block-img {
+  text-align: center;
+  position: relative;
+}
+.two-blocks .cta-block-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.two-blocks .cta-block-content {
+  position: absolute;
+  top: 30px;
+  margin: 0 auto;
+}
+
+/* ## Sections : Post Selection
+--------------------------------------------- */
+.video-cta-banner {
+  padding: 40px 0;
+  background-color: rgba(235, 235, 235, 0.38);
+  text-align: center;
+}
+
+/* ## Sections : Banners
+--------------------------------------------- */
+.kpi-banner {
+  padding: 40px 0;
+  text-align: center;
+}
+.kpi-banner .kpi-count {
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 3.6rem;
+  background-color: #E4003F;
+  color: rgba(235, 235, 235, 0.87);
+  font-weight: 600;
+}
+
+.main-cta-banner {
+  padding: 40px 0;
+  text-align: center;
+}
+
 /* ## Entries
 --------------------------------------------- */
 .entry {

@@ -123,7 +123,7 @@ if( have_rows('content_blocks') ){
             * 
             */                
             case 'dual_blocks':
-                echo '<div class="2-blocks">';
+                echo '<div class="two-blocks">';
                 echo '<div class="wrap">';
                     $i = 0;
                     while ( have_rows('dual_block_item') ) {

@@ -99,7 +99,7 @@
 
 .post-selection {
 	padding: 40px 0;
-	
+
 	.post {
 		text-align: center;
 
@@ -110,6 +110,67 @@
 			object-position: center;
 		}
 	}
+}
+
+/* ## Sections : Two/Dual Blocks
+--------------------------------------------- */
+
+.two-blocks {
+	background-color: $primary-dark;
+	padding: 40px 0;
+	position: relative;
+
+	.cta-block-img {
+		text-align: center;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.cta-block-content {
+		position: absolute;
+		top: 30px;
+		margin: 0 auto;
+	}
+}
+
+/* ## Sections : Post Selection
+--------------------------------------------- */
+
+.video-cta-banner {
+	padding: 40px 0;
+	background-color: $third-light;
+	text-align: center;
+}
+
+/* ## Sections : Banners
+--------------------------------------------- */
+
+.kpi-banner {
+	padding: 40px 0;
+	text-align: center;
+
+	.kpi-count {
+		border-radius: 5px;
+		padding: 10px 20px;
+		margin: 10px auto;
+		display: inline-block;
+		font-weight: 600;
+		font-size: 3.6rem;
+		background-color: $primary-color;
+		color: $primary-light;
+		font-weight: 600;
+	}
+}
+
+.main-cta-banner {
+	padding: 40px 0;
+	text-align: center;
 }
 
 /* ## Entries
