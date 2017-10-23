@@ -1503,6 +1503,20 @@ img.alignright,
 .quote-block .wrap p {
   text-align: justify;
   margin: -9px 0 5px;
+  position: relative;
+  font-family: Georgia, serif;
+}
+.quote-block .wrap p:before {
+  display: block;
+  padding-left: 10px;
+  content: "\201C";
+  font-size: 100px;
+  position: absolute;
+  left: 99px;
+  top: -49px;
+  color: #0099AF;
+}
+.quote-block .wrap span {
   font-style: italic;
 }
 .quote-block img {
