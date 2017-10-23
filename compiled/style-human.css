@@ -1419,6 +1419,42 @@ img.alignright,
   padding: 0;
 }
 
+.tile-shadow {
+  position: relative;
+  box-shadow: 0 2rem 5rem -2.5rem rgba(0, 0, 0, 0.1), 0rem 0.3rem 0.5rem -0.4rem rgba(0, 0, 0, 0.2);
+}
+
+.blurb {
+  border: 1px solid rgba(62, 62, 62, 0.08);
+  border-radius: 5px;
+  text-align: center;
+}
+.blurb img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.blurb p {
+  padding: 6px 10px 13px;
+  margin: 0;
+  border-bottom: 1px solid rgba(62, 62, 62, 0.08);
+}
+.blurb a.read-more {
+  color: #E4003F;
+  text-decoration: none;
+  padding: 14px;
+  display: block;
+  transition: background-color 1s ease;
+}
+.blurb a.read-more:hover {
+  color: #3E3E3E;
+  background-color: rgba(62, 62, 62, 0.02);
+}
+
 /* ## Hero Sections
 --------------------------------------------- */
 .hero-section {
@@ -1480,7 +1516,7 @@ img.alignright,
 /* ## Sections : Text Blocks
 --------------------------------------------- */
 .text-block {
-  margin: 40px 0;
+  margin: 40px 0 20px;
   text-align: center;
 }
 .text-block img {
@@ -1495,6 +1531,9 @@ img.alignright,
 
 /* ## Sections : Quote Blocks
 --------------------------------------------- */
+.quote-block {
+  margin: 40px 0;
+}
 .quote-block .wrap {
   max-width: 700px;
   color: #0099AF;
@@ -1526,41 +1565,7 @@ img.alignright,
 /* ## Sections : 3 Blurbs
 --------------------------------------------- */
 .three-blurbs {
-  margin: 40px 0;
-}
-.three-blurbs .blurb {
-  border: 1px solid rgba(62, 62, 62, 0.08);
-  border-radius: 5px;
-  text-align: center;
-}
-.three-blurbs .blurb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.three-blurbs .blurb p {
-  padding: 0 10px 13px;
-  margin: 0;
-  border-bottom: 1px solid rgba(62, 62, 62, 0.08);
-}
-.three-blurbs .blurb a {
-  color: #E4003F;
-  text-decoration: none;
-  padding: 14px;
-  display: block;
-  transition: background-color 1s ease;
-}
-.three-blurbs .blurb a:hover {
-  color: #3E3E3E;
-  background-color: rgba(62, 62, 62, 0.02);
-}
-
-.tile-shadow {
-  position: relative;
-  box-shadow: 0 2rem 5rem -2.5rem rgba(0, 0, 0, 0.1), 0rem 0.3rem 0.5rem -0.4rem rgba(0, 0, 0, 0.2);
+  margin: 20px 0 40px;
 }
 
 /* ## Sections : Post Selection
@@ -1582,6 +1587,7 @@ img.alignright,
 --------------------------------------------- */
 .two-blocks {
   background-color: rgba(62, 62, 62, 0.87);
+  margin: 0 0 40px;
   padding: 40px 0;
   position: relative;
 }
@@ -1604,7 +1610,7 @@ img.alignright,
 /* ## Sections : List
 --------------------------------------------- */
 .list {
-  padding: 0 0 40px;
+  margin: 40px 0;
 }
 .list .wrap {
   max-width: 700px;
@@ -1635,12 +1641,46 @@ img.alignright,
 
 /* ## Sections : Feed
 --------------------------------------------- */
+.feed {
+  margin: 0 0 40px;
+}
 .feed h4 a, .feed h5 a, .feed h6 a {
-  color: #3E3E3E;
   text-decoration: none;
 }
 .feed.feed-timeline .wrap {
   max-width: 740px;
+}
+.feed .feed-item {
+  position: relative;
+}
+.feed .feed-item h4 {
+  padding: 0;
+  margin: 0;
+}
+.feed .feed-item h4 a {
+  color: #E4003F;
+}
+.feed .feed-item h5 {
+  color: #3E3E3E;
+}
+.feed .feed-item h6 {
+  position: absolute;
+  top: 10px;
+  left: -4px;
+}
+.feed .feed-item h6 a {
+  color: #FFF;
+  text-align: left;
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  clear: left;
+  padding: 7px 10px;
+  margin-bottom: 2px;
+  opacity: .94;
+  background-color: #0099AF;
 }
 
 .timeline-item {
@@ -1659,29 +1699,12 @@ img.alignright,
   float: left;
   width: 54%;
 }
-.timeline-item h4 {
-  padding: 0;
-  margin: -4px 0 0;
-}
-.timeline-item h4 a {
-  color: #E4003F;
-}
 .timeline-item h4:after {
   content: "";
   width: 30px;
   margin: 2px 0 10px;
   display: block;
   border-top: 1px solid rgba(62, 62, 62, 0.08);
-}
-.timeline-item h6 {
-  font-size: 14px;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  padding: 5px 0 0;
-  margin: 0;
-}
-.timeline-item h6 a {
-  color: rgba(62, 62, 62, 0.54);
 }
 .timeline-item .item-date {
   position: absolute;

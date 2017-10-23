@@ -77,7 +77,7 @@ if( have_rows('content_blocks') ){
                         echo 		'<h4>' . get_sub_field('title') . '</h4>';
                         echo 		'<p>' . get_sub_field('text') . '</p>';
                         if ( get_sub_field('link') ) {
-                            echo		'<a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '">' . get_sub_field('link')['title'] . '</a>';                            
+                            echo		'<a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '" class="read-more">' . get_sub_field('link')['title'] . '</a>';                            
                         }
                         echo 	'</div>';
                         echo '</div>';
@@ -103,9 +103,12 @@ if( have_rows('content_blocks') ){
                         // https://www.advancedcustomfields.com/resources/relationship/
                         foreach($posts as $p) {
                             if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
-                            echo 	'<div class="post">';
+                            // print_r($p);
+                            echo 	'<div class="post blurb">';
                             echo 		'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($p->ID)) . '" alt="" title="">';
-                            echo 		'<h5>' . $p->post_title . '</h5>';
+                            echo 		'<h4>' . $p->post_title . '</h4>';
+                            echo 		'<p>' . $p->post_excerpt . '</p>';
+                            echo		'<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">Voir</a>';
                             echo 	'</div>';
                             echo '</div>';
                             $i++;
@@ -277,10 +280,10 @@ if( have_rows('content_blocks') ){
                         echo        '<div class="feed-item secondary-feed-item">';
                             }
                         } else {
-                        echo        '<div class="feed-item">';    
+                        echo        '<div class="feed-item blurb tile-shadow">';    
                         }
                         
-                        if ( $items_type !== 'contagion' && has_post_thumbnail() ){ 
+                        if ( has_post_thumbnail() ){ 
                                         the_post_thumbnail( 'medium_large' ); 
                         }
                         echo            '<div class="item-content">';
@@ -299,6 +302,8 @@ if( have_rows('content_blocks') ){
                         echo            '<ul class="tags">';
                                             the_tags( '<li>', '</li><li>', '</li>' );
                         echo            '</ul>';
+                        } else {
+                            echo		'<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">Voir</a>';
                         }
                         echo        '</div>'; // end of item-content
                         echo        '</div>'; // end of feed-item

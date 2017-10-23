@@ -6,6 +6,45 @@
 	padding: 0;
 }
 
+.tile-shadow {
+    position: relative;
+	box-shadow: 0 2rem 5rem -2.5rem rgba(0,0,0,0.1), 0rem 0.3rem 0.5rem -0.4rem rgba(0,0,0,0.2);
+}	
+
+.blurb {
+	border: $site-border;
+	border-radius: $site-radius;
+	text-align: center;
+
+	img {
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+		object-fit: cover;
+		object-position: center;
+		border-top-left-radius: $site-radius;
+		border-top-right-radius: $site-radius;
+	}
+
+	p {
+		padding: 6px 10px 13px;
+		margin: 0;
+		border-bottom: $site-border;
+	}
+
+	a.read-more {
+		color: $primary-color;
+		text-decoration: none;
+		padding: 14px;
+		display: block;
+		transition: background-color 1s ease;
+
+		&:hover {
+			color: $base-dark;
+			background-color: $fifth-dark;
+		}
+	}
+}
 
 /* ## Hero Sections
 --------------------------------------------- */
@@ -58,7 +97,7 @@
 --------------------------------------------- */
 
 .text-block {
-	margin: 40px 0;
+	margin: 40px 0 20px;
 	text-align: center;
 
 	img {
@@ -78,6 +117,8 @@
 --------------------------------------------- */
 
 .quote-block {
+	margin: 40px 0;
+
 	.wrap {
 		max-width: 700px;
 		color: $secondary-color;
@@ -115,47 +156,8 @@
 --------------------------------------------- */
 
 .three-blurbs {
-	margin: 40px 0;
-
-	.blurb {
-		border: $site-border;
-		border-radius: $site-radius;
-		text-align: center;
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center;
-			border-top-left-radius: $site-radius;
-			border-top-right-radius: $site-radius;
-		}
-
-		p {
-			padding: 0 10px 13px;
-			margin: 0;
-			border-bottom: $site-border;
-		}
-
-		a {
-			color: $primary-color;
-			text-decoration: none;
-			padding: 14px;
-			display: block;
-			transition: background-color 1s ease;
-
-			&:hover {
-				color: $base-dark;
-				background-color: $fifth-dark;
-			}
-		}
-	}
+	margin: 20px 0 40px;
 }
-
-.tile-shadow {
-    position: relative;
-	box-shadow: 0 2rem 5rem -2.5rem rgba(0,0,0,0.1), 0rem 0.3rem 0.5rem -0.4rem rgba(0,0,0,0.2);
-}	
 
 /* ## Sections : Post Selection
 --------------------------------------------- */
@@ -180,6 +182,7 @@
 
 .two-blocks {
 	background-color: $primary-dark;
+	margin: 0 0 40px;
 	padding: 40px 0;
 	position: relative;
 
@@ -206,7 +209,7 @@
 --------------------------------------------- */
 
 .list {
-	padding: 0 0 40px;
+	margin: 40px 0;
 
 	.wrap {
 		max-width: 700px;
@@ -247,9 +250,10 @@
 --------------------------------------------- */
 
 .feed {
+	margin: 0 0 40px;
+
 	h4, h5, h6 {
 		a {
-			color: $base-dark;
 			text-decoration: none;
 		}
 	}
@@ -257,6 +261,42 @@
 	&.feed-timeline {
 		.wrap {
 			max-width: 740px;
+		}
+	}
+
+	.feed-item {
+		position: relative;
+
+		h4 {
+			padding: 0;
+			margin: 0;
+			a {
+				color: $primary-color;
+			}
+		}	
+	
+		h5 {
+			color: $base-dark;
+		}
+	
+		h6 {
+			position: absolute;
+			top: 10px;
+			left: -4px;
+
+			a {
+				color: $white;
+				text-align: left;
+				@include font-size($font-size-xs);
+				text-transform: uppercase;
+				display: block;
+				float: left;
+				clear: left;
+				padding: 7px 10px;
+				margin-bottom: 2px;
+				opacity: .94;
+				background-color: $secondary-color;
+			}
 		}
 	}
 }
@@ -280,27 +320,12 @@
 	}
 
 	h4 {
-		padding: 0;
-		margin: -4px 0 0;
-		a {
-			color: $primary-color;
-		}
 		&:after {
 			content: "";
 			width: 30px;
 			margin: 2px 0 10px;
 			display: block;
 			border-top: $site-border;
-		}
-	}
-
-	h6 {
-		@include font-size($font-size-xs);
-		text-transform: uppercase;
-		padding: 5px 0 0;
-		margin: 0;
-		a {
-			color: $secondary-dark;
 		}
 	}
 
