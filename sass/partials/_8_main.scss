@@ -275,7 +275,7 @@
 	}
 }
 
-/* ## Sections : Video CTA Banner
+/* ## Sections : Banners
 --------------------------------------------- */
 
 .video-cta-banner {
@@ -288,12 +288,12 @@
 	}
 }
 
-/* ## Sections : Banners
---------------------------------------------- */
-
 .kpi-banner {
 	padding: 40px 0;
 	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 0%;
 
 	.kpi-count {
 		border-radius: $site-radius;
@@ -316,6 +316,9 @@
 .main-cta-banner {
 	padding: 40px 0;
 	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 100%;
 }
 
 /* ## Entries

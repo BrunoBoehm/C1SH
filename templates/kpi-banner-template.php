@@ -3,7 +3,7 @@
 $kpi_banner = get_field('kpi_banner', 'option');
 if ( $kpi_banner ) {
     // var_dump($kpi_banner);
-    echo '<div class="kpi-banner">';
+    echo '<div class="kpi-banner" style="background-image: url(' . $kpi_banner['bg_img']['url'] . ');">';
     echo '<div class="wrap">';
     echo 	'<h3>' . $kpi_banner['title'] . '</h3>';
     echo 	'<div class="one-third first">';

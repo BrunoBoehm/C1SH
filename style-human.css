@@ -1682,7 +1682,7 @@ img.alignright,
   top: 10px;
 }
 
-/* ## Sections : Video CTA Banner
+/* ## Sections : Banners
 --------------------------------------------- */
 .video-cta-banner {
   padding: 40px 0;
@@ -1693,11 +1693,12 @@ img.alignright,
   margin: 10px 0 20px;
 }
 
-/* ## Sections : Banners
---------------------------------------------- */
 .kpi-banner {
   padding: 40px 0;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0%;
 }
 .kpi-banner .kpi-count {
   border-radius: 5px;
@@ -1718,6 +1719,9 @@ img.alignright,
 .main-cta-banner {
   padding: 40px 0;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
 }
 
 /* ## Entries
