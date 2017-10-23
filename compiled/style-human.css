@@ -1597,6 +1597,38 @@ img.alignright,
   margin: 0 auto;
 }
 
+/* ## Sections : List
+--------------------------------------------- */
+.list {
+  padding: 0 0 40px;
+}
+.list .wrap {
+  max-width: 700px;
+}
+.list .wrap .list-item {
+  clear: both;
+  margin: 0 0 20px;
+}
+.list .wrap .list-item h4 {
+  color: #E4003F;
+  margin: 0;
+}
+.list .wrap .list-item p {
+  margin: 0;
+}
+.list .wrap .list-item img {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+.list .wrap .list-item:not(:last-child):after {
+  content: "";
+  width: 60px;
+  display: block;
+  margin: 30px auto;
+  border-top: 1px solid rgba(62, 62, 62, 0.08);
+}
+
 /* ## Sections : Feed
 --------------------------------------------- */
 .feed h4 a, .feed h5 a, .feed h6 a {

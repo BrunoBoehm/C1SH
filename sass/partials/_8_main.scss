@@ -197,6 +197,47 @@
 	}
 }
 
+/* ## Sections : List
+--------------------------------------------- */
+
+.list {
+	padding: 0 0 40px;
+
+	.wrap {
+		max-width: 700px;
+
+		.list-item {
+			clear: both;
+			margin: 0 0 20px;
+
+			h4 {
+				color: $primary-color;
+				margin: 0;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			img {
+				float: left;
+				width: 100px;
+				height: 100px;
+			}
+
+			&:not(:last-child):after {
+				content: "";
+				width: 60px;
+				display: block;
+				margin: 30px auto;
+				border-top: $site-border;
+			}
+		}
+	}
+}
+
+
+
 /* ## Sections : Feed
 --------------------------------------------- */
 
