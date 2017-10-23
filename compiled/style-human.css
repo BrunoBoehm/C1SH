@@ -391,6 +391,7 @@ h6 {
 h1 {
   font-size: 36px;
   font-size: 3.6rem;
+  font-weight: 400;
   text-shadow: 1px 1px 2px rgba(62, 62, 62, 0.54);
 }
 
@@ -620,7 +621,7 @@ input[type="submit"].small {
 .site-container input[type="submit"]:disabled:hover {
   background-color: #FFF;
   border-width: 0;
-  color: rgba(62, 62, 62, 0.12);
+  color: rgba(62, 62, 62, 0.08);
   cursor: not-allowed;
 }
 
@@ -693,7 +694,7 @@ th:first-child {
   z-index: 100000;
   /* Above WP toolbar. */
   text-decoration: none;
-  box-shadow: 0 0 2px 2px rgba(62, 62, 62, 0.12);
+  box-shadow: 0 0 2px 2px rgba(62, 62, 62, 0.08);
 }
 
 .more-link {
@@ -1342,7 +1343,7 @@ img.alignright,
 --------------------------------------------- */
 .nav-primary {
   background-color: #FFF;
-  border-top: 1px solid rgba(62, 62, 62, 0.12);
+  border-top: 1px solid rgba(62, 62, 62, 0.08);
 }
 
 /* ## Footer Navigation
@@ -1360,11 +1361,10 @@ img.alignright,
 .footer-widgets {
   background-color: #3E3E3E;
   color: #EBEBEB;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   clear: both;
   padding: 30px 0;
-  font-size: 66%;
 }
 .footer-widgets .widget-title {
   color: #E4003F;
@@ -1401,12 +1401,11 @@ img.alignright,
   background-color: #3E3E3E;
   border-top: 1px solid rgba(62, 62, 62, 0.87);
   color: #EBEBEB;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1;
   padding: 0 0 20px 0;
   text-align: center;
-  font-size: 66%;
 }
 
 .site-footer p {
@@ -1424,7 +1423,7 @@ img.alignright,
 --------------------------------------------- */
 .hero-section {
   position: relative;
-  padding: 20% 0 15%;
+  padding: 22% 0 12%;
   background-position: center;
   background-size: cover;
   transition: all .1s ease;
@@ -1455,6 +1454,8 @@ img.alignright,
 }
 .hero-section .wrap h1 {
   color: white;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .overlay {
@@ -1493,7 +1494,7 @@ img.alignright,
   margin: 40px 0;
 }
 .three-blurbs .blurb {
-  border: 1px solid rgba(62, 62, 62, 0.12);
+  border: 1px solid rgba(62, 62, 62, 0.08);
   border-radius: 5px;
   text-align: center;
 }
@@ -1506,7 +1507,7 @@ img.alignright,
 .three-blurbs .blurb p {
   padding: 0 10px 13px;
   margin: 0;
-  border-bottom: 1px solid rgba(62, 62, 62, 0.12);
+  border-bottom: 1px solid rgba(62, 62, 62, 0.08);
 }
 .three-blurbs .blurb a {
   color: #E4003F;
@@ -1563,6 +1564,108 @@ img.alignright,
   margin: 0 auto;
 }
 
+/* ## Sections : Feed
+--------------------------------------------- */
+.feed h4 a, .feed h5 a, .feed h6 a {
+  color: #3E3E3E;
+  text-decoration: none;
+}
+.feed.feed-timeline .wrap {
+  max-width: 740px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  border: 1px solid rgba(62, 62, 62, 0.08);
+  border-radius: 5px;
+}
+.timeline-item img {
+  float: left;
+  margin-right: 20px;
+}
+.timeline-item .item-content {
+  float: left;
+}
+.timeline-item h4 {
+  padding: 0;
+  margin: -4px 0 0;
+}
+.timeline-item h4 a {
+  color: #E4003F;
+}
+.timeline-item h4:after {
+  content: "";
+  width: 30px;
+  margin: 2px 0 10px;
+  display: block;
+  border-top: 1px solid rgba(62, 62, 62, 0.08);
+}
+.timeline-item h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 5px 0 0;
+  margin: 0;
+}
+.timeline-item h6 a {
+  color: rgba(62, 62, 62, 0.54);
+}
+.timeline-item .item-date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+  background-color: #E4003F;
+  color: #FFF;
+  padding: 10px;
+  font-weight: 700;
+}
+.timeline-item p {
+  margin: 0 0 10px;
+}
+.timeline-item ul.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.timeline-item ul.tags li {
+  float: left;
+  background: rgba(62, 62, 62, 0.08);
+  border-radius: 5px;
+  display: inline-block;
+  height: 26px;
+  line-height: 24px;
+  padding: 0 10px 0 24px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  transition: color 0.2s;
+}
+.timeline-item ul.tags li a {
+  color: rgba(62, 62, 62, 0.54);
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.timeline-item ul.tags li a:hover {
+  color: #E4003F;
+}
+.timeline-item ul.tags li:before {
+  content: '';
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
 /* ## Sections : Video CTA Banner
 --------------------------------------------- */
 .video-cta-banner {
@@ -1582,14 +1685,18 @@ img.alignright,
 }
 .kpi-banner .kpi-count {
   border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px auto;
+  min-width: 100px;
+  padding: 0;
+  margin: 20px auto;
   display: inline-block;
   font-weight: 600;
   font-size: 3.6rem;
-  background-color: #E4003F;
-  color: rgba(235, 235, 235, 0.87);
+  background-color: #0099AF;
+  color: #FFF;
   font-weight: 600;
+}
+.kpi-banner .kpi-text {
+  padding: 0 20%;
 }
 
 .main-cta-banner {

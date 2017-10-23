@@ -11,7 +11,7 @@
 --------------------------------------------- */
 .hero-section {
 	position: relative;
-	padding: 20% 0 15%;
+	padding: 22% 0 12%;
 	background-position: center;
 	background-size: cover;
 	transition: all .1s ease;
@@ -44,6 +44,8 @@
 
 		h1 {
 			color: white;
+			max-width: 700px;
+			margin: 0 auto;
 		}
 	}
 }
@@ -154,6 +156,124 @@
 	}
 }
 
+/* ## Sections : Feed
+--------------------------------------------- */
+
+.feed {
+	h4, h5, h6 {
+		a {
+			color: $base-dark;
+			text-decoration: none;
+		}
+	}
+
+	&.feed-timeline {
+		.wrap {
+			max-width: 740px;
+		}
+	}
+}
+
+.timeline-item {
+	position: relative;
+	margin: 20px 0;
+	border: $site-border;
+	border-radius: $site-radius;
+
+	img {
+		float: left;
+		margin-right: 20px;
+	}
+
+	.item-content {
+		float: left;
+	}
+
+	h4 {
+		padding: 0;
+		margin: -4px 0 0;
+		a {
+			color: $primary-color;
+		}
+		&:after {
+			content: "";
+			width: 30px;
+			margin: 2px 0 10px;
+			display: block;
+			border-top: $site-border;
+		}
+	}
+
+	h6 {
+		@include font-size($font-size-xs);
+		text-transform: uppercase;
+		padding: 5px 0 0;
+		margin: 0;
+		a {
+			color: $secondary-dark;
+		}
+	}
+
+	.item-date {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include font-size($font-size-xs);
+		background-color: $primary-color;
+		color: $white;
+		padding: 10px;
+		font-weight: $font-weight-superbold;
+	}
+
+	p {
+		margin: 0 0 10px;
+	}
+
+	ul.tags {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+
+		li {
+			float: left;
+			background: $fourth-dark;
+			border-radius: $site-radius;
+			display: inline-block;
+			height: 26px;
+			line-height: 24px;
+			padding: 0 10px 0 24px;
+			position: relative;
+			margin: 0 10px 10px 0;
+			transition: color 0.2s;
+
+			a {
+				color: $secondary-dark;
+				@include font-size($font-size-xs);
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: $font-weight-bold;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+
+			&:before {
+				content: '';
+				background: $white;
+				border-radius: 10px;
+				box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+				height: 6px;
+				left: 10px;
+				position: absolute;
+				width: 6px;
+				top: 10px;
+			}
+		}
+	}
+}
+
 /* ## Sections : Video CTA Banner
 --------------------------------------------- */
 
@@ -176,14 +296,19 @@
 
 	.kpi-count {
 		border-radius: $site-radius;
-		padding: 10px 20px;
-		margin: 10px auto;
+		min-width: 100px;
+		padding: 0;
+		margin: 20px auto;
 		display: inline-block;
 		font-weight: 600;
 		font-size: 3.6rem;
-		background-color: $primary-color;
-		color: $primary-light;
+		background-color: $secondary-color;
+		color: $white;
 		font-weight: 600;
+	}
+
+	.kpi-text {
+		padding: 0 20%;
 	}
 }
 

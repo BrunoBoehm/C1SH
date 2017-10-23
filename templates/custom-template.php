@@ -261,7 +261,7 @@ if( have_rows('content_blocks') ){
                         $the_query->the_post();
 
                         if ( $layout_type == 'timeline' ) {
-                        echo    '<div class="timeline-item">';
+                        echo    '<div class="timeline-item tile-shadow">';
                         } else {  
                             if ( $i == 0 ){ 
                         echo    '<div class="one-third first">'; 
@@ -284,24 +284,26 @@ if( have_rows('content_blocks') ){
                         if ( $items_type !== 'contagion' && has_post_thumbnail() ){ 
                                         the_post_thumbnail( 'medium_large' ); 
                         }
-                        echo            '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
-                        if ( $items_type == 'action' ) {
-                        echo            '<h6>' . get_the_date('Y') . '</h6>';
-                        echo            '<h5>';
-                                            the_tags( '<span class="tag">', '', '</span>' );
-                        echo            '</h5>';
-                        }
+                        echo            '<div class="item-content">';
                         $related_institutions = get_field('related_institution');
                         if ( $related_institutions ) {
                             echo        '<h6>';
                             foreach( $related_institutions as $related_institution ){
                             echo            '<a href="' . get_the_permalink($related_institution->ID) . '">' . get_the_title($related_institution->ID) . '</a>';
                             }
-                            echo        '<h6>';
+                            echo        '</h6>';
                         }
+                        echo            '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
                         echo            '<p>' . get_the_excerpt() . '</p>';
+                        if ( $items_type == 'action' ) {
+                        echo            '<span class="item-date">' . get_the_date('Y') . '</span>';
+                        echo            '<ul class="tags">';
+                                            the_tags( '<li>', '</li><li>', '</li>' );
+                        echo            '</ul>';
+                        }
+                        echo        '</div>'; // end of item-content
                         echo        '</div>'; // end of feed-item
-
+                        echo '<div class="clearfix"></div>';
                         echo    '</div>'; // end of timeline-item or one-third
                         $i++;
                     }
