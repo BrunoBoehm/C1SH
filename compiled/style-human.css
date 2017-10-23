@@ -992,6 +992,27 @@ img.alignright,
   outline: #ccc solid 1px;
 }
 
+/* # CTAs
+--------------------------------------------- */
+.cta-btn {
+  background-color: #E4003F;
+  border-radius: 5px;
+  color: #FFF;
+  padding: 10px 20px 12px;
+  text-decoration: none;
+  transition: all 1s ease;
+  margin: 10px 0 0;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.cta-btn:hover {
+  color: #FFF;
+  background-color: #b10031;
+}
+
 /* # Structure and Layout
 ---------------------------------------------------------------------------------------------------- */
 /* ## Site Containers
@@ -1458,7 +1479,7 @@ img.alignright,
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.33);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* ## Sections : Text Blocks

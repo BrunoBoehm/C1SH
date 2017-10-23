@@ -15,7 +15,7 @@ if( have_rows('hero_slider') ) {
         echo 	'<div class="wrap">';
         echo		'<h1>' . get_sub_field('title') . '</h1>';
         if ( get_sub_field('link') ) {
-            echo	'<a href="' . get_sub_field('link')['url'] . '">' . get_sub_field('link')['title'] . '</a>';				
+            echo	'<a href="' . get_sub_field('link')['url'] . '" class="cta-btn btn-large">' . get_sub_field('link')['title'] . '</a>';				
         }
         echo 	'</div>';
         echo '</div>';
