@@ -1423,7 +1423,7 @@ img.alignright,
 --------------------------------------------- */
 .hero-section {
   position: relative;
-  padding: 22% 0 12%;
+  padding: 20% 0 10%;
   background-position: center;
   background-size: cover;
   transition: all .1s ease;
@@ -1455,7 +1455,7 @@ img.alignright,
 .hero-section .wrap h1 {
   color: white;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .overlay {
