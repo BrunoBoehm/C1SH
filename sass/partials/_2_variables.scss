@@ -1,3 +1,8 @@
+/* # Variables
+-----------------------------------------------------------------------*/
+
+/* ### Colors */
+
 $primary-color: #E4003F;
 $secondary-color: #0099AF;
 $accent-color: #E4003F;
@@ -14,3 +19,30 @@ $secondary-light: rgba( $base-light, .54 );
 $third-light: rgba( $base-light, .38 );
 $fourth-light: rgba( $base-light, .12 );
 $white: #FFF;
+
+/* ### Typography */
+
+$font-heading: 'Source Sans Pro', sans-serif;
+$font-body: 'Source Sans Pro', sans-serif;
+// loaded in functions.php
+
+$font-weight-superbold: 700;
+$font-weight-bold: 600;
+$font-weight-normal: 400;
+
+// use font-size from mixins: @include font-size($font-size-s);
+$font-size-xl: 3.6;
+$font-size-l: 3.0;
+$font-size-m: 2.2;
+$font-size-s: 1.6;
+$font-size-xs: 1.2;
+
+$line-height-heading: 1.3;
+$line-height-body: 1.625;
+
+
+
+/* ### Misc */
+
+$site-border: 1px solid $fourth-dark;
+$site-radius: 5px;

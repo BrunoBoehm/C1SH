@@ -72,8 +72,8 @@
 	padding: 40px 0;
 
 	.blurb {
-		border: 1px solid $fourth-dark;
-		border-radius: 4px;
+		border: $site-border;
+		border-radius: $site-radius;
 		text-align: center;
 
 		img {
