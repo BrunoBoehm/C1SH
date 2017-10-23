@@ -64,6 +64,29 @@
 	p {
 		max-width: 700px;
 		margin: 0 auto;
+		text-align: justify;
+	}
+}
+
+
+/* ## Sections : Quote Blocks
+--------------------------------------------- */
+
+.quote-block {
+	.wrap {
+		max-width: 700px;
+		color: $secondary-color;
+
+		p {
+			text-align: justify;
+			margin: -9px 0 5px;
+			font-style: italic;
+		}
+	}
+
+	img {
+		float: left;
+		margin-right: 20px;
 	}
 }
 

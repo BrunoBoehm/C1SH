@@ -52,11 +52,10 @@ if( have_rows('content_blocks') ){
             * 
             */
             case 'quote_block':
-                echo '<div class"quote-block">';
+                echo '<div class="quote-block">';
                 echo '<div class="wrap">';
                 echo 	'<img src="' . get_sub_field('image')['url'] . '">';
-                echo 	'<p>' . get_sub_field('text');
-                echo	'<span>' . get_sub_field('autho') . '</span></p>';
+                echo 	get_sub_field('text') . '<span>' . get_sub_field('author') . '</span>';
                 echo '</div>';
                 echo '</div>';
                 break;

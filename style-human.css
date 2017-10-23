@@ -1491,6 +1491,23 @@ img.alignright,
 .text-block p {
   max-width: 700px;
   margin: 0 auto;
+  text-align: justify;
+}
+
+/* ## Sections : Quote Blocks
+--------------------------------------------- */
+.quote-block .wrap {
+  max-width: 700px;
+  color: #0099AF;
+}
+.quote-block .wrap p {
+  text-align: justify;
+  margin: -9px 0 5px;
+  font-style: italic;
+}
+.quote-block img {
+  float: left;
+  margin-right: 20px;
 }
 
 /* ## Sections : 3 Blurbs
