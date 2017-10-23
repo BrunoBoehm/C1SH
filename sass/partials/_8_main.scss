@@ -11,9 +11,10 @@
 --------------------------------------------- */
 .hero-section {
 	position: relative;
-	// background-position: center;
-	// background-size: cover;
-	padding: 25vh 0;
+	padding: 20% 0 15%;
+	background-position: center;
+	background-size: cover;
+	transition: all .1s ease;
 	text-align: center;
 
 	.wp-custom-header {
@@ -23,11 +24,11 @@
 		top: 0;
 		bottom: 0;
 		margin: 0 auto;
-		// height: 100%;
-		// width: 100%;
-		// object-fit: cover;
-		// object-position: center;
-		// overflow: hidden;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+		overflow: hidden;
 		z-index: 0;
 
 		img {
@@ -48,8 +49,7 @@
 }
 
 .overlay {
-	background-color: rgba(0, 0, 0, 0.7);
-	z-index: 1;
+	@include overlay;
 }
 
 /* ## Sections : Text Blocks
