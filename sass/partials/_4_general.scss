@@ -124,7 +124,7 @@ h1 {
 h2 {
 	@include font-size($font-size-l);
 	text-transform: uppercase;
-	font-weight: 300;
+	font-weight: $font-weight-normal;
 
 	&:after {
 		content: "";
@@ -136,19 +136,22 @@ h2 {
 }
 
 h3 {
-	@include font-size($font-size-m);
+	@include font-size($font-size-l);
+	text-transform: uppercase;
+	font-weight: $font-weight-normal;
 }
 
 h4 {
 	@include font-size($font-size-m);
+	font-weight: $font-weight-normal;
 }
 
 h5 {
-	@include font-size($font-size-m);
+	@include font-size($font-size-s);
 }
 
 h6 {
-	@include font-size($font-size-m);
+	@include font-size($font-size-s);
 }
 
 /* ## Objects

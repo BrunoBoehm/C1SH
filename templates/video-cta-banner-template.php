@@ -7,7 +7,7 @@ if ($banner) {
     echo 	'<div class="video-cta-banner-video">' . $banner['video_link'] . '</div>';
     echo 	'<h3>' . $banner['title'] . '</h3>';
     echo 	'<div class="video-cta-banner-video-html">' . $banner['html'] . '</div>';
-    echo 	'<a href="' . $banner['btn_link']['url'] . '" title="' . $banner['btn_link']['title'] . '">' . $banner['btn_text'] . '</a>';
+    echo 	'<a href="' . $banner['btn_link']['url'] . '" title="' . $banner['btn_link']['title'] . '" class="button">' . $banner['btn_text'] . '</a>';
     echo '</div>';
     echo '</div>';
 }

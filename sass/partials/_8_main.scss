@@ -56,7 +56,7 @@
 --------------------------------------------- */
 
 .text-block {
-	padding: 40px 0;
+	margin: 40px 0;
 	text-align: center;
 
 	p {
@@ -69,7 +69,7 @@
 --------------------------------------------- */
 
 .three-blurbs {
-	padding: 40px 0;
+	margin: 40px 0;
 
 	.blurb {
 		border: $site-border;
@@ -84,21 +84,36 @@
 		}
 
 		p {
-			padding: 0 10px;
+			padding: 0 10px 13px;
+			margin: 0;
+			border-bottom: $site-border;
+		}
+
+		a {
+			color: $primary-color;
+			text-decoration: none;
+			padding: 14px;
+			display: block;
+			transition: background-color 1s ease;
+
+			&:hover {
+				color: $base-dark;
+				background-color: $fifth-dark;
+			}
 		}
 	}
 }
 
 .tile-shadow {
     position: relative;
-	box-shadow: 0 2rem 5rem -2.5rem rgba(0,0,0,0.10), 0rem 0.3rem 0.5rem -0.4rem rgba(0,0,0,0.2);
+	box-shadow: 0 2rem 5rem -2.5rem rgba(0,0,0,0.1), 0rem 0.3rem 0.5rem -0.4rem rgba(0,0,0,0.2);
 }	
 
 /* ## Sections : Post Selection
 --------------------------------------------- */
 
 .post-selection {
-	padding: 40px 0;
+	margin: 40px 0 15px;
 
 	.post {
 		text-align: center;
@@ -139,13 +154,17 @@
 	}
 }
 
-/* ## Sections : Post Selection
+/* ## Sections : Video CTA Banner
 --------------------------------------------- */
 
 .video-cta-banner {
 	padding: 40px 0;
 	background-color: $third-light;
 	text-align: center;
+
+	h3 {
+		margin: 10px 0 20px;
+	}
 }
 
 /* ## Sections : Banners

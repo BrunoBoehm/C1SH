@@ -398,7 +398,7 @@ h2 {
   font-size: 30px;
   font-size: 3rem;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
 }
 h2:after {
   content: "";
@@ -409,23 +409,26 @@ h2:after {
 }
 
 h3 {
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 30px;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 h4 {
   font-size: 22px;
   font-size: 2.2rem;
+  font-weight: 400;
 }
 
 h5 {
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 h6 {
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 /* ## Objects
@@ -1476,7 +1479,7 @@ img.alignright,
 /* ## Sections : Text Blocks
 --------------------------------------------- */
 .text-block {
-  padding: 40px 0;
+  margin: 40px 0;
   text-align: center;
 }
 .text-block p {
@@ -1487,7 +1490,7 @@ img.alignright,
 /* ## Sections : 3 Blurbs
 --------------------------------------------- */
 .three-blurbs {
-  padding: 40px 0;
+  margin: 40px 0;
 }
 .three-blurbs .blurb {
   border: 1px solid rgba(62, 62, 62, 0.12);
@@ -1501,7 +1504,20 @@ img.alignright,
   object-position: center;
 }
 .three-blurbs .blurb p {
-  padding: 0 10px;
+  padding: 0 10px 13px;
+  margin: 0;
+  border-bottom: 1px solid rgba(62, 62, 62, 0.12);
+}
+.three-blurbs .blurb a {
+  color: #E4003F;
+  text-decoration: none;
+  padding: 14px;
+  display: block;
+  transition: background-color 1s ease;
+}
+.three-blurbs .blurb a:hover {
+  color: #3E3E3E;
+  background-color: rgba(62, 62, 62, 0.02);
 }
 
 .tile-shadow {
@@ -1512,7 +1528,7 @@ img.alignright,
 /* ## Sections : Post Selection
 --------------------------------------------- */
 .post-selection {
-  padding: 40px 0;
+  margin: 40px 0 15px;
 }
 .post-selection .post {
   text-align: center;
@@ -1547,12 +1563,15 @@ img.alignright,
   margin: 0 auto;
 }
 
-/* ## Sections : Post Selection
+/* ## Sections : Video CTA Banner
 --------------------------------------------- */
 .video-cta-banner {
   padding: 40px 0;
   background-color: rgba(235, 235, 235, 0.38);
   text-align: center;
+}
+.video-cta-banner h3 {
+  margin: 10px 0 20px;
 }
 
 /* ## Sections : Banners

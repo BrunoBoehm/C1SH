@@ -106,7 +106,7 @@ if( have_rows('content_blocks') ){
                             if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
                             echo 	'<div class="post">';
                             echo 		'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($p->ID)) . '" alt="" title="">';
-                            echo 		'<h4>' . $p->post_title . '</h4>';
+                            echo 		'<h5>' . $p->post_title . '</h5>';
                             echo 	'</div>';
                             echo '</div>';
                             $i++;
