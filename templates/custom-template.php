@@ -41,7 +41,7 @@ if( have_rows('content_blocks') ){
                 } else {
                     echo '<h2>' . get_sub_field('title') . '</h2>';
                 }
-                echo '<p>' . get_sub_field('text') . '</p>';
+                echo        get_sub_field('text');
                 echo '</div>';
                 echo '</div>';
                 break;

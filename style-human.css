@@ -1488,6 +1488,10 @@ img.alignright,
   margin: 40px 0;
   text-align: center;
 }
+.text-block img {
+  height: 100px;
+  width: auto;
+}
 .text-block p {
   max-width: 700px;
   margin: 0 auto;
