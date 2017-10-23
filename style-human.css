@@ -1599,6 +1599,7 @@ img.alignright,
 }
 .timeline-item .item-content {
   float: left;
+  width: 54%;
 }
 .timeline-item h4 {
   padding: 0;
