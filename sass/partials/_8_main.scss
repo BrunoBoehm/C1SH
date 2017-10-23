@@ -83,6 +83,8 @@
 			height: 100%;
 			object-fit: cover;
 			object-position: center;
+			border-top-left-radius: $site-radius;
+			border-top-right-radius: $site-radius;
 		}
 
 		p {
@@ -183,6 +185,8 @@
 	img {
 		float: left;
 		margin-right: 20px;
+		border-top-left-radius: $site-radius;
+		border-bottom-left-radius: $site-radius;
 	}
 
 	.item-content {
@@ -224,6 +228,7 @@
 		color: $white;
 		padding: 10px;
 		font-weight: $font-weight-superbold;
+		border-top-left-radius: $site-radius;
 	}
 
 	p {

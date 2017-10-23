@@ -1510,6 +1510,8 @@ img.alignright,
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .three-blurbs .blurb p {
   padding: 0 10px 13px;
@@ -1596,6 +1598,8 @@ img.alignright,
 .timeline-item img {
   float: left;
   margin-right: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .timeline-item .item-content {
   float: left;
@@ -1635,6 +1639,7 @@ img.alignright,
   color: #FFF;
   padding: 10px;
   font-weight: 700;
+  border-top-left-radius: 5px;
 }
 .timeline-item p {
   margin: 0 0 10px;
