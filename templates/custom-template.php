@@ -132,15 +132,15 @@ if( have_rows('content_blocks') ){
                         the_row();
                         if ( $i == 0 ){ echo '<div class="one-half first">'; } else { echo '<div class="one-half">'; }
                         echo 	'<div class="cta-block">';
-                        echo		'<div class="cta-block-img">';
+                        echo		'<div class="cta-block-item">';
                         echo			'<img src="' . get_sub_field('image')['url'] . '" alt="' . get_sub_field('image')['alt'] . '" title="' . get_sub_field('image')['description'] . '">';
-                        echo		'</div>';
-                        echo		'<div class="cta-block-content">';
-                        echo			'<h4>' . get_sub_field('title') . '</h4>';
-                        echo			'<p>' . get_sub_field('text') . '</p>';
-                        if ( get_sub_field('btn_link') && get_sub_field('btn_text') ) {
-                            echo			'<a href="' . get_sub_field('btn_link')['url'] . '">' . get_sub_field('btn_text') . '</a>';
+                        echo		    '<div class="cta-block-content">';
+                        echo			    '<h3>' . get_sub_field('title') . '</h3>';
+                        echo			    '<p>' . get_sub_field('text') . '</p>';
+                        if ( get_sub_field('link') ) {
+                            echo			'<a href="' . get_sub_field('link')['url'] . '" class="button">' . get_sub_field('link')['title'] . '</a>';
                         }
+                        echo		    '</div>';
                         echo		'</div>';
                         echo 	'</div>';
                         echo '</div>';

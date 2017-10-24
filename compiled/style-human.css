@@ -1587,24 +1587,29 @@ img.alignright,
 --------------------------------------------- */
 .two-blocks {
   background-color: rgba(62, 62, 62, 0.87);
-  margin: 0 0 40px;
+  margin: 40px 0 0;
   padding: 40px 0;
   position: relative;
 }
-.two-blocks .cta-block-img {
+.two-blocks .cta-block-item {
   text-align: center;
   position: relative;
 }
-.two-blocks .cta-block-img img {
+.two-blocks .cta-block-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.two-blocks .cta-block-content {
+.two-blocks .cta-block-item .cta-block-content {
   position: absolute;
-  top: 30px;
-  margin: 0 auto;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 15%;
+}
+.two-blocks .cta-block-item .cta-block-content h4 {
+  text-transform: uppercase;
 }
 
 /* ## Sections : List

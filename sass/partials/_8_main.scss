@@ -182,11 +182,11 @@
 
 .two-blocks {
 	background-color: $primary-dark;
-	margin: 0 0 40px;
+	margin: 40px 0 0;
 	padding: 40px 0;
 	position: relative;
 
-	.cta-block-img {
+	.cta-block-item {
 		text-align: center;
 		position: relative;
 
@@ -196,12 +196,18 @@
 			object-fit: cover;
 			object-position: center;
 		}
-	}
 
-	.cta-block-content {
-		position: absolute;
-		top: 30px;
-		margin: 0 auto;
+		.cta-block-content {
+			position: absolute;
+			top: 30%;
+			left: 0;
+			right: 0;
+			margin: 0 15%;
+
+			h4 {
+				text-transform: uppercase;
+			}
+		}
 	}
 }
 
