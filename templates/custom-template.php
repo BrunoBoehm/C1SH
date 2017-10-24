@@ -288,6 +288,9 @@ if( have_rows('content_blocks') ){
                         }
                         echo            '<div class="item-content">';
                         $related_institutions = get_field('related_institution');
+                        if ( $items_type == 'action' ) {
+                        echo            '<span class="item-date">' . get_the_date('Y') . '</span>';
+                        }
                         if ( $related_institutions ) {
                             echo        '<h6>';
                             foreach( $related_institutions as $related_institution ){
@@ -298,7 +301,6 @@ if( have_rows('content_blocks') ){
                         echo            '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
                         echo            '<p>' . get_the_excerpt() . '</p>';
                         if ( $items_type == 'action' ) {
-                        echo            '<span class="item-date">' . get_the_date('Y') . '</span>';
                         echo            '<ul class="tags">';
                                             the_tags( '<li>', '</li><li>', '</li>' );
                         echo            '</ul>';

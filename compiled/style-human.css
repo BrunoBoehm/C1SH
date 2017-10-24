@@ -1510,7 +1510,7 @@ img.alignright,
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* ## Sections : Text Blocks
@@ -1536,7 +1536,7 @@ img.alignright,
 }
 .quote-block .wrap {
   max-width: 700px;
-  color: #0099AF;
+  color: #02ccff;
 }
 .quote-block .wrap p {
   text-align: justify;
@@ -1552,7 +1552,7 @@ img.alignright,
   position: absolute;
   left: 99px;
   top: -49px;
-  color: #0099AF;
+  color: #02ccff;
 }
 .quote-block .wrap span {
   font-style: italic;
@@ -1680,7 +1680,7 @@ img.alignright,
   padding: 7px 10px;
   margin-bottom: 2px;
   opacity: .94;
-  background-color: #0099AF;
+  background-color: #02ccff;
 }
 
 .timeline-item {
@@ -1707,16 +1707,11 @@ img.alignright,
   border-top: 1px solid rgba(62, 62, 62, 0.08);
 }
 .timeline-item .item-date {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
+  margin-bottom: -6px;
   font-size: 14px;
   font-size: 1.4rem;
-  background-color: #E4003F;
-  color: #FFF;
-  padding: 10px;
   font-weight: 700;
-  border-top-left-radius: 5px;
 }
 .timeline-item p {
   margin: 0 0 10px;
@@ -1726,6 +1721,7 @@ img.alignright,
   margin: 0;
   padding: 0;
   overflow: hidden;
+  height: 30px;
 }
 .timeline-item ul.tags li {
   float: left;
@@ -1788,7 +1784,7 @@ img.alignright,
   display: inline-block;
   font-weight: 600;
   font-size: 3.6rem;
-  background-color: #0099AF;
+  background-color: #02ccff;
   color: #FFF;
   font-weight: 600;
 }

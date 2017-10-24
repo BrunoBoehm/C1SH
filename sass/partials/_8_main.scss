@@ -330,15 +330,10 @@
 	}
 
 	.item-date {
-		position: absolute;
-		top: 0;
-		left: 0;
+		display: block;
+		margin-bottom: -6px;
 		@include font-size($font-size-xs);
-		background-color: $primary-color;
-		color: $white;
-		padding: 10px;
 		font-weight: $font-weight-superbold;
-		border-top-left-radius: $site-radius;
 	}
 
 	p {
@@ -350,6 +345,7 @@
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
+		height: 30px;
 
 		li {
 			float: left;
