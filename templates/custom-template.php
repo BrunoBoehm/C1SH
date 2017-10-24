@@ -225,9 +225,13 @@ if( have_rows('content_blocks') ){
                 $items_type = get_sub_field('post_type');
                 $feed_length = get_sub_field('feed_length');
                 $layout_type = strtolower(get_sub_field('layout_type'));
+                $cat_array = get_sub_field('feed_cat_filter');
+                $tag_array = get_sub_field('feed_tag_filter');
 
                 // echo '<pre>';
                 // print_r(get_sub_field('post_type'));
+                // print_r($cat_array);
+                // print_r($tag_array);
                 // echo '</pre>';
 
                 // Query Args
@@ -246,8 +250,10 @@ if( have_rows('content_blocks') ){
                     );
                 } else {
                     $args = array( 
-                        'post_type' => $items_type,
-                        'posts_per_page' => $feed_length
+                        'post_type'         => $items_type,
+                        'posts_per_page'    => $feed_length,
+                        'category__and'     => $cat_array,
+                        'tag__and'          => $tag_array
                     );
                 }
 
