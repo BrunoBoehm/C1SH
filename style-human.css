@@ -1375,6 +1375,21 @@ img.alignright,
   color: #EBEBEB;
   text-decoration: none;
 }
+.footer-widgets img.footer-logo {
+  width: 71px;
+}
+.footer-widgets ul.menu > li.menu-item > a {
+  text-transform: uppercase;
+}
+.footer-widgets .widget li li {
+  margin: 0 0 0 -4px;
+}
+.footer-widgets .widget li li:before {
+  content: "+";
+  color: #E4003F;
+  padding: 0 4px;
+  font-weight: 600;
+}
 
 .footer-widgets-1,
 .footer-widgets-2,
@@ -1407,7 +1422,6 @@ img.alignright,
   padding: 0 0 20px 0;
   text-align: center;
 }
-
 .site-footer p {
   margin-bottom: 0;
 }

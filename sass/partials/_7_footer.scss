@@ -18,6 +18,25 @@
 		color: $base-light;
 		text-decoration: none;
 	}
+
+	img.footer-logo {
+		width: 71px;
+	}
+
+	ul.menu > li.menu-item > a {
+		text-transform: uppercase;
+	}
+
+	.widget li li {
+		margin: 0 0 0 -4px;
+
+		&:before {
+			content: "+";
+			color: $primary-color;
+			padding: 0 4px;
+			font-weight: $font-weight-bold;
+		}
+	}
 }
 
 .footer-widgets-1,
@@ -51,8 +70,8 @@
 	line-height: 1;
 	padding: 0 0 20px 0;
 	text-align: center;
-}
 
-.site-footer p {
-	margin-bottom: 0;
+	p {
+		margin-bottom: 0;
+	}
 }
