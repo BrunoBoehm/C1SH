@@ -1,9 +1,13 @@
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
 
-.site-inner.full {
-	max-width: none;
-	padding: 0;
+.site-inner {
+	margin-top: 100px;
+
+	&.full {
+		max-width: none;
+		padding: 0;
+	}
 }
 
 .tile-shadow {
@@ -50,7 +54,7 @@
 --------------------------------------------- */
 .hero-section {
 	position: relative;
-	padding: 20% 0 10%;
+	padding: 24% 0 6%;
 	background-position: center;
 	background-size: cover;
 	transition: all .1s ease;
@@ -277,7 +281,7 @@
 			padding: 0;
 			margin: 0;
 			a {
-				color: $primary-color;
+				color: $base-dark;
 			}
 		}	
 	

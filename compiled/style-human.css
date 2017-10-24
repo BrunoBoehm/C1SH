@@ -1147,10 +1147,11 @@ img.alignright,
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: #FFF;
   position: fixed;
   z-index: 10;
   width: 100%;
+  border-bottom: 1px solid rgba(62, 62, 62, 0.08);
 }
 
 .site-header > .wrap {
@@ -1428,6 +1429,9 @@ img.alignright,
 
 /* # Content Area
 ---------------------------------------------------------------------------------------------------- */
+.site-inner {
+  margin-top: 100px;
+}
 .site-inner.full {
   max-width: none;
   padding: 0;
@@ -1473,7 +1477,7 @@ img.alignright,
 --------------------------------------------- */
 .hero-section {
   position: relative;
-  padding: 20% 0 10%;
+  padding: 24% 0 6%;
   background-position: center;
   background-size: cover;
   transition: all .1s ease;
@@ -1524,7 +1528,7 @@ img.alignright,
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 /* ## Sections : Text Blocks
@@ -1677,7 +1681,7 @@ img.alignright,
   margin: 0;
 }
 .feed .feed-item h4 a {
-  color: #E4003F;
+  color: #3E3E3E;
 }
 .feed .feed-item h5 {
   color: #3E3E3E;
