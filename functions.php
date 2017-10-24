@@ -115,6 +115,13 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 
+//* Change the footer text
+add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
+function sp_footer_creds_filter( $creds ) {
+	$creds = '[footer_copyright] COMMEUNSEULHOMME';
+	return $creds;
+}
+
 //* Add ACF Options Page
 if( function_exists('acf_add_options_page') ) {
 	
