@@ -23,8 +23,13 @@
 		width: 71px;
 	}
 
-	ul.menu > li.menu-item > a {
-		text-transform: uppercase;
+	ul.menu > li.menu-item {
+		margin-bottom: 0px;
+		padding-bottom: 2px;
+
+		&> a {
+			text-transform: uppercase;
+		}
 	}
 
 	.widget li li {
@@ -35,6 +40,10 @@
 			color: $primary-color;
 			padding: 0 4px;
 			font-weight: $font-weight-bold;
+		}
+
+		a:hover {
+			color: $primary-color;
 		}
 	}
 }

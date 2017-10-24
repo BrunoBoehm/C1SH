@@ -1379,6 +1379,10 @@ img.alignright,
 .footer-widgets img.footer-logo {
   width: 71px;
 }
+.footer-widgets ul.menu > li.menu-item {
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
 .footer-widgets ul.menu > li.menu-item > a {
   text-transform: uppercase;
 }
@@ -1390,6 +1394,9 @@ img.alignright,
   color: #E4003F;
   padding: 0 4px;
   font-weight: 600;
+}
+.footer-widgets .widget li li a:hover {
+  color: #E4003F;
 }
 
 .footer-widgets-1,
