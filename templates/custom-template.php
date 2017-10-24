@@ -74,11 +74,13 @@ if( have_rows('content_blocks') ){
                         if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
                         echo 	'<div class="blurb tile-shadow">';
                         echo 		'<img src="' . get_sub_field('image')['url'] . '">';
-                        echo 		'<h4>' . get_sub_field('title') . '</h4>';
-                        echo 		'<p>' . get_sub_field('text') . '</p>';
+                        echo        '<div class="item-content">';
+                        echo 		    '<h4>' . get_sub_field('title') . '</h4>';
+                        echo 		    '<p>' . get_sub_field('text') . '</p>';
                         if ( get_sub_field('link') ) {
                             echo		'<a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '" class="read-more">' . get_sub_field('link')['title'] . '</a>';                            
                         }
+                        echo 	    '</div>';
                         echo 	'</div>';
                         echo '</div>';
                         $i++;
@@ -106,9 +108,11 @@ if( have_rows('content_blocks') ){
                             // print_r($p);
                             echo 	'<div class="post blurb">';
                             echo 		'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($p->ID)) . '" alt="" title="">';
-                            echo 		'<h4>' . $p->post_title . '</h4>';
-                            echo 		'<p>' . $p->post_excerpt . '</p>';
-                            echo		'<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">Voir</a>';
+                            echo        '<div class="item-content">';
+                            echo 		    '<h4>' . $p->post_title . '</h4>';
+                            echo 		    '<p>' . $p->post_excerpt . '</p>';
+                            echo		    '<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">Voir</a>';
+                            echo 	    '</div>';
                             echo 	'</div>';
                             echo '</div>';
                             $i++;
@@ -268,8 +272,9 @@ if( have_rows('content_blocks') ){
                     while ( $the_query->have_posts() ) {
                         $the_query->the_post();
 
+                        // should it be a timeline-item or a column ?
                         if ( $layout_type == 'timeline' ) {
-                        echo    '<div class="timeline-item tile-shadow">';
+                        echo    '<div class="timeline-item">';
                         } else {  
                             if ( $i == 0 ){ 
                         echo    '<div class="one-third first">'; 
@@ -281,12 +286,12 @@ if( have_rows('content_blocks') ){
                         if ( $items_type == 'action' ) {
                             $milestone_level = get_field('milestone_level');
                             if ( $milestone_level == 'primary' ) {
-                        echo        '<div class="feed-item primary-feed-item">';
+                        echo        '<div class="blurb primary-feed-item clearfix">';
                             } elseif ( $milestone_level == 'secondary' ) {
-                        echo        '<div class="feed-item secondary-feed-item">';
+                        echo        '<div class="blurb secondary-feed-item clearfix">';
                             }
                         } else {
-                        echo        '<div class="feed-item blurb tile-shadow">';    
+                        echo        '<div class="blurb clearfix">';    
                         }
                         
                         if ( has_post_thumbnail() ){ 
@@ -294,32 +299,32 @@ if( have_rows('content_blocks') ){
                         }
                         echo            '<div class="item-content">';
                         $related_institutions = get_field('related_institution');
-                        if ( $items_type == 'action' ) {
-                        echo            '<span class="item-date">' . get_the_date('Y') . '</span>';
+                        if ( $items_type == 'action' or $items_type == 'post' ) {
+                        echo                '<span class="item-date">' . get_the_date('Y') . '</span>';
                         }
                         if ( $related_institutions ) {
-                            echo        '<h6>';
+                            echo            '<h6>';
                             foreach( $related_institutions as $related_institution ){
-                            echo            '<a href="' . get_the_permalink($related_institution->ID) . '">' . get_the_title($related_institution->ID) . '</a>';
+                            echo                '<a href="' . get_the_permalink($related_institution->ID) . '">' . get_the_title($related_institution->ID) . '</a>';
                             }
-                            echo        '</h6>';
+                            echo            '</h6>';
                         }
-                        echo            '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
-                        echo            '<p>' . get_the_excerpt() . '</p>';
+                        echo                '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+                        echo                '<p>' . get_the_excerpt() . '</p>';
                         if ( $items_type == 'action' ) {
-                        echo            '<ul class="tags">';
-                                            the_tags( '<li>', '</li><li>', '</li>' );
-                        echo            '</ul>';
-                        } else {
-                            echo		'<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">Voir</a>';
+                        echo                '<ul class="tags">';
+                                              the_tags( '<li>', '</li><li>', '</li>' );
+                        echo                '</ul>';
                         }
-                        echo        '</div>'; // end of item-content
-                        echo        '</div>'; // end of feed-item
+                        if ( $layout_type == 'blurbs' ) {
+                            echo		    '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">Voir</a>';
+                        }
+                        echo            '</div>'; // end of item-content
+                        echo        '</div>'; // end of blurb
                         echo '<div class="clearfix"></div>';
                         echo    '</div>'; // end of timeline-item or one-third
                         $i++;
                     }
-                    echo '<div class="clearfix"></div>';
                     echo '</div>'; // end of wrap
                     echo '</div>'; // end of section
                 } else {

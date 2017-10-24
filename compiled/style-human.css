@@ -1446,6 +1446,7 @@ img.alignright,
   border: 1px solid rgba(62, 62, 62, 0.08);
   border-radius: 5px;
   text-align: center;
+  position: relative;
 }
 .blurb img {
   width: 100%;
@@ -1456,19 +1457,46 @@ img.alignright,
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.blurb p {
-  padding: 6px 10px 13px;
+.blurb .item-content h4, .blurb .item-content h5, .blurb .item-content h6 {
+  padding: 0;
+  margin: 0;
+}
+.blurb .item-content h4 a, .blurb .item-content h5 a, .blurb .item-content h6 a {
+  color: #3E3E3E;
+  text-decoration: none;
+}
+.blurb .item-content h6 {
+  position: absolute;
+  top: 6px;
+  left: -3px;
+}
+.blurb .item-content h6 a {
+  color: #FFF;
+  text-align: left;
+  font-size: 14px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  clear: left;
+  padding: 7px 10px;
+  margin-bottom: 2px;
+  opacity: .94;
+  background-color: #02ccff;
+}
+.blurb .item-content p {
+  padding: 6px 30px 13px;
   margin: 0;
   border-bottom: 1px solid rgba(62, 62, 62, 0.08);
 }
-.blurb a.read-more {
+.blurb .item-content a.read-more {
   color: #E4003F;
   text-decoration: none;
   padding: 14px;
   display: block;
   transition: background-color 1s ease;
 }
-.blurb a.read-more:hover {
+.blurb .item-content a.read-more:hover {
   color: #3E3E3E;
   background-color: rgba(62, 62, 62, 0.02);
 }
@@ -1667,86 +1695,54 @@ img.alignright,
 .feed {
   margin: 0 0 40px;
 }
-.feed h4 a, .feed h5 a, .feed h6 a {
-  text-decoration: none;
-}
 .feed.feed-timeline .wrap {
   max-width: 740px;
 }
-.feed .feed-item {
-  position: relative;
-}
-.feed .feed-item h4 {
-  padding: 0;
-  margin: 0;
-}
-.feed .feed-item h4 a {
-  color: #3E3E3E;
-}
-.feed .feed-item h5 {
-  color: #3E3E3E;
-}
-.feed .feed-item h6 {
-  position: absolute;
-  top: 10px;
-  left: -4px;
-}
-.feed .feed-item h6 a {
-  color: #FFF;
-  text-align: left;
-  font-size: 14px;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  display: block;
-  float: left;
-  clear: left;
-  padding: 7px 10px;
-  margin-bottom: 2px;
-  opacity: .94;
-  background-color: #02ccff;
-}
 
 .timeline-item {
-  position: relative;
-  margin: 20px 0;
-  border: 1px solid rgba(62, 62, 62, 0.08);
-  border-radius: 5px;
+  margin: 30px 0;
 }
-.timeline-item img {
+.timeline-item .blurb img {
   float: left;
   margin-right: 20px;
+  width: auto;
+  height: auto;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
 }
-.timeline-item .item-content {
+.timeline-item .blurb .item-content {
   float: left;
   width: 54%;
+  text-align: left;
 }
-.timeline-item h4:after {
+.timeline-item .blurb .item-content h4:after {
   content: "";
   width: 30px;
-  margin: 2px 0 10px;
+  margin: 6px 0 10px;
   display: block;
   border-top: 1px solid rgba(62, 62, 62, 0.08);
 }
-.timeline-item .item-date {
+.timeline-item .blurb .item-content .item-date {
   display: block;
-  margin-bottom: -6px;
+  margin-bottom: -2px;
   font-size: 14px;
   font-size: 1.4rem;
   font-weight: 700;
 }
-.timeline-item p {
+.timeline-item .blurb .item-content p {
   margin: 0 0 10px;
+  padding: 0;
+  border-bottom: none;
 }
-.timeline-item ul.tags {
+.timeline-item .blurb .item-content ul.tags {
   list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   height: 30px;
 }
-.timeline-item ul.tags li {
+.timeline-item .blurb .item-content ul.tags li {
   float: left;
   background: rgba(62, 62, 62, 0.08);
   border-radius: 5px;
@@ -1758,7 +1754,7 @@ img.alignright,
   margin: 0 10px 10px 0;
   transition: color 0.2s;
 }
-.timeline-item ul.tags li a {
+.timeline-item .blurb .item-content ul.tags li a {
   color: rgba(62, 62, 62, 0.54);
   font-size: 14px;
   font-size: 1.4rem;
@@ -1766,10 +1762,10 @@ img.alignright,
   text-transform: uppercase;
   font-weight: 600;
 }
-.timeline-item ul.tags li a:hover {
+.timeline-item .blurb .item-content ul.tags li a:hover {
   color: #E4003F;
 }
-.timeline-item ul.tags li:before {
+.timeline-item .blurb .item-content ul.tags li:before {
   content: '';
   background: #FFF;
   border-radius: 10px;
