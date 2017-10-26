@@ -293,7 +293,7 @@
 
 .feed {
 	margin: 0 0 40px;
-	
+
 	&.feed-timeline {
 		.wrap {
 			max-width: 740px;
@@ -308,7 +308,7 @@
 		img {
 			float: left;
 			margin-right: 20px;
-			width: auto;
+			width: 42%;
 			height: auto;
 			border-top-left-radius: $site-radius;
 			border-bottom-left-radius: $site-radius;
@@ -409,7 +409,7 @@
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: 50% 0%;
+	background-position: 50% 35%;
 
 	.kpi-count {
 		border-radius: $site-radius;

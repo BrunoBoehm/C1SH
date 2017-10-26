@@ -1712,7 +1712,7 @@ img.alignright,
 .timeline-item .blurb img {
   float: left;
   margin-right: 20px;
-  width: auto;
+  width: 42%;
   height: auto;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -1800,7 +1800,7 @@ img.alignright,
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 0%;
+  background-position: 50% 35%;
 }
 .kpi-banner .kpi-count {
   border-radius: 5px;
