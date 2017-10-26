@@ -231,18 +231,15 @@ if( have_rows('content_blocks') ){
                 $layout_type = strtolower(get_sub_field('layout_type'));
                 $cat_array = get_sub_field('feed_cat_filter');
                 $tag_array = get_sub_field('feed_tag_filter');
-
-                // echo '<pre>';
-                // print_r(get_sub_field('post_type'));
-                // print_r($cat_array);
-                // print_r($tag_array);
-                // echo '</pre>';
+                $limit_to_milestones = get_sub_field('limit_to_milestones');
 
                 // Query Args
-                if ( $items_type == 'action' ) {
+                if ( $items_type == 'action' && $limit_to_milestones == true ) {
                     $args = array( 
                         'post_type'         => $items_type,
                         'posts_per_page'    => $feed_length,
+                        'category__and'     => $cat_array,
+                        'tag__and'          => $tag_array,
                         'meta_query'	    => array(
                             'relation'		=> 'AND',
                             array(
@@ -250,8 +247,8 @@ if( have_rows('content_blocks') ){
                                 'value'	  	=> array('primary', 'secondary'),
                                 'compare' 	=> 'IN',
                             )
-                        )    
-                    );
+                        )
+                    );              
                 } else {
                     $args = array( 
                         'post_type'         => $items_type,
@@ -259,7 +256,15 @@ if( have_rows('content_blocks') ){
                         'category__and'     => $cat_array,
                         'tag__and'          => $tag_array
                     );
-                }
+                };
+
+                // echo '<pre>';
+                // print_r(get_sub_field('post_type'));
+                // print_r($cat_array);
+                // print_r($tag_array);
+                // var_dump($limit_to_milestones);
+                // print_r($args);
+                // echo '</pre>';
 
                 // The Query
                 $the_query = new WP_Query( $args );
@@ -277,18 +282,20 @@ if( have_rows('content_blocks') ){
                         echo    '<div class="timeline-item">';
                         } else {  
                             if ( $i == 0 ){ 
-                        echo    '<div class="one-third first">'; 
+                            echo '<div class="one-third first">'; 
                             } else { 
-                        echo    '<div class="one-third">'; 
+                            echo '<div class="one-third">'; 
                             }
                         }
 
                         if ( $items_type == 'action' ) {
                             $milestone_level = get_field('milestone_level');
                             if ( $milestone_level == 'primary' ) {
-                        echo        '<div class="blurb primary-feed-item clearfix">';
+                            echo    '<div class="blurb primary-feed-item clearfix">';
                             } elseif ( $milestone_level == 'secondary' ) {
-                        echo        '<div class="blurb secondary-feed-item clearfix">';
+                            echo    '<div class="blurb secondary-feed-item clearfix">';
+                            } else {
+                            echo    '<div class="blurb clearfix">'; 
                             }
                         } else {
                         echo        '<div class="blurb clearfix">';    
