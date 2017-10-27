@@ -89,7 +89,7 @@ i {
 blockquote {
 	margin: 40px 0;
 	color: $secondary-color;
-	font-family: Georgia, serif;
+	font-family: $font-serif;
 }
 
 blockquote::before {

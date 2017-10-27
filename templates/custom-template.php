@@ -341,6 +341,24 @@ if( have_rows('content_blocks') ){
                 wp_reset_postdata();
                 break;
 
+            /*
+            *
+            * Video Embed as embed code
+            * 
+            */                        
+            case 'video_embed':
+                $embed_code = get_sub_field('video_link');
+                $video_caption = get_sub_field('video_caption');
+
+                echo '<div class="video-block">';
+                echo '<div class="wrap">';
+                echo        '<div class="video-embed-responsive">' . $embed_code . '</div>';
+                echo        '<p>' . $video_caption . '</p>';
+                echo '</div>';
+                echo '</div>';
+                break;
+
+
         }   // end Switch
     }   // end while
 };
