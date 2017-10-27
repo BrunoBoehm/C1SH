@@ -133,8 +133,9 @@
 --------------------------------------------- */
 
 .text-block {
-	margin: 40px 0 20px;
+	margin: 40px auto 20px;
 	text-align: center;
+	max-width: 700px;
 
 	img {
 		height: 100px;
@@ -145,6 +146,22 @@
 		max-width: 700px;
 		margin: 0 auto;
 		text-align: justify;
+	}
+
+	ol {
+		text-align: left;
+		padding-bottom: 20px;
+		li {
+			list-style-type: decimal;
+		}
+	}
+
+	ul {
+		text-align: left;
+		padding-bottom: 20px;
+		li {
+			list-style-type: disc;
+		}
 	}
 }
 

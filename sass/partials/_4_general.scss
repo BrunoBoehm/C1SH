@@ -87,17 +87,22 @@ i {
 }
 
 blockquote {
-	margin: 40px;
+	margin: 40px 0;
+	color: $secondary-color;
+	font-family: Georgia, serif;
 }
 
 blockquote::before {
 	content: "\201C";
 	display: block;
-	@include font-size($font-size-l);
+	text-align: left;
+	font-size: 100px;
+	font-size: 10rem;
 	height: 0;
-	left: -20px;
+	left: -50px;
 	position: relative;
-	top: -10px;
+	top: -40px;
+	color: $secondary-color;
 }
 
 
