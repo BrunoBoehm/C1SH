@@ -353,11 +353,25 @@ if( have_rows('content_blocks') ){
                 echo '<div class="video-block">';
                 echo '<div class="wrap">';
                 echo        '<div class="video-embed-responsive">' . $embed_code . '</div>';
-                echo        '<p>' . $video_caption . '</p>';
+                echo        '<p class="media-caption">' . $video_caption . '</p>';
                 echo '</div>';
                 echo '</div>';
                 break;
 
+            /*
+            *
+            * Image Block as image array
+            * 
+            */                        
+            case 'image_block':
+                $image_object = get_sub_field('image_file');
+                $image_caption = get_sub_field('image_caption');
+
+                echo '<div class="image-block">';
+                echo        '<img src="' . $image_object['url'] . '">';
+                echo        '<p class="media-caption">' . $image_caption . '</p>';
+                echo '</div>';
+                break;                
 
         }   // end Switch
     }   // end while

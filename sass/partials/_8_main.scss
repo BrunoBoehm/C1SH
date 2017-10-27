@@ -462,15 +462,15 @@ https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-respons
 .video-block {
 	max-width: 1000px;
 	margin: 40px auto;
+}
 
-	p {
-		text-align: center;
-		font-style: italic;
-		font-family: $font-serif;
-		color: $third-dark;
-		@include font-size($font-size-xs);
-		margin: 10px 0;
-	}
+p.media-caption {
+	text-align: center;
+	font-style: italic;
+	font-family: $font-serif;
+	color: $third-dark;
+	@include font-size($font-size-xs);
+	margin: 10px 0;
 }
 
 .video-embed-responsive {
@@ -489,6 +489,17 @@ https://www.smashingmagazine.com/2014/02/making-embedded-content-work-in-respons
 	}
 }
 
+/* ## Image Block
+--------------------------------------------- */
+
+.image-block {
+	img {
+		width: 100%;
+		max-height: 500px;
+		overflow: hidden;
+		object-fit: cover;
+	}
+}
 
 /* ## Entries
 --------------------------------------------- */
