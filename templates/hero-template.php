@@ -10,6 +10,7 @@ if( have_rows('hero_slider') ) {
         the_row();
         $related_institutions = get_field('related_institution');
         $related_actions = get_field('related_action');
+        $institution_logo = get_field('institution_logo');
         // print_r($related_institution);
 
         echo '<div class="hero-section overlay">';
@@ -22,6 +23,10 @@ if( have_rows('hero_slider') ) {
             foreach ( $related_institutions as $institution ) {
             echo        '<div class="brand-logo"><a href="' . get_permalink( $institution->ID ) . '" title="' . $institution->post_title . '"><img src="' . get_field('institution_logo', $institution->ID )['url'] . '"></a></div>';
             };
+            echo    '</div>';
+        } elseif ( $institution_logo ) {
+            echo    '<div class="brand-logos">';
+            echo        '<div class="brand-logo"><img src="' . $institution_logo['url'] . '"></div>';
             echo    '</div>';
         };
         echo		'<h1>' . get_sub_field('title') . '</h1>';
