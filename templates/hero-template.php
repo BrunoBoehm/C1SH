@@ -18,20 +18,19 @@ if( have_rows('hero_slider') ) {
         echo 	'</div>';
         echo 	'<div class="wrap">';
         if ( $related_institutions ) {
+            echo    '<div class="brand-logos">';
             foreach ( $related_institutions as $institution ) {
-                echo    '<div class="institution-profile-pic">';
-                echo        '<img src="' . get_field('institution_logo', $institution->ID )['url'] . '">';
-                echo        '<span>' . $institution->post_title . '</span>';
-                echo    '</div>';
+            echo        '<div class="brand-logo"><a href="' . get_permalink( $institution->ID ) . '" title="' . $institution->post_title . '"><img src="' . get_field('institution_logo', $institution->ID )['url'] . '"></a></div>';
             };
+            echo    '</div>';
         };
         echo		'<h1>' . get_sub_field('title') . '</h1>';
         if ( $related_actions ) {
+            echo    '<div class="related-actions">';
             foreach ( $related_actions as $action ) {
-                echo    '<div class="related-action">';
-                echo        '<a href="' . get_permalink( $action->ID ) . '">' . $action->post_title . '</a>';
-                echo    '</div>';
+            echo        '<a href="' . get_permalink( $action->ID ) . '">' . $action->post_title . '</a>';
             };
+            echo    '</div>';
         };
         if ( get_sub_field('link') ) {
             echo	'<a href="' . get_sub_field('link')['url'] . '" class="button">' . get_sub_field('link')['title'] . '</a>';				

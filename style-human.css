@@ -1559,6 +1559,36 @@ img.alignright,
   max-width: 700px;
   margin: 0 auto 20px;
 }
+.hero-section .wrap .brand-logos .brand-logo {
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  opacity: .8;
+  background-color: #FFF;
+  display: inline-block;
+  margin: 2px;
+}
+.hero-section .wrap .brand-logos .brand-logo img {
+  width: 80px;
+  height: 80px;
+  padding: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-section .wrap .related-actions a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+.hero-section .wrap .related-actions:before {
+  content: "";
+  display: block;
+  width: 40px;
+  border-top: 1px solid #FFF;
+  margin: 0 auto;
+  padding-top: 20px;
+}
 
 .overlay {
   position: relative;

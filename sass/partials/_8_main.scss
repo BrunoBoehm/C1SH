@@ -122,6 +122,44 @@
 			max-width: 700px;
 			margin: 0 auto 20px;
 		}
+
+		.brand-logos {
+
+			.brand-logo {
+				border-radius: 50px;
+				width: 80px;
+				height: 80px;
+				opacity: .8;
+				background-color: $white;
+				display: inline-block;
+				margin: 2px;
+
+				img {
+					width: 80px;
+					height: 80px;
+					padding: 15px;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.related-actions {
+			a {
+				color: white;
+				text-decoration: none;
+				text-transform: uppercase;
+				margin:	0 10px;
+			}
+
+			&:before {
+				content: "";
+				display: block;
+				width: 40px;
+				border-top: 1px solid $white;
+				margin: 0 auto;
+				padding-top: 20px;
+			}
+		}
 	}
 }
 
