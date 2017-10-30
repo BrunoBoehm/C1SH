@@ -124,7 +124,6 @@ h6 {
 h1 {
 	@include font-size($font-size-xl);
 	font-weight: $font-weight-normal;
-	text-shadow: 1px 1px 2px $secondary-dark;
 }
 
 h2 {
@@ -420,8 +419,8 @@ th:first-child {
 	font-size: 1em;
 	font-weight: bold;
 	padding: 15px 23px 14px;
-	color: #333;
-	background: #fff;
+	color: $base-dark;
+	background: $white;
 	z-index: 100000; /* Above WP toolbar. */
 	text-decoration: none;
 	box-shadow: 0 0 2px 2px $fourth-dark;
@@ -460,8 +459,7 @@ th:first-child {
 
 .breadcrumb {
 	background-color: #fff;
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font-size($font-size-xs);
 	margin-bottom: 1px;
 	padding: 12px 30px;
 }
@@ -469,11 +467,8 @@ th:first-child {
 .after-entry,
 .archive-description,
 .author-box {
-	background-color: #fff;
-	font-size: 18px;
-	font-size: 1.8rem;
-	margin-bottom: 40px;
-	padding: 60px;
+	background-color: $white;
+	@include font-size($font-size-l);
 }
 
 .archive-description p:last-child,
@@ -521,24 +516,23 @@ th:first-child {
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
-	font-size: 20px;
-	font-size: 2rem;
+	@include font-size($font-size-l);
+	text-align: center;
 }
 
 .entry-title {
-	font-size: 36px;
-	font-size: 3.6rem;
+	@include font-size($font-size-l);
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-	color: #333;
+	color: $base-dark;
 	text-decoration: none;
 }
 
 .entry-title a:hover,
 .entry-title a:focus {
-	color: #c3251d;
+	color: $primary-color;
 }
 
 .widget-title {
@@ -675,8 +669,7 @@ img.alignright,
 }
 
 .featured-content .entry-title {
-	font-size: 20px;
-	font-size: 2rem;
+	@include font-size($font-size-l);
 }
 
 
@@ -688,32 +681,31 @@ img.alignright,
 
 .sidebar .enews-widget,
 .sidebar .enews-widget .widget-title {
-	color: #fff;
+	color: $white;
 }
 
 .sidebar .widget.enews-widget {
-	background-color: #333;
+	background-color: $base-dark;
 }
 
 .sidebar .enews-widget input,
 .sidebar .enews-widget input:focus {
-	border: 1px solid #333;
+	border: 1px solid $base-dark;
 }
 
 .sidebar .enews-widget input[type="submit"] {
-	background-color: #c3251d;
-	color: #fff;
+	background-color: $primary-color;
+	color: $white;
 }
 
 .sidebar .enews-widget input:hover[type="submit"],
 .sidebar .enews-widget input:focus[type="submit"]  {
-	background-color: #fff;
-	color: #333;
+	background-color: $white;
+	color: $base-dark;
 }
 
 .enews-widget input {
-	font-size: 16px;
-	font-size: 1.6rem;
+	@include font-size($font-size-xs);
 	margin-bottom: 16px;
 }
 
@@ -749,6 +741,6 @@ img.alignright,
 
 /* Display outline on focus */
 :focus {
-	color: #333;
+	color: $base-dark;
 	outline: #ccc solid 1px;
 }

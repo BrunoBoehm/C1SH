@@ -396,7 +396,6 @@ h1 {
   font-size: 36px;
   font-size: 3.6rem;
   font-weight: 400;
-  text-shadow: 1px 1px 2px rgba(62, 62, 62, 0.54);
 }
 
 h2 {
@@ -693,8 +692,8 @@ th:first-child {
   font-size: 1em;
   font-weight: bold;
   padding: 15px 23px 14px;
-  color: #333;
-  background: #fff;
+  color: #3E3E3E;
+  background: #FFF;
   z-index: 100000;
   /* Above WP toolbar. */
   text-decoration: none;
@@ -731,8 +730,8 @@ th:first-child {
 --------------------------------------------- */
 .breadcrumb {
   background-color: #fff;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   margin-bottom: 1px;
   padding: 12px 30px;
 }
@@ -740,11 +739,9 @@ th:first-child {
 .after-entry,
 .archive-description,
 .author-box {
-  background-color: #fff;
-  font-size: 18px;
-  font-size: 1.8rem;
-  margin-bottom: 40px;
-  padding: 60px;
+  background-color: #FFF;
+  font-size: 30px;
+  font-size: 3rem;
 }
 
 .archive-description p:last-child,
@@ -790,24 +787,25 @@ th:first-child {
 .archive-description .entry-title,
 .archive-title,
 .author-box-title {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 30px;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .entry-title {
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 30px;
+  font-size: 3rem;
 }
 
 .entry-title a,
 .sidebar .widget-title a {
-  color: #333;
+  color: #3E3E3E;
   text-decoration: none;
 }
 
 .entry-title a:hover,
 .entry-title a:focus {
-  color: #c3251d;
+  color: #E4003F;
 }
 
 .widget-title {
@@ -940,8 +938,8 @@ img.alignright,
 }
 
 .featured-content .entry-title {
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 30px;
+  font-size: 3rem;
 }
 
 /* # Plugins
@@ -950,32 +948,32 @@ img.alignright,
 --------------------------------------------- */
 .sidebar .enews-widget,
 .sidebar .enews-widget .widget-title {
-  color: #fff;
+  color: #FFF;
 }
 
 .sidebar .widget.enews-widget {
-  background-color: #333;
+  background-color: #3E3E3E;
 }
 
 .sidebar .enews-widget input,
 .sidebar .enews-widget input:focus {
-  border: 1px solid #333;
+  border: 1px solid #3E3E3E;
 }
 
 .sidebar .enews-widget input[type="submit"] {
-  background-color: #c3251d;
-  color: #fff;
+  background-color: #E4003F;
+  color: #FFF;
 }
 
 .sidebar .enews-widget input:hover[type="submit"],
 .sidebar .enews-widget input:focus[type="submit"] {
-  background-color: #fff;
-  color: #333;
+  background-color: #FFF;
+  color: #3E3E3E;
 }
 
 .enews-widget input {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   margin-bottom: 16px;
 }
 
@@ -1008,7 +1006,7 @@ img.alignright,
 
 /* Display outline on focus */
 :focus {
-  color: #333;
+  color: #3E3E3E;
   outline: #ccc solid 1px;
 }
 
@@ -1549,6 +1547,7 @@ img.alignright,
   color: white;
   max-width: 700px;
   margin: 0 auto 20px;
+  text-shadow: 1px 1px 2px rgba(62, 62, 62, 0.54);
 }
 .hero-section .wrap .brand-logos .brand-logo {
   border-radius: 50px;
@@ -1989,6 +1988,9 @@ p.entry-meta {
   margin-bottom: 0;
 }
 
+.entry-header {
+  text-align: center;
+}
 .entry-header .entry-meta {
   margin-bottom: 24px;
 }
