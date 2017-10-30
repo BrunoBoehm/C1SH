@@ -339,7 +339,6 @@ if( have_rows('content_blocks') ){
                         }
                         echo            '</div>'; // end of item-content
                         echo        '</div>'; // end of blurb
-                        echo '<div class="clearfix"></div>';
                         echo    '</div>'; // end of timeline-item or one-third
                         $i++;
                     }
