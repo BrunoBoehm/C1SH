@@ -527,6 +527,49 @@ p.media-caption {
 	}
 }
 
+
+/* ## User List
+--------------------------------------------- */
+
+.user-list {
+	padding: 40px 0;
+}
+
+.list-single-user {
+	text-align: center;
+	margin: 10px 0;
+
+	.single-user-avatar {
+
+		img {
+			width: 130px;
+			height: 130px;
+			object-fit: cover;
+			border-radius: 80px;
+		}
+	}
+
+	.single-user-meta {
+		h5, h6, span {
+			margin: 0;
+		}
+
+		h6 a {
+			text-decoration: none;
+			color: $primary-dark;
+			text-transform: uppercase;
+			@include font-size($font-size-xs);
+		}
+
+		span {
+			display: block;
+			color: $primary-dark;
+			@include font-size($font-size-xs);
+		}
+	}
+}
+
+
 /* ## Image Block
 --------------------------------------------- */
 

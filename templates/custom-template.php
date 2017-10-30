@@ -204,12 +204,13 @@ if( have_rows('content_blocks') ){
                 echo '<div class="wrap">';
                 $i = 0;
                 while ( have_rows('user_list') ) {
-                    if ( $i == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
+                    if ( $i == 0 || $i % 6 == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
                     the_row();
                     $user_id = get_sub_field('single_user')['ID'];
                     $company = get_field('institution', "user_{$user_id}" )[0];
+                    $position = get_field('position', "user_{$user_id}" );
                     $show_company = get_field('show_company', "user_{$user_id}" );
-                    
+
                     echo    '<div class="list-single-user">';
                     echo        '<div class="single-user-avatar"><img src="' . get_field('profile_picture', "user_{$user_id}" )['url'] . '"></div>';
                     echo        '<div class="single-user-meta">';
@@ -217,7 +218,9 @@ if( have_rows('content_blocks') ){
                     if ( $company && $show_company ) {
                     echo            '<h6><a href="' . get_permalink($company) . '" title="' . $company->post_title . '">' . $company->post_title . '</a></h6>';
                     }
-                    echo            '<span>' . get_field('position', "user_{$user_id}" ) . '</span>';
+                    if ( $position ) {
+                    echo            '<span>' . $position . '</span>';
+                    }
                     echo        '</div>';
                     echo    '</div>'; // end of .list-single-user
                     echo '</div>'; // end of columns

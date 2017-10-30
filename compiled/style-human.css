@@ -1907,6 +1907,39 @@ p.media-caption {
   height: 100%;
 }
 
+/* ## User List
+--------------------------------------------- */
+.user-list {
+  padding: 40px 0;
+}
+
+.list-single-user {
+  text-align: center;
+  margin: 10px 0;
+}
+.list-single-user .single-user-avatar img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 80px;
+}
+.list-single-user .single-user-meta h5, .list-single-user .single-user-meta h6, .list-single-user .single-user-meta span {
+  margin: 0;
+}
+.list-single-user .single-user-meta h6 a {
+  text-decoration: none;
+  color: rgba(62, 62, 62, 0.87);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.list-single-user .single-user-meta span {
+  display: block;
+  color: rgba(62, 62, 62, 0.87);
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
 /* ## Image Block
 --------------------------------------------- */
 .image-block img {
