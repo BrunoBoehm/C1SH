@@ -296,10 +296,15 @@
 
 		.cta-block-content {
 			position: absolute;
-			top: 30%;
+			top: 10%;
+			margin: 0 5%;
 			left: 0;
 			right: 0;
-			margin: 0 15%;
+
+			@include breakpoint(md) {
+				top: 30%;
+				margin: 0 15%;
+			}
 
 			h4 {
 				text-transform: uppercase;

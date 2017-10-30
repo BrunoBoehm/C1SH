@@ -1772,10 +1772,16 @@ img.alignright,
 }
 .two-blocks .cta-block-item .cta-block-content {
   position: absolute;
-  top: 30%;
+  top: 10%;
+  margin: 0 5%;
   left: 0;
   right: 0;
-  margin: 0 15%;
+}
+@media (min-width: 1023px) {
+  .two-blocks .cta-block-item .cta-block-content {
+    top: 30%;
+    margin: 0 15%;
+  }
 }
 .two-blocks .cta-block-item .cta-block-content h4 {
   text-transform: uppercase;
