@@ -2,11 +2,11 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Genesis Sample\n"
+"Project-Id-Version: Lyketil\n"
 "POT-Creation-Date: 2016-05-17 23:09-0400\n"
 "PO-Revision-Date: 2016-05-17 23:08-0400\n"
-"Last-Translator: StudioPress <translations@studiopress.com>\n"
-"Language-Team: StudioPress <translations@studiopress.com>\n"
+"Last-Translator: Lyketil <hello@lyketil.com>\n"
+"Language-Team: Lyketil <hello@lyketil.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,18 +51,18 @@ msgid "Accent Color"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Genesis Sample"
+msgid "COMMEUNSEULHOMME"
 msgstr ""
 
 #. Theme URI of the plugin/theme
 #. Author URI of the plugin/theme
-msgid "http://www.studiopress.com/"
+msgid "http://www.lyketil.com/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "This is the sample theme created for the Genesis Framework."
+msgid "COMMEUNSEULHOMME Wordpress Theme"
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "StudioPress"
+msgid "Lyketil"
 msgstr ""
