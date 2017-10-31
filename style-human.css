@@ -1329,14 +1329,8 @@ img.alignright,
   margin: -56px 0 0 199px;
 }
 
-/* ## Site Header Navigation
+/* ## Menu Toggle
 --------------------------------------------- */
-.js nav.nav-primary,
-.js .site-header nav {
-  display: none;
-  position: relative;
-}
-
 .menu-toggle,
 .sub-menu-toggle {
   border-width: 0;
@@ -1377,36 +1371,45 @@ img.alignright,
   z-index: 100;
 }
 
-.js .nav-primary .genesis-nav-menu .menu-item,
-.js .site-header .genesis-nav-menu .menu-item {
-  display: block;
-  float: none;
-  margin: 1px 0;
-  position: relative;
-  text-align: left;
-}
+/* ## Small Sub Menu Layout
+--------------------------------------------- */
+@media screen and (max-width: 800px) {
+  .js nav.nav-primary,
+  .js .site-header nav {
+    display: none;
+    position: relative;
+  }
 
-.js .genesis-nav-menu .menu-item:hover {
-  position: relative;
-}
+  .js .nav-primary .genesis-nav-menu .menu-item,
+  .js .site-header .genesis-nav-menu .menu-item {
+    display: block;
+    float: none;
+    margin: 1px 0;
+    position: relative;
+    text-align: left;
+  }
 
-.js .nav-primary .genesis-nav-menu .menu-item a,
-.js .site-header .genesis-nav-menu .menu-item a {
-  border: none;
-  padding: 12px 0;
-  width: 100%;
-}
+  .js .genesis-nav-menu .menu-item:hover {
+    position: relative;
+  }
 
-.js .genesis-nav-menu .sub-menu {
-  clear: both;
-  display: none;
-  margin: 0;
-  opacity: 1;
-  padding-left: 15px;
-  position: static;
-  width: 100%;
-}
+  .js .nav-primary .genesis-nav-menu .menu-item a,
+  .js .site-header .genesis-nav-menu .menu-item a {
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+  }
 
+  .js .genesis-nav-menu .sub-menu {
+    clear: both;
+    display: none;
+    margin: 0;
+    opacity: 1;
+    padding-left: 15px;
+    position: static;
+    width: 100%;
+  }
+}
 /* ## Footer Navigation
 --------------------------------------------- */
 .site-footer .genesis-nav-menu {
