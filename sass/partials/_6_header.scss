@@ -1,17 +1,179 @@
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 
+
+/* ## Menu Toggle
+--------------------------------------------- */
+
+.menu-toggle,
+.sub-menu-toggle {
+	border-width: 0;
+	background-color: $white;
+	color: $base-dark;
+	display: block;
+	visibility: visible;
+	float: right;
+
+	@include breakpoint(sm) {
+		display: none;
+		visibility: hidden;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: $fifth-dark;
+		color: $base-dark;
+	}
+}
+
+.menu-toggle {
+	line-height: 20px;
+	position: relative;
+	z-index: 1000;
+	top: 15px;
+	width: auto;
+}
+
+.sub-menu-toggle {
+	float: right;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+/* ## Responsive Menu Structure
+--------------------------------------------- */
+
+// should be wrapped in a .js {} ?
 .site-header {
 	background-color: $white;
-	position: fixed;
 	z-index: 999;
 	width: 100%;
 	top: 0;
-    left: 0;
+	left: 0;
 	border-bottom: $site-border;
+
+	@include breakpoint(sm){
+		position: fixed; // sticky on desktops
+	}
 
 	.wrap {
 		padding: 10px 5%;
+	}
+
+	nav.nav-primary  {
+		display: none; // Gets updated by JS to display: block;
+		clear: both; // Makes the hamburger open below nav
+		
+		// .nav-primary displays at breakpoint(sm)
+		@include breakpoint(sm) {
+			display: block;
+			padding: 0;
+			width: auto;
+			clear: none;
+			float: right;
+		}
+
+		a:hover,
+		a:focus,
+		.current-menu-item>a,
+		.sub-menu .current-menu-item>a:hover,
+		.sub-menu .current-menu-item>a:focus {
+			text-decoration: none;
+		}
+
+		.genesis-nav-menu {
+			@include font-size($font-size-s);
+			font-weight: 600;
+			line-height: 1;
+			width: 100%;
+			text-transform: uppercase;
+			margin: 12px 0;
+
+			li.menu-item {
+				display: block;
+				float: none;
+				padding: 12px 0;
+				position: relative;	// enables to absolute position submenu buttons
+				text-align: left;
+
+				@include breakpoint(sm){
+					display: inline-block;
+					margin: 0;
+					padding: 0; // clears mobile block padding
+					text-align: left;
+				}
+
+				&:hover {
+					position: relative;
+
+					@include breakpoint(sm){
+						position: static;
+						
+						&> .sub-menu { // makes sub-menu visible by bringing it to the screen
+							left: auto;
+							opacity: 1;
+						}
+					}
+				}
+
+				a {
+					border: none;
+					color: $base-dark; // get rid of link styling
+					text-decoration: none;
+
+					@include breakpoint(sm) {
+						display: block;						
+						padding: 20px 20px; // desktop nav spacing and button-like look
+					}
+				}
+
+				.sub-menu {
+					clear: both; // appears below
+					display: none;
+					margin: 25px 0 0; // margin-top when mobile sub-menu clicked
+					padding-left: 15px;	// sub-menu indentation
+					position: static;
+					width: auto; // stays into the box
+					@include font-size($font-size-xs);
+					word-wrap: break-word;
+
+					@include breakpoint(sm){
+						left: -9999px; 	// changes to "auto" on hover
+						opacity: 0; 	// changes to 1 on hover
+						position: absolute; // absolute positioning relative to li.menu-item
+						transition: opacity .2s ease-in-out;
+						width: 200px;
+						z-index: 99;
+						margin: 0; // brings margin back to 0 for desktop menu, otherwise impossible to click on submenu
+						padding-top: 24px; // no overlap with main navbar
+						margin-left: -20px; // indent to the left
+
+						a {
+							background-color: $white;
+							border: 1px solid $third-light;
+							border-top: 0;
+							padding: 20px;
+							width: 200px;
+						}
+					}
+				}
+			}
+			
+			@include breakpoint(sm){
+				> .menu-item {
+					&:last-of-type { // make last one on desktop appear like a button
+						background-color: $primary-color;
+						border-radius: 5px;
+						> a {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -56,215 +218,5 @@
 		float: right;
 		text-align: right;
 		padding: 10px 0 0 30px;
-	}
-}
-
-
-/* # Site Navigation
----------------------------------------------------------------------------------------------------- */
-
-.nav-primary {
-    width: 100%;
-    clear: both;
-    top: 100%;
-	left: 0;
-	
-	@include breakpoint(sm) {
-        width: auto;
-        clear: none;
-        float: right;
-        top: auto;
-        left: auto;
-        margin-left: auto;
-	}
-	
-	.js & {
-        background-color: $white;
-        display: none;
-        padding: 0 5%;
-		position: absolute;
-		
-        @include breakpoint(sm) {
-            background-color: transparent;
-            box-shadow: none;
-            display: block;
-            position: relative;
-            padding: 0;
-		}
-    }
-
-    li li {
-        margin-left: 0;
-	}
-	
-    a:hover,
-    a:focus,
-    .current-menu-item>a,
-    .sub-menu .current-menu-item>a:hover,
-    .sub-menu .current-menu-item>a:focus {
-        text-decoration: none;
-    }
-}
-
-.genesis-nav-menu {
-	clear: both;
-	font-size: 16px;
-	font-size: 1.6rem;
-	font-weight: 600;
-	line-height: 1;
-	width: 100%;
-	text-transform: uppercase;
-	margin: 12px 0;
-
-	.menu-item {
-		display: inline-block;
-		margin-bottom: 0;
-		padding-bottom: 0;
-		text-align: left;
-
-		a {
-			color: $base-dark;
-			text-decoration: none;
-			display: block;
-			padding: 20px 20px;
-		}
-
-		&:hover {
-			position: static;
-
-			&> .sub-menu {
-				left: auto;
-				opacity: 1;
-			}
-		}
-
-	}
-
-	@include breakpoint(sm){
-		> .menu-item {
-			&:last-of-type {
-				background-color: $primary-color;
-				border-radius: 5px;
-				> a {
-					color: $white;
-				}
-			}
-		}
-	}
-
-	a:hover,
-	a:focus,
-	.current-menu-item > a,
-	.sub-menu .current-menu-item > a:hover,
-	.sub-menu .current-menu-item > a:focus  {
-		color: $primary-color;
-		text-decoration: none;
-	}
-
-	.sub-menu {
-		left: -9999px;
-		opacity: 0;
-		position: absolute;
-		transition: opacity .4s ease-in-out;
-		width: 200px;
-		z-index: 99;
-
-		a {
-			background-color: $white;
-			border: 1px solid $third-light;
-			border-top: 0;
-			font-size: 14px;
-			font-size: 1.4rem;
-			padding: 20px;
-			position: relative;
-			width: 200px;
-			word-wrap: break-word;
-		}
-
-		.sub-menu {
-			margin: -56px 0 0 199px;
-		}
-	}
-}
-
-/* ## Menu Toggle
---------------------------------------------- */
-
-.menu-toggle,
-.sub-menu-toggle {
-	border-width: 0;
-	background-color: $white;
-	color: $base-dark;
-	display: block;
-	visibility: visible;
-
-	@include breakpoint(xs) {
-		display: none;
-		visibility: hidden;
-	}
-
-	&:hover,
-	&:focus {
-		background-color: $fifth-dark;
-		color: $base-dark;
-	}
-}
-
-.menu-toggle {
-	line-height: 20px;
-	position: relative;
-	float: right;
-	z-index: 1000;
-	top: 15px;
-	width: auto;
-}
-
-.sub-menu-toggle {
-	float: right;
-	padding: 10px;
-	position: absolute;
-	right: 0;
-	top: 0;
-	z-index: 100;
-}
-
-/* ## Small Sub Menu Layout
---------------------------------------------- */
-
-@media screen and (max-width: 800px) {
-	.js nav.nav-primary,
-	.js .site-header nav  {
-		display: none;
-		position: relative;
-	}
-	
-	.js .nav-primary .genesis-nav-menu .menu-item,
-	.js .site-header .genesis-nav-menu .menu-item {
-		display: block;
-		float: none;
-		margin: 1px 0;
-		position: relative;
-		text-align: left;
-	}
-	
-	.js .genesis-nav-menu .menu-item:hover {
-		position: relative;
-	}
-	
-	.js .nav-primary .genesis-nav-menu .menu-item a,
-	.js .site-header .genesis-nav-menu .menu-item a {
-		border: none;
-		padding: 12px 0;
-		width: 100%;
-	}
-	
-	.js .genesis-nav-menu .sub-menu {
-		clear: both;
-		display: none;
-		margin: 0;
-		opacity: 1;
-		padding-left: 15px;
-		position: static;
-		width: 100%;
 	}
 }

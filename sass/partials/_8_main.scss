@@ -2,7 +2,11 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-inner {
-	margin-top: 100px;
+	margin-top: 0;
+
+	@include breakpoint(sm){
+		margin-top: 100px;
+	}
 
 	&.full {
 		max-width: none;
