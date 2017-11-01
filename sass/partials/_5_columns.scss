@@ -9,6 +9,10 @@
 	margin: 0 auto;
 	max-width: 1280px;
 	padding: 0 5%;
+
+	@include breakpoint(sm) {
+		padding: 0;
+	}
 }
 
 .site-inner {

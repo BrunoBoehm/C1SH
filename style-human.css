@@ -1025,6 +1025,12 @@ img.alignright,
   max-width: 1280px;
   padding: 0 5%;
 }
+@media (min-width: 860px) {
+  .site-inner,
+  .wrap {
+    padding: 0;
+  }
+}
 
 .site-inner {
   clear: both;
@@ -1686,12 +1692,12 @@ img.alignright,
 }
 .text-block p {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: justify;
 }
 .text-block ol {
   text-align: left;
-  padding-bottom: 20px;
+  padding: 0 0  20px 20px;
 }
 .text-block ol li {
   list-style-type: decimal;
@@ -1735,6 +1741,7 @@ img.alignright,
 .quote-block img {
   float: left;
   margin-right: 20px;
+  width: 140px;
 }
 
 /* ## Sections : 3 Blurbs
