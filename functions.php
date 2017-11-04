@@ -260,3 +260,12 @@ function cush_custom_posts_init() {
 
 }
 add_action('init', 'cush_custom_posts_init');
+
+/**
+ * Custom excerpt length for posts
+ *
+ */
+function cush_excerpt_length( $length ) {
+	return 25;
+}
+add_filter( 'excerpt_length', 'cush_excerpt_length', 999 );
