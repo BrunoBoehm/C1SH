@@ -243,6 +243,7 @@ if( have_rows('content_blocks') ){
                 $cat_array = get_sub_field('feed_cat_filter');
                 $tag_array = get_sub_field('feed_tag_filter');
                 $limit_to_milestones = get_sub_field('limit_to_milestones');
+                $show_read_more = get_sub_field('show_read_more');
 
                 // Query Args
                 if ( $items_type == 'action' && $limit_to_milestones == true ) {
@@ -346,6 +347,9 @@ if( have_rows('content_blocks') ){
                         echo        '</div>'; // end of blurb
                         echo    '</div>'; // end of timeline-item or one-third
                         $i++;
+                    }
+                    if ( $show_read_more == true ) {
+                    echo '<div class="feed-get-more"><a href="' . get_post_type_archive_link( $items_type ) . '" class="button btn-alt">Voir Plus</a></div>';
                     }
                     echo '</div>'; // end of wrap
                     echo '</div>'; // end of section
