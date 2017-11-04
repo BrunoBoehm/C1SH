@@ -64,6 +64,15 @@ function cush_enqueue_scripts_styles() {
 
 }
 
+// Remove Primary Menu's wrap.
+add_theme_support( 'genesis-structural-wraps', array(
+    'header',
+    // 'menu-primary',
+    'menu-secondary',
+    'footer-widgets',
+    'footer'
+) );
+
 //* Add HTML5 markup structure
 add_theme_support( 'html5', array( 
 	'caption', 
