@@ -131,11 +131,17 @@ h2 {
 	text-transform: uppercase;
 	font-weight: $font-weight-normal;
 
+
 	&:after {
 		content: "";
 		display: block;
-		width: 100px;
+		width: 80px;
 		margin: 15px auto 15px;
+
+		// background: url('images/c1sh-line.jpg') no-repeat;
+		// background-size: 80px;
+		// height: 20px;
+
 		border-top: 1px solid $primary-color;
 	}
 }
