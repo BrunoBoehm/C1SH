@@ -108,6 +108,10 @@
 	@include breakpoint(sm) {
 		float: left;
 		margin-left: 2.564102564102564%;
+
+		.feed & {
+			min-height: 450px;
+		}
 	}
 }
 

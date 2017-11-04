@@ -1131,6 +1131,19 @@ img.alignright,
     float: left;
     margin-left: 2.564102564102564%;
   }
+  .feed .five-sixths, .feed
+  .four-sixths, .feed
+  .one-fourth, .feed
+  .one-half, .feed
+  .one-sixth, .feed
+  .one-third, .feed
+  .three-fourths, .feed
+  .three-sixths, .feed
+  .two-fourths, .feed
+  .two-sixths, .feed
+  .two-thirds {
+    min-height: 450px;
+  }
 }
 
 @media (min-width: 860px) {

@@ -292,7 +292,7 @@ if( have_rows('content_blocks') ){
                         if ( $layout_type == 'timeline' ) {
                         echo    '<div class="timeline-item">';
                         } else {  
-                            if ( $i == 0 ){ 
+                            if ( $i == 0 || $i % 3 == 0 ){ 
                             echo '<div class="one-third first">'; 
                             } else { 
                             echo '<div class="one-third">'; 
