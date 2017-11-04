@@ -109,9 +109,9 @@ if( have_rows('content_blocks') ){
                             echo 	'<div class="post blurb">';
                             echo 		'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($p->ID)) . '" alt="" title="">';
                             echo        '<div class="item-content">';
-                            echo 		    '<h4>' . $p->post_title . '</h4>';
+                            echo 		    '<h4><a href="' . get_permalink($p) . '" title"' . $p->post_title . '" >' . $p->post_title . '</a></h4>';
                             echo 		    '<p>' . $p->post_excerpt . '</p>';
-                            echo		    '<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">Voir</a>';
+                            echo		    '<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">' . __('Lire Plus', 'C1SH') . '</a>';
                             echo 	    '</div>';
                             echo 	'</div>';
                             echo '</div>';
