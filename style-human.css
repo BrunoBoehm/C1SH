@@ -1843,6 +1843,7 @@ img.alignright,
   float: left;
   width: 100px;
   height: 100px;
+  margin: 0 15px 0 0;
 }
 .list .wrap .list-item:not(:last-child):after {
   content: "";
