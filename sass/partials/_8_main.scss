@@ -91,7 +91,7 @@
 --------------------------------------------- */
 .hero-section {
 	position: relative;
-	padding: 19% 0 7%;
+	padding: 7% 0 7%;
 	background-position: center;
 	background-size: cover;
 	transition: all .1s ease;
@@ -154,7 +154,8 @@
 				color: white;
 				text-decoration: none;
 				text-transform: uppercase;
-				margin:	0 10px;
+				margin:	2px 10px;
+				display: inline-block;
 			}
 
 			&:before {
@@ -164,6 +165,22 @@
 				border-top: 1px solid $white;
 				margin: 0 auto;
 				padding-top: 20px;
+			}
+		}
+
+		.related-categories {
+			margin: 15px 0 0 0;
+
+			a {
+				display: inline-block;
+				color: $white;
+				background-color: $secondary-color;
+				padding: 3px 10px;
+				border-radius: 2px;
+				margin: 2px 4px;
+				text-decoration: none;
+				font-weight: $font-weight-bold;
+				opacity: .86;
 			}
 		}
 	}
