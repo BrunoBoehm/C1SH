@@ -406,7 +406,7 @@ if( have_rows('content_blocks') ){
                 foreach ($institutions as $institution){
                     if ( $i == 0 || $i % 6 == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
                     echo    '<div class="list-single-institution">';
-                    echo        '<div class="single-institution-logo"><img src="' . get_field('institution_logo', $institution->ID )['url'] . '"></div>';
+                    echo        '<div class="single-institution-logo"><a href="' . get_permalink($institution) . '" title="' . $institution->post_title . '"><img src="' . get_field('institution_logo', $institution->ID )['url'] . '"></a></div>';
                     if ( get_sub_field('show_company_names') ) {
                         echo        '<div class="single-institution-meta">';
                         echo            '<h6><a href="' . get_permalink($institution) . '" title="' . $institution->post_title . '">' . $institution->post_title . '</a></h6>';
