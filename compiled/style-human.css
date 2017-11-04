@@ -1720,11 +1720,14 @@ img.alignright,
 }
 .quote-block .wrap p {
   text-align: justify;
-  margin: -9px 0 5px;
   position: relative;
   font-family: Georgia, serif;
+  margin: 0 0 5px;
 }
-.quote-block .wrap p:before {
+.quote-block .wrap p:first-of-type {
+  margin: -9px 0 5px;
+}
+.quote-block .wrap p:first-of-type:before {
   display: block;
   padding-left: 10px;
   content: "\201C";
