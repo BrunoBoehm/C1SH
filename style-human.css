@@ -1606,12 +1606,25 @@ img.alignright,
 --------------------------------------------- */
 .hero-section {
   position: relative;
-  padding: 7% 0 7%;
+  padding: 11% 0 7%;
   background-position: center;
   background-size: cover;
   -webkit-transition: all .1s ease;
   transition: all .1s ease;
   text-align: center;
+}
+.page-template .hero-section {
+  padding: 25% 0 3%;
+}
+@media (min-width: 860px) {
+  .hero-section {
+    min-height: 400px;
+  }
+}
+@media (min-width: 1023px) {
+  .hero-section {
+    min-height: 540px;
+  }
 }
 .hero-section .wp-custom-header {
   position: absolute;
@@ -1644,7 +1657,15 @@ img.alignright,
   color: white;
   max-width: 700px;
   margin: 0 auto 20px;
+  font-size: 22px;
+  font-size: 2.2rem;
   text-shadow: 1px 1px 2px rgba(62, 62, 62, 0.54);
+}
+@media (min-width: 860px) {
+  .hero-section .wrap h1 {
+    font-size: 30px;
+    font-size: 3rem;
+  }
 }
 .hero-section .wrap .brand-logos .brand-logo {
   border-radius: 50px;
