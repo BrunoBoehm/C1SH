@@ -223,6 +223,7 @@ if( have_rows('content_blocks') ){
                     }
                     echo        '</div>';
                     echo    '</div>'; // end of .list-single-user
+
                     echo '</div>'; // end of columns
                     $i++;
                 }
@@ -391,6 +392,35 @@ if( have_rows('content_blocks') ){
                 echo        '<p class="media-caption">' . $image_caption . '</p>';
                 echo '</div>';
                 break;                
+
+            /*
+            *
+            * Institution List as relation with Institutions
+            * 
+            */                        
+            case 'institution_list':
+                echo '<div class="institution-list">';
+                echo    '<div class="wrap">';
+                $institutions = get_sub_field('institution_list');
+                $i = 0;
+                foreach ($institutions as $institution){
+                    if ( $i == 0 || $i % 6 == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
+                    echo    '<div class="list-single-institution">';
+                    echo        '<div class="single-institution-logo"><img src="' . get_field('institution_logo', $institution->ID )['url'] . '"></div>';
+                    if ( get_sub_field('show_company_names') ) {
+                        echo        '<div class="single-institution-meta">';
+                        echo            '<h6><a href="' . get_permalink($institution) . '" title="' . $institution->post_title . '">' . $institution->post_title . '</a></h6>';
+                        echo        '</div>';
+                    }
+                    echo    '</div>'; // end of .list-single-institution
+                    echo '</div>'; // end of one-sixth
+                    $i++;
+                }
+                // print_r( get_sub_field('institution_list') );
+                echo    '</div>';
+                echo '</div>';
+                break; 
+
 
         }   // end Switch
     }   // end while

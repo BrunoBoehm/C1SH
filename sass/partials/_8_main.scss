@@ -605,10 +605,11 @@ p.media-caption {
 }
 
 
-/* ## User List
+/* ## User/Institution List
 --------------------------------------------- */
 
-.user-list {
+.user-list,
+.institution-list {
 	padding: 0;
 
 	@include breakpoint(xs) {
@@ -616,7 +617,8 @@ p.media-caption {
 	}
 }
 
-.list-single-user {
+.list-single-user,
+.list-single-institution {
 	text-align: center;
 	margin: 20px 0;
 
@@ -624,17 +626,22 @@ p.media-caption {
 		margin: 10px 0;
 	}
 
-	.single-user-avatar {
+	.single-user-avatar,
+	.single-institution-logo {
 
 		img {
 			width: 130px;
 			height: 130px;
 			object-fit: cover;
-			border-radius: 80px;
 		}
 	}
 
-	.single-user-meta {
+	.single-user-avatar img {
+		border-radius: 80px;
+	}
+
+	.single-user-meta,
+	.single-institution-meta {
 		h5, h6, span {
 			margin: 0;
 		}
@@ -653,7 +660,6 @@ p.media-caption {
 		}
 	}
 }
-
 
 /* ## Image Block
 --------------------------------------------- */
