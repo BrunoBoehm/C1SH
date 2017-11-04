@@ -75,7 +75,7 @@ if( have_rows('content_blocks') ){
                         echo 	'<div class="blurb tile-shadow">';
                         echo 		'<img src="' . get_sub_field('image')['url'] . '">';
                         echo        '<div class="item-content">';
-                        echo 		    '<h4>' . get_sub_field('title') . '</h4>';
+                        echo 		    '<h4><a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '">' . get_sub_field('title') . '</a></h4>';
                         echo 		    '<p>' . get_sub_field('text') . '</p>';
                         if ( get_sub_field('link') ) {
                             echo		'<a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '" class="read-more">' . get_sub_field('link')['title'] . '</a>';                            
