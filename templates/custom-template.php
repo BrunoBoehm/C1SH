@@ -318,7 +318,12 @@ if( have_rows('content_blocks') ){
                         echo            '<div class="item-content">';
                         $related_institutions = get_field('related_institution');
                         if ( $items_type == 'action' or $items_type == 'post' ) {
-                        echo                '<span class="item-date">' . get_the_date('Y') . '</span>';
+                            $time_range = get_field('time_range');
+                            if ( $time_range ) {
+                        echo                '<span class="item-date">' . $time_range . '</span>';
+                            } else {
+                        echo                '<span class="item-date">' . get_the_date('M Y') . '</span>';
+                            }
                         }
                         if ( $related_institutions ) {
                             echo            '<h6>';
