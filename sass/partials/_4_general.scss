@@ -124,6 +124,10 @@ h6 {
 h1 {
 	@include font-size($font-size-xl);
 	font-weight: $font-weight-normal;
+
+	.single-post & {
+		text-transform: uppercase;
+	}
 }
 
 h2 {

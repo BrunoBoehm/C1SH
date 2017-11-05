@@ -278,3 +278,62 @@ function cush_excerpt_length( $length ) {
 	return 25;
 }
 add_filter( 'excerpt_length', 'cush_excerpt_length', 999 );
+
+
+/**
+ * Code to Display Featured Image on top of the post 
+ * 
+ */
+add_action( 'genesis_after_header', 'cush_full_featured_post_image', 15 );
+function cush_full_featured_post_image() {
+	if ( is_singular( 'post' ) && has_post_thumbnail() ) {
+		echo '<div class="hero-section">';
+		echo 	'<div class="wp-custom-header">';
+		the_post_thumbnail();
+		echo 	'</div>';
+		echo '</div>';
+	}
+}
+
+/**
+ * Helper function to get user role
+ * 
+ */
+function cush_get_user_role($id) {
+    $user = new WP_User($id);
+    return array_shift($user->roles);
+}
+
+/**
+ * Don't show admin author on posts 
+ * 
+ */
+add_filter( 'genesis_post_info', 'cush_post_info_filter' );
+function cush_post_info_filter($post_info) {
+	$author_role = cush_get_user_role( get_the_author_meta( 'ID' ) );
+	// print_r( $author_role );
+	if ( is_singular( 'post' ) && $author_role == 'administrator' ) {
+		$post_info = '[post_date]';
+		return $post_info;
+	} else {
+		return $post_info;
+	}
+}
+
+/**
+ * Customize Entry Meta Filed Under and Tagged Under
+ * https://basicwp.com/edit-filed-under-tagged-with-text-studiopress/
+ * 
+ */
+add_filter( 'genesis_post_meta', 'cush_entry_meta_footer' );
+function cush_entry_meta_footer( $post_meta ) {
+	$post_meta = '[post_categories before=""] [post_tags before=""]';
+	return $post_meta;
+}
+
+/**
+ * Move post meta after title and date
+ * 
+ */
+// remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+// add_action( 'genesis_entry_header', 'genesis_post_meta', 20 );

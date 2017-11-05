@@ -399,6 +399,9 @@ h1 {
   font-size: 3.6rem;
   font-weight: 400;
 }
+.single-post h1 {
+  text-transform: uppercase;
+}
 
 h2 {
   font-size: 30px;
@@ -1524,6 +1527,9 @@ img.alignright,
     margin-top: 100px;
   }
 }
+.single-post .site-inner {
+  margin-top: 0;
+}
 .site-inner.full {
   max-width: none;
   padding: 0;
@@ -1603,6 +1609,7 @@ img.alignright,
   background-size: cover;
   transition: all .1s ease;
   text-align: center;
+  min-height: 260px;
 }
 .page-template .hero-section {
   padding: 25% 0 3%;
@@ -1684,15 +1691,21 @@ img.alignright,
   margin: 0 auto;
   padding-top: 20px;
 }
-.hero-section .wrap .related-categories {
+
+.post-categories,
+.entry-categories,
+.entry-tags {
   margin: 15px 0 0 0;
+  color: #FFF;
 }
-.hero-section .wrap .related-categories a {
+.post-categories a,
+.entry-categories a,
+.entry-tags a {
   display: inline-block;
   color: #FFF;
   background-color: #02ccff;
   padding: 3px 10px;
-  border-radius: 2px;
+  border-radius: 5px;
   margin: 2px 4px;
   text-decoration: none;
   font-weight: 600;
@@ -2181,22 +2194,24 @@ p.media-caption {
 
 /* ## Entry Meta
 --------------------------------------------- */
-p.entry-meta {
-  font-size: 16px;
-  font-size: 1.6rem;
-  margin-bottom: 0;
-}
-
 .entry-header {
   text-align: center;
 }
 .entry-header .entry-meta {
-  margin-bottom: 24px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: Georgia, serif;
+  color: rgba(62, 62, 62, 0.38);
 }
 
+.entry-footer {
+  text-align: center;
+}
 .entry-footer .entry-meta {
-  border-top: 1px solid #FFF;
+  border-top: 1px solid rgba(62, 62, 62, 0.08);
   padding-top: 24px;
+  margin-bottom: 0;
 }
 
 .entry-categories,

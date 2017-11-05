@@ -63,7 +63,7 @@ if( have_rows('hero_slider') ) {
         // If Contagion post type, list categories
         if ( get_post_type( get_the_ID() ) == 'contagion' ) {
             $categories = get_the_category();
-            echo    '<div class="related-categories">';
+            echo    '<div class="post-categories">';
             foreach ($categories as $category) {
             echo        '<a href="' . get_category_link( $category->term_id ) . '" title="' . __( "Principe d'action", 'C1SH' ) . ' : ' . $category->name . '">' . $category->name . '</a>';
             }

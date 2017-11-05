@@ -8,6 +8,10 @@
 		margin-top: 100px;
 	}
 
+	.single-post & {
+		margin-top: 0;
+	}
+
 	&.full {
 		max-width: none;
 		padding: 0;
@@ -96,6 +100,7 @@
 	background-size: cover;
 	transition: all .1s ease;
 	text-align: center;
+	min-height: 260px;
 
 	.page-template & {
 		padding: 25% 0 3%;
@@ -183,22 +188,25 @@
 				padding-top: 20px;
 			}
 		}
+	}
+}
 
-		.related-categories {
-			margin: 15px 0 0 0;
+.post-categories,
+.entry-categories,
+.entry-tags {
+	margin: 15px 0 0 0;
+	color: $white;
 
-			a {
-				display: inline-block;
-				color: $white;
-				background-color: $secondary-color;
-				padding: 3px 10px;
-				border-radius: 2px;
-				margin: 2px 4px;
-				text-decoration: none;
-				font-weight: $font-weight-bold;
-				opacity: .86;
-			}
-		}
+	a {
+		display: inline-block;
+		color: $white;
+		background-color: $secondary-color;
+		padding: 3px 10px;
+		border-radius: $site-radius;
+		margin: 2px 4px;
+		text-decoration: none;
+		font-weight: $font-weight-bold;
+		opacity: .86;
 	}
 }
 
@@ -713,22 +721,23 @@ p.media-caption {
 /* ## Entry Meta
 --------------------------------------------- */
 
-p.entry-meta {
-	font-size: 16px;
-	font-size: 1.6rem;
-	margin-bottom: 0;
-}
-
 .entry-header {
 	text-align: center;
 	.entry-meta {
-		margin-bottom: 24px;
+		margin-bottom: 15px;
+		@include font-size($font-size-xs);
+		font-family: $font-serif;
+		color: $third-dark;
 	}
 }
 
-.entry-footer .entry-meta {
-	border-top: 1px solid $white;
-	padding-top: 24px;
+.entry-footer {
+	text-align: center;
+	.entry-meta {
+		border-top: 1px solid $fourth-dark;
+		padding-top: 24px;
+		margin-bottom: 0;
+	}
 }
 
 .entry-categories,
