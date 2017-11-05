@@ -1810,14 +1810,8 @@ img.alignright,
 .post-selection {
   margin: 40px 0 15px;
 }
-.post-selection .post {
-  text-align: center;
-}
-.post-selection .post img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.single-post .post-selection {
+  margin: 0 0 15px;
 }
 
 /* ## Sections : Two/Dual Blocks
@@ -1896,7 +1890,8 @@ img.alignright,
 .feed.feed-timeline .wrap {
   max-width: 740px;
 }
-.feed .feed-get-more {
+
+.feed-get-more {
   text-align: center;
   clear: both;
 }
@@ -2164,7 +2159,7 @@ p.media-caption {
 @media (min-width: 1023px) {
   .entry {
     max-width: 700px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
   }
 }
 
@@ -2210,8 +2205,9 @@ p.media-caption {
 }
 .entry-footer .entry-meta {
   border-top: 1px solid rgba(62, 62, 62, 0.08);
-  padding-top: 24px;
+  border-bottom: 1px solid rgba(62, 62, 62, 0.08);
   margin-bottom: 0;
+  padding-bottom: 15px;
 }
 
 .entry-categories,

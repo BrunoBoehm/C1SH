@@ -337,3 +337,52 @@ function cush_entry_meta_footer( $post_meta ) {
  */
 // remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 // add_action( 'genesis_entry_header', 'genesis_post_meta', 20 );
+
+/**
+ * Add related posts feed on single posts
+ * 
+ */
+add_action( 'genesis_before_footer', 'cush_related_articles_feed', 5 );
+
+function cush_related_articles_feed() {
+	if ( ! is_singular ( 'post' ) ) {
+		return;
+	}
+
+	if ( have_rows('content_blocks', get_option( 'page_on_front' ) ) ) {
+		while ( have_rows( 'content_blocks', get_option( 'page_on_front' ) ) ) {
+			the_row();
+			if( get_row_layout() == 'post_selection' ) {
+				$posts = get_sub_field('post_selection');
+			}
+		  }
+	}
+
+	if ($posts) {
+		$i = 0;
+
+		echo '<div class="post-selection">';
+		echo '<div class="wrap">';
+
+		// variable must NOT be called $post (IMPORTANT) otherwise will conflict with main loop
+		// https://www.advancedcustomfields.com/resources/relationship/
+		foreach($posts as $p) {
+			if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
+			// print_r($p);
+			echo 	'<div class="post blurb">';
+			echo 		'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($p->ID)) . '" alt="" title="">';
+			echo        '<div class="item-content">';
+			echo 		    '<h4><a href="' . get_permalink($p) . '" title"' . $p->post_title . '" >' . $p->post_title . '</a></h4>';
+			echo 		    '<p>' . $p->post_excerpt . '</p>';
+			echo		    '<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">' . __('Lire Plus', 'C1SH') . '</a>';
+			echo 	    '</div>';
+			echo 	'</div>';
+			echo '</div>';
+			$i++;
+		}
+
+		echo '<div class="feed-get-more"><a href="' . get_permalink( get_option( 'page_for_posts' ) ) . '" class="button btn-alt">' . __('Voir Plus') . '</a></div>';	
+		echo '</div>';	// end of wrap
+		echo '</div>';	// end of post selection
+	}	
+}

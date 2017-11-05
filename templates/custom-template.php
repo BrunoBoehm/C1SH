@@ -350,7 +350,7 @@ if( have_rows('content_blocks') ){
                         $i++;
                     }
                     if ( $show_read_more == true ) {
-                    echo '<div class="feed-get-more"><a href="' . get_post_type_archive_link( $items_type ) . '" class="button btn-alt">Voir Plus</a></div>';
+                    echo '<div class="feed-get-more"><a href="' . get_post_type_archive_link( $items_type ) . '" class="button btn-alt">' . __('Voir Plus') . '</a></div>';
                     }
                     echo '</div>'; // end of wrap
                     echo '</div>'; // end of section
