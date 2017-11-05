@@ -12,11 +12,6 @@
 		margin-top: 0;
 	}
 
-	.blog &,
-	.archive & {
-		margin-top: 60px;
-	}
-
 	&.full {
 		max-width: none;
 		padding: 0;
@@ -607,6 +602,7 @@ p.media-caption {
     padding-top: 35px;
     height: 0;
 	overflow: hidden;
+	margin-bottom: 20px;
 	
 	iframe {
 		position: absolute;
@@ -697,6 +693,10 @@ p.media-caption {
 		max-width: 700px;
 		margin: 0 auto 20px;
 	}
+}
+
+.entry-content p {
+	text-align: justify;
 }
 
 .entry-content ol,

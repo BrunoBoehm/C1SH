@@ -1535,9 +1535,6 @@ img.alignright,
 .single-post .site-inner {
   margin-top: 0;
 }
-.blog .site-inner, .archive .site-inner {
-  margin-top: 60px;
-}
 .site-inner.full {
   max-width: none;
   padding: 0;
@@ -2079,6 +2076,7 @@ p.media-caption {
   padding-top: 35px;
   height: 0;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .embed-responsive iframe {
   position: absolute;
@@ -2176,6 +2174,10 @@ p.media-caption {
     max-width: 700px;
     margin: 0 auto 20px;
   }
+}
+
+.entry-content p {
+  text-align: justify;
 }
 
 .entry-content ol,
