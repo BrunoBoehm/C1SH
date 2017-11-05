@@ -12,6 +12,11 @@
 		margin-top: 0;
 	}
 
+	.blog &,
+	.archive & {
+		margin-top: 60px;
+	}
+
 	&.full {
 		max-width: none;
 		padding: 0;

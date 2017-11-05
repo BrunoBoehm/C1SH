@@ -484,12 +484,19 @@ th:first-child {
 .archive-description,
 .author-box {
 	background-color: $white;
-	@include font-size($font-size-l);
 }
 
 .archive-description p:last-child,
 .author-box p:last-child {
-	margin-bottom: 0;
+	margin-bottom: 20px;
+}
+
+.archive-description {
+	p {
+		max-width: 740px;
+		margin: 0 auto;
+		text-align: justify;
+	}
 }
 
 /* ## Search Form
@@ -533,6 +540,7 @@ th:first-child {
 .archive-title,
 .author-box-title {
 	@include font-size($font-size-l);
+	text-transform: uppercase;
 	text-align: center;
 }
 

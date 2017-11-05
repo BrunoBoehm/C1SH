@@ -757,13 +757,17 @@ th:first-child {
 .archive-description,
 .author-box {
   background-color: #FFF;
-  font-size: 30px;
-  font-size: 3rem;
 }
 
 .archive-description p:last-child,
 .author-box p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 20px;
+}
+
+.archive-description p {
+  max-width: 740px;
+  margin: 0 auto;
+  text-align: justify;
 }
 
 /* ## Search Form
@@ -806,6 +810,7 @@ th:first-child {
 .author-box-title {
   font-size: 30px;
   font-size: 3rem;
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -1533,6 +1538,9 @@ img.alignright,
 }
 .single-post .site-inner {
   margin-top: 0;
+}
+.blog .site-inner, .archive .site-inner {
+  margin-top: 60px;
 }
 .site-inner.full {
   max-width: none;

@@ -191,7 +191,7 @@ function cush_custom_posts_init() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'menu_icon'			 => 'dashicons-awards', 
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'page-attributes' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'revisions', 'page-attributes', 'genesis-cpt-archives-settings' ),
 		'taxonomies'		 => array('category', 'post_tag')
 	);
 
@@ -226,7 +226,7 @@ function cush_custom_posts_init() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'menu_icon'			 => 'dashicons-building', 
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'genesis-cpt-archives-settings' ),
 		'taxonomies'		 => array('category', 'post_tag')
 	);
 
@@ -261,7 +261,7 @@ function cush_custom_posts_init() {
 		'hierarchical'       => false,
 		'menu_position'      => null,
 		'menu_icon'			 => 'dashicons-megaphone', 
-		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt' ),
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'genesis-cpt-archives-settings' ),
 		'taxonomies'		 => array('category', 'post_tag')
 	);
 
