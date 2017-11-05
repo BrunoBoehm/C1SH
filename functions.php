@@ -28,7 +28,7 @@ load_child_theme_textdomain( 'c1sh', apply_filters( 'child_theme_textdomain', ge
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'C1SH' );
 define( 'CHILD_THEME_URL', 'http://www.lyketil.com/' );
-define( 'CHILD_THEME_VERSION', '1.0.0' );
+define( 'CHILD_THEME_VERSION', '1.0.1' );
 
 //* Enqueue Scripts and Styles
 add_action( 'wp_enqueue_scripts', 'cush_enqueue_scripts_styles' );
