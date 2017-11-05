@@ -372,7 +372,7 @@ if( have_rows('content_blocks') ){
 
                 echo '<div class="video-block">';
                 echo '<div class="wrap">';
-                echo        '<div class="video-embed-responsive">' . $embed_code . '</div>';
+                echo        '<div class="embed-responsive">' . $embed_code . '</div>';
                 echo        '<p class="media-caption">' . $video_caption . '</p>';
                 echo '</div>';
                 echo '</div>';

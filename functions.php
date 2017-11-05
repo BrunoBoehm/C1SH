@@ -386,3 +386,14 @@ function cush_related_articles_feed() {
 		echo '</div>';	// end of post selection
 	}	
 }
+
+/**
+ * Add reponsive container to embeds
+ * 
+ * http://alxmedia.se/code/2013/10/make-wordpress-default-video-embeds-responsive/
+ * 
+ */
+add_filter( 'embed_oembed_html', 'cush_responsive_embed_html', 10, 3 );
+function cush_responsive_embed_html( $embed ) {
+    return '<div class="embed-responsive">' . $embed . '</div>';
+}
