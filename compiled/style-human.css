@@ -1697,6 +1697,7 @@ img.alignright,
 .entry-tags {
   margin: 15px 0 0 0;
   color: #FFF;
+  display: block;
 }
 .post-categories a,
 .entry-categories a,
@@ -1710,6 +1711,12 @@ img.alignright,
   text-decoration: none;
   font-weight: 600;
   opacity: .86;
+}
+.single-post .post-categories a, .single-post
+.entry-categories a, .single-post
+.entry-tags a {
+  background-color: rgba(62, 62, 62, 0.08);
+  color: rgba(62, 62, 62, 0.54);
 }
 
 .overlay {
@@ -2202,17 +2209,13 @@ p.media-caption {
 
 .entry-footer {
   text-align: center;
+  margin-top: 20px;
 }
 .entry-footer .entry-meta {
   border-top: 1px solid rgba(62, 62, 62, 0.08);
   border-bottom: 1px solid rgba(62, 62, 62, 0.08);
   margin-bottom: 0;
   padding-bottom: 15px;
-}
-
-.entry-categories,
-.entry-tags {
-  display: block;
 }
 
 .entry-comments-link::before {
