@@ -31,18 +31,14 @@ function cush_custom_loop() {
     global $post;
 
     $items_type = get_post_type( $post->ID );
+    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
         
+    // note post_per_page should be above the number in settings>reading>max_posts_per_page
     $args = array( 
-        'post_type'         => $items_type
+        'post_type'         => $items_type,
+        'posts_per_page'    => 3,
+        'paged'             => $paged
     );
-
-    // echo '<pre>';
-    // print_r(get_sub_field('post_type'));
-    // print_r($cat_array);
-    // print_r($tag_array);
-    // var_dump($limit_to_milestones);
-    // print_r($args);
-    // echo '</pre>';
 
     // The Query
     $the_query = new WP_Query( $args );
@@ -54,12 +50,8 @@ function cush_custom_loop() {
         $i = 0;
         while ( $the_query->have_posts() ) {
             $the_query->the_post();
-
-            // should it be a timeline-item or a column ?
-
             echo    '<div class="timeline-item">';
             echo        '<div class="blurb clearfix">';    
-            
             if ( has_post_thumbnail() ){ the_post_thumbnail( 'medium_large' ); }
             echo            '<div class="item-content">';
             echo                '<span class="item-date">' . get_the_date('M Y') . '</span>';
@@ -70,8 +62,12 @@ function cush_custom_loop() {
             echo    '</div>'; // end of timeline-item or one-third
             $i++;
         }
+        echo    '<div class="nav-previous alignleft">' . get_next_posts_link( 'Next Page', $the_query->max_num_pages ) . '</div>';
+        echo    '<div class="nav-next alignright">' . get_previous_posts_link( 'Previous Page' ) . '</div>';
         echo '</div>'; // end of wrap
         echo '</div>'; // end of section
+
+        wp_reset_postdata();
     } else {
         // no posts found
     }
