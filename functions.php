@@ -25,6 +25,10 @@ load_child_theme_textdomain( 'c1sh', apply_filters( 'child_theme_textdomain', ge
 //* Include Customizer CSS
 // include_once( get_stylesheet_directory() . '/lib/output.php' );
 
+//* Include Appel setup
+include_once( get_stylesheet_directory() . '/lib/appel-signup.php' );
+include_once( get_stylesheet_directory() . '/lib/appel-signatures.php' );
+
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'C1SH' );
 define( 'CHILD_THEME_URL', 'http://www.lyketil.com/' );

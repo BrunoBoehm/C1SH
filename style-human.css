@@ -2191,6 +2191,19 @@ p.media-caption {
      object-fit: cover;
 }
 
+/* ## Signature Form Block
+--------------------------------------------- */
+.signature-block {
+  margin-bottom: 40px;
+}
+.signature-block .wrap {
+  max-width: 700px;
+}
+.signature-block .wrap .gform_wrapper .top_label input.medium,
+.signature-block .wrap .gform_wrapper .top_label select.medium {
+  width: 100%;
+}
+
 /* ## Entries
 --------------------------------------------- */
 .entry {

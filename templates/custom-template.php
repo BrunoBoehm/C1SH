@@ -421,6 +421,18 @@ if( have_rows('content_blocks') ){
                 echo '</div>';
                 break; 
 
+            /*
+            *
+            * Signature Form
+            * 
+            */                        
+            case 'signature_block':
+                echo '<div class="signature-block">';
+                echo    '<div class="wrap">';
+                echo do_shortcode('[gravityform id="' . get_sub_field('signature_form') . '" title="false" description="false"]');    
+                echo    '</div>';
+                echo '</div>';
+                break;
 
         }   // end Switch
     }   // end while

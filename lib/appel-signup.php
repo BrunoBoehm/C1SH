@@ -1,6 +1,6 @@
 <?php
 /**
- * AppelPourLaDifférence - Signup
+ * AppelPourLaDifférence - Signature
  *
  * Sets up all of the necessary stuff to perform signups
  *
@@ -11,18 +11,16 @@
  * Gravity Forms
  *
  */
-
 // loads gravity JS in the footer
-add_filter("gform_init_scripts_footer", "init_scripts");
-function init_scripts() {
-	return true;
-}
+// add_filter("gform_init_scripts_footer", "init_scripts");
+// function init_scripts() {
+// 	return true;
+// }
 
 // handle data after form submission
-add_action( 'gform_after_submission_1', 'after_submission_subscribe_form', 10, 2 );
+add_action( 'gform_after_submission_1', 'cush_after_submission_subscribe_form', 10, 2 );
 
-function after_submission_subscribe_form( $entry, $form ) {
-	
+function cush_after_submission_subscribe_form( $entry, $form ) {
 	global $wpdb; 
 	
 	$last_name = rgar( $entry, '1' );
@@ -32,15 +30,15 @@ function after_submission_subscribe_form( $entry, $form ) {
 	$photo_url = rgar( $entry, '5' );
 	$subscribe_newsletter = rgar( $entry, '6.1' );
 
-	$inscription = array(
+	$signature = array(
 	  'post_title'  => $first_name . ' ' . $last_name,
 	  'post_content'  => $message,
 	  'post_status'   => 'publish',
-	  'post_type'	  => 'inscription'
+	  'post_type'	  => 'signature'
 	);
  
 	// Insert the post into the database
-	$result = wp_insert_post( $inscription );
+	$result = wp_insert_post( $signature );
 	if ($result==0) { 
         // error
 	} else {
@@ -63,15 +61,14 @@ function after_submission_subscribe_form( $entry, $form ) {
 	}
 	
 	$message = $email;
-	$message .= " Nouvelle inscription commeunseulhomme.org";
-	wp_mail( "communication@commeunseulhomme.com", "Inscription liste " . get_home_url(), $message );
+	$message .= " Nouvelle signature commeunseulhomme.org";
+	wp_mail( "bruno@lyketil.com", "Nouvelle Signature " . get_home_url(), $message );
 	
 }
 
-add_filter( 'gform_upload_path', 'change_upload_path', 10, 2 );
-function change_upload_path( $path_info, $form_id ) {
+add_filter( 'gform_upload_path', 'cush_change_upload_path', 10, 2 );
+function cush_change_upload_path( $path_info, $form_id ) {
 	$upload_dir = wp_upload_dir();
-	//debug_by_mail($upload_dir);
 
 	$path_info['path'] = $upload_dir['path'] . '/';
 	$path_info['url'] = $upload_dir['url']. '/';
