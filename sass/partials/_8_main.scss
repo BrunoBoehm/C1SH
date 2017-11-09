@@ -623,11 +623,12 @@ p.media-caption {
 }
 
 
-/* ## User/Institution List
+/* ## User/Institution/Signatures List
 --------------------------------------------- */
 
 .user-list,
-.institution-list {
+.institution-list, 
+.signatures-list {
 	padding: 0;
 
 	@include breakpoint(xs) {
@@ -636,7 +637,8 @@ p.media-caption {
 }
 
 .list-single-user,
-.list-single-institution {
+.list-single-institution,
+.list-single-signature {
 	text-align: center;
 	margin: 20px 0;
 

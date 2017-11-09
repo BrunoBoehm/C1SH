@@ -434,6 +434,38 @@ if( have_rows('content_blocks') ){
                 echo '</div>';
                 break;
 
+            /*
+            *
+            * Signatures List
+            * 
+            */       
+            case 'signatures_list':
+                $signatures_number = get_sub_field('signatures_number');
+                $signatures = get_signatures('rand', $signatures_number, true);
+
+                echo '<div class="signatures-list">';
+                echo    '<div class="wrap">';
+                $i = 0;
+                foreach ( $signatures as $signature ) {
+                    setup_postdata( $signature );
+                    if ( $i == 0 || $i % 6 == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
+                    echo    '<div class="list-single-signature">';
+                    echo        '<div class="single-user-avatar"><img src="' . $signature->url_featured_img_small . '"></div>';
+                    echo        '<div class="single-user-meta">';
+                    echo            '<h5>' . $signature->author . '</h5>';
+                    echo        '</div>';
+                    echo    '</div>'; // end of .list-single-signature
+                    echo '</div>'; // end of columns
+                    $i++;
+                }
+                echo '<div class="clearfix"></div>';
+                echo    '</div>';
+                echo '</div>';
+                break;
+
+            default:
+                break;
+
         }   // end Switch
     }   // end while
 };

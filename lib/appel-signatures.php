@@ -176,8 +176,8 @@ function cush_signature_columns_edit( $columns ) {
 		return $columns;
 }
 
-add_action( 'manage_signature_posts_custom_column', 'signature_column_content', 10, 2 );
-function signature_column_content( $column, $post_id ) {
+add_action( 'manage_signature_posts_custom_column', 'cush_signature_column_content', 10, 2 );
+function cush_signature_column_content( $column, $post_id ) {
 	global $post;
 
 	switch( $column ) {

@@ -2094,40 +2094,47 @@ p.media-caption {
   height: 100%;
 }
 
-/* ## User/Institution List
+/* ## User/Institution/Signatures List
 --------------------------------------------- */
 .user-list,
-.institution-list {
+.institution-list,
+.signatures-list {
   padding: 0;
 }
 @media (min-width: 600px) {
   .user-list,
-  .institution-list {
+  .institution-list,
+  .signatures-list {
     padding: 40px 0;
   }
 }
 
 .list-single-user,
-.list-single-institution {
+.list-single-institution,
+.list-single-signature {
   text-align: center;
   margin: 20px 0;
 }
 @media (min-width: 860px) {
   .list-single-user,
-  .list-single-institution {
+  .list-single-institution,
+  .list-single-signature {
     margin: 10px 0;
   }
 }
 .list-single-user .single-user-avatar img,
 .list-single-user .single-institution-logo img,
 .list-single-institution .single-user-avatar img,
-.list-single-institution .single-institution-logo img {
+.list-single-institution .single-institution-logo img,
+.list-single-signature .single-user-avatar img,
+.list-single-signature .single-institution-logo img {
   width: 130px;
   height: 130px;
   object-fit: cover;
 }
 .list-single-user .single-user-avatar img,
-.list-single-institution .single-user-avatar img {
+.list-single-institution .single-user-avatar img,
+.list-single-signature .single-user-avatar img {
   border-radius: 80px;
 }
 .list-single-user .single-user-meta h5, .list-single-user .single-user-meta h6, .list-single-user .single-user-meta span,
@@ -2139,13 +2146,21 @@ p.media-caption {
 .list-single-institution .single-user-meta span,
 .list-single-institution .single-institution-meta h5,
 .list-single-institution .single-institution-meta h6,
-.list-single-institution .single-institution-meta span {
+.list-single-institution .single-institution-meta span,
+.list-single-signature .single-user-meta h5,
+.list-single-signature .single-user-meta h6,
+.list-single-signature .single-user-meta span,
+.list-single-signature .single-institution-meta h5,
+.list-single-signature .single-institution-meta h6,
+.list-single-signature .single-institution-meta span {
   margin: 0;
 }
 .list-single-user .single-user-meta h6 a,
 .list-single-user .single-institution-meta h6 a,
 .list-single-institution .single-user-meta h6 a,
-.list-single-institution .single-institution-meta h6 a {
+.list-single-institution .single-institution-meta h6 a,
+.list-single-signature .single-user-meta h6 a,
+.list-single-signature .single-institution-meta h6 a {
   text-decoration: none;
   color: rgba(62, 62, 62, 0.87);
   text-transform: uppercase;
@@ -2155,7 +2170,9 @@ p.media-caption {
 .list-single-user .single-user-meta span,
 .list-single-user .single-institution-meta span,
 .list-single-institution .single-user-meta span,
-.list-single-institution .single-institution-meta span {
+.list-single-institution .single-institution-meta span,
+.list-single-signature .single-user-meta span,
+.list-single-signature .single-institution-meta span {
   display: block;
   color: rgba(62, 62, 62, 0.87);
   font-size: 14px;
