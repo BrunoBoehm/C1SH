@@ -38,6 +38,7 @@ function cush_enqueue_scripts_styles() {
 	wp_enqueue_style( 'dashicons' );
 
 	wp_enqueue_script( 'c1sh-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'c1sh-javascript', get_stylesheet_directory_uri() . '/js/c1sh-javascript.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 	// Remove sub-menu animation and delay.
 	// wp_deregister_script( 'superfish-args' );

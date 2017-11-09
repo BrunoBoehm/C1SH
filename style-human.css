@@ -2039,6 +2039,14 @@ img.alignright,
   margin: 10px 0 20px;
 }
 
+.join-us-form {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.join-us-form #join-us-select {
+  margin-bottom: 20px;
+}
+
 .kpi-banner {
   padding: 40px 0;
   text-align: center;
