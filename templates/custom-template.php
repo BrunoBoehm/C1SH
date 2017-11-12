@@ -458,6 +458,7 @@ if( have_rows('content_blocks') ){
                     echo '</div>'; // end of columns
                     $i++;
                 }
+                wp_reset_postdata();
                 echo '<div class="clearfix"></div>';
                 echo    '</div>';
                 echo '</div>';
