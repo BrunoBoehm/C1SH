@@ -441,7 +441,7 @@ if( have_rows('content_blocks') ){
             */       
             case 'signatures_list':
                 $signatures_number = get_sub_field('signatures_number');
-                $signatures = get_signatures('rand', $signatures_number, true);
+                $signatures = cush_get_signatures('rand', $signatures_number, true);
 
                 echo '<div class="signatures-list">';
                 echo    '<div class="wrap">';
@@ -455,13 +455,14 @@ if( have_rows('content_blocks') ){
                     echo            '<h5>' . $signature->author . '</h5>';
                     echo        '</div>';
                     echo    '</div>'; // end of .list-single-signature
-                    echo '</div>'; // end of columns
+                    echo '</div>'; // end of column
                     $i++;
                 }
                 wp_reset_postdata();
-                echo '<div class="clearfix"></div>';
-                echo    '</div>';
-                echo '</div>';
+                echo    '<div class="clearfix"></div>';
+                echo    '<div class="feed-get-more"><a href="' . get_post_type_archive_link( 'signature' ) . '" class="button btn-alt">' . __('Voir Plus') . '</a></div>';
+                echo    '</div>'; // end of .wrap
+                echo '</div>'; // end of .signatures-list
                 break;
 
             default:

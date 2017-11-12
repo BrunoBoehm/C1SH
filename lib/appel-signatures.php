@@ -82,7 +82,7 @@ function cush_register_cpt_signatures() {
  * Query for signatures by number of posts
  *
  */
-function get_signatures($order, $limit, $only_with_photo = false, $paged = null) {
+function cush_get_signatures($order, $limit, $only_with_photo = false, $paged = null) {
 	$args = array(
 		'orderby'          => $order,
 		'order'            => 'DESC',
@@ -120,7 +120,7 @@ function get_signatures($order, $limit, $only_with_photo = false, $paged = null)
  * Query for signatures by A-Z
  *
  */
-function get_signatures_author($starting_letter="", $ending_letter="") {
+function cush_get_signatures_by_author($starting_letter="", $ending_letter="") {
 	$args = array(
 		'posts_per_page'	=> '-1',
 		'post_type'        => 'signature',
