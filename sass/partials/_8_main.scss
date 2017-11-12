@@ -709,6 +709,38 @@ p.media-caption {
 	}
 }
 
+/* ## Signature Listing
+--------------------------------------------- */
+
+.nav-listing-signatures {
+	ol.nav {
+		width: 100;
+		margin: 0 auto;
+
+		li {
+			display: inline-block;
+			@include font-size($font-size-s);
+			margin-bottom: 8px;
+			margin-right: 8px;
+			float: left;
+			list-style: none;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.listing-signatures {
+	clear: left;
+
+	li {
+		float: left;
+		width: 9%;
+		margin: 0 1% 10px 0;
+	}
+}
+
 /* ## Entries
 --------------------------------------------- */
 
