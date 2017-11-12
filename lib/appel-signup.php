@@ -17,7 +17,7 @@
 // 	return true;
 // }
 
-// handle data after form submission
+//* handle data after form submission
 add_action( 'gform_after_submission_1', 'cush_after_submission_subscribe_form', 10, 2 );
 
 function cush_after_submission_subscribe_form( $entry, $form ) {
@@ -30,6 +30,7 @@ function cush_after_submission_subscribe_form( $entry, $form ) {
 	$photo_url = rgar( $entry, '5' );
 	$subscribe_newsletter = rgar( $entry, '6.1' );
 
+    // create signature post object
 	$signature = array(
 	  'post_title'  => $first_name . ' ' . $last_name,
 	  'post_content'  => $message,
@@ -37,7 +38,7 @@ function cush_after_submission_subscribe_form( $entry, $form ) {
 	  'post_type'	  => 'signature'
 	);
  
-	// Insert the post into the database
+	// Insert the post object into the database
 	$result = wp_insert_post( $signature );
 	if ($result==0) { 
         // error
@@ -46,16 +47,14 @@ function cush_after_submission_subscribe_form( $entry, $form ) {
 		update_post_meta($result, 'txt_last_name', $last_name);
 		update_post_meta($result, 'txt_first_name', $first_name);
 		update_post_meta($result, 'txt_email', $email);
-		//debug_by_mail('test 1 : '.$subscribe_newsletter);
 		if ($subscribe_newsletter != "") { 
             $subscribe_newsletter = true;
         } else { 
             $subscribe_newsletter = false;
         };
-		//debug_by_mail('test 2 : '.$subscribe_newsletter);
 		update_post_meta($result, 'boolean_subscribe_newsletter', $subscribe_newsletter);
         if ($photo_url) {
-            // creates thumbnail image
+            // create thumbnail image
 			Generate_Featured_Image( $photo_url, $result );
         };
 	}
@@ -66,6 +65,7 @@ function cush_after_submission_subscribe_form( $entry, $form ) {
 	
 }
 
+//* custom upload folder
 add_filter( 'gform_upload_path', 'cush_change_upload_path', 10, 2 );
 function cush_change_upload_path( $path_info, $form_id ) {
 	$upload_dir = wp_upload_dir();
@@ -257,4 +257,36 @@ function add_file_field_attributes_for_upload_on_mobile( $input, $field, $value,
         $input = '<div class="ginput_container ginput_container_fileupload"><input type="hidden" name="MAX_FILE_SIZE" value="3145728"><input name="input_5" id="input_1_5" type="file" class="medium" capture="camera" accept="image/*" aria-describedby="extensions_message" tabindex="4"><span id="extensions_message" class="screen-reader-text">Types de fichiers acceptés : jpg, gif, png, bmp.</span></div>';
     }
     return $input;
+}
+
+/**
+ * Attach single file uploads to email
+ *
+ * https://docs.gravityforms.com/gform_notification/
+ */
+
+add_filter( 'gform_notification', 'cush_change_user_notification_attachments', 10, 3 );
+function cush_change_user_notification_attachments( $notification, $form, $entry ) {
+ 
+    //There is no concept of user notifications anymore, so we will need to target notifications based on other criteria, such as name
+    if ( $notification['name'] == 'User Notification' ) {
+ 
+        $fileupload_fields = GFCommon::get_fields_by_type( $form, array( 'fileupload' ) );
+ 
+        if ( ! is_array( $fileupload_fields ) )
+            return $notification;
+ 
+        $notification['attachments'] = ( is_array( rgget('attachments', $notification ) ) ) ? rgget( 'attachments', $notification ) : array();
+        $upload_root = RGFormsModel::get_upload_root();
+        foreach( $fileupload_fields as $field ) {
+            $url = $entry[ $field->id ];
+            $attachment = preg_replace( '|^(.*?)/gravity_forms/|', $upload_root, $url );
+            if ( $attachment ) {
+                $notification['attachments'][] = $attachment;
+            }
+        }
+ 
+    }
+ 
+    return $notification;
 }
