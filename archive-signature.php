@@ -1,9 +1,15 @@
 <?php 
 
-add_action("genesis_after_header", "cush_display_signatures_listing");
+remove_action( 'genesis_loop', 'genesis_do_loop' );
+add_action("genesis_after_content", "cush_display_signatures_listing");
 
 function cush_display_signatures_listing() {
+	$letter1 = $letter2 = "";
+	if (isset($_GET['lettre1'])) $letter1 = $_GET['lettre1'];
+	if (isset($_GET['lettre2'])) $letter2 = $_GET['lettre2'];
+	$signatures = cush_get_signatures_by_author($letter1, $letter2);
 
+    echo '<div class="wrap">';
 	echo '<div id="listing_signatures">';
 	echo '<ol class="nav">
             <li><a href="'.home_url().'/signatures/" class="active">Tous</a></li>
@@ -35,18 +41,16 @@ function cush_display_signatures_listing() {
             <li><a href="'.home_url().'/signatures/?lettre1=Z&lettre2=A">Z</a></li>
         </ol>';
 
-	$letter1 = $letter2 = "";
-	if (isset($_GET['lettre1'])) $letter1 = $_GET['lettre1'];
-	if (isset($_GET['lettre2'])) $letter2 = $_GET['lettre2'];
-
-	$signatures = cush_get_signatures_by_author($letter1, $letter2);
-
-	echo    '<ul class="listing_participants">';
+	echo    '<ul class="listing-signatures">';
 	foreach ( $signatures as $signature ) {
-    echo        '<li class="participant"><span class="first">' . get_post_meta($participant->ID, 'txt_first_name', true) . '</span> <span class="last">' . get_post_meta($participant->ID, 'txt_last_name', true) . '</span></li>';
+    echo        '<li class="single-signature">';
+    echo            '<span class="first">' . get_post_meta($signature->ID, 'txt_first_name', true) . '</span>';
+    echo            '<span class="last"> ' . get_post_meta($signature->ID, 'txt_last_name', true) . '</span>';
+    echo        '</li>'; // end .single-signature
     }
-	echo    '</ul>';
-	echo '</div>';
+	echo    '</ul>'; // end .listing-signatures
+    echo '</div>';
+    echo '</div>';
 }
 
 genesis();
