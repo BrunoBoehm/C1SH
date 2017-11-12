@@ -71,7 +71,7 @@ function cush_register_cpt_signatures() {
 		"query_var" 			=> true,
 		"menu_position" 		=> null,
 		'menu_icon'			 	=> 'dashicons-tickets-alt', 	
-		"supports" 				=> array( "editor", "thumbnail", "genesis-cpt-archives-settings" ),				
+		"supports" 				=> array( "editor", "thumbnail", "custom-fields", "author", "genesis-cpt-archives-settings" ),				
     );
     
 	register_post_type( "signature", $signature_args );
