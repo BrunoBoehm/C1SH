@@ -402,3 +402,15 @@ add_filter( 'embed_oembed_html', 'cush_responsive_embed_html', 10, 3 );
 function cush_responsive_embed_html( $embed ) {
     return '<div class="embed-responsive">' . $embed . '</div>';
 }
+
+
+/**
+ * Add categories to attachments
+ * 
+ * https://code.tutsplus.com/articles/applying-categories-tags-and-custom-taxonomies-to-media-attachments--wp-32319
+ * 
+ */
+add_action( 'init' , 'cush_add_categories_to_attachments' );
+function cush_add_categories_to_attachments() {
+    register_taxonomy_for_object_type( 'category', 'attachment' );
+}
