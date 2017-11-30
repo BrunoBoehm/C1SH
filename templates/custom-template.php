@@ -234,6 +234,46 @@ if( have_rows('content_blocks') ){
 
             /*
             *
+            * Contagion List
+            * 
+            */                        
+            case 'contagion_list':
+                echo '<div class="feed feed-blurbs">';
+                echo '<div class="wrap">';
+                $i = 0;
+                while ( have_rows('contagion_list') ) {
+                    if ( $i == 0 || $i % 3 == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
+                    the_row();
+                    $single_contagion = get_sub_field('single_contagion');
+                    $related_institutions = get_field('related_institution', $single_contagion->ID);
+                    $thumbnail = get_the_post_thumbnail($single_contagion->ID, 'medium_large' );
+
+                    echo        '<div class="blurb clearfix">'; 
+                    if ( $thumbnail )
+                        echo $thumbnail ;
+                    echo            '<div class="item-content">';
+                    if ( $related_institutions ) {
+                        echo            '<h6>';
+                        foreach( $related_institutions as $related_institution ){
+                        echo                '<a href="' . get_the_permalink($related_institution->ID) . '">' . get_the_title($related_institution->ID) . '</a>';
+                        }
+                        echo            '</h6>';
+                    }
+                    echo                '<h4><a href="' . get_the_permalink($single_contagion->ID) . '">' . $single_contagion->post_title . '</a></h4>';
+                    echo                '<p>' . $single_contagion->post_excerpt . '</p>';        
+                    echo		    '<a href="' . get_the_permalink($single_contagion->ID) . '" title="' . $single_contagion->post_title . '" class="read-more">' . __('Voir Plus') . '</a>';
+                    echo            '</div>'; // end of item-content
+                    echo        '</div>'; // end of blurb
+                    echo '</div>'; // end of columns
+                    $i++;
+                }  // end of has_rows
+                echo '<div class="feed-get-more"><a href="' . get_post_type_archive_link( 'contagion' ) . '" class="button btn-alt">' . __('Voir Plus') . '</a></div>';
+                echo '</div>'; // end of wrap
+                echo '</div>'; // end of feed
+                break;
+
+            /*
+            *
             * Feed as selection between action/contagion/institution
             * 
             */                        
@@ -342,7 +382,7 @@ if( have_rows('content_blocks') ){
                         echo                '</ul>';
                         }
                         if ( $layout_type == 'blurbs' ) {
-                            echo		    '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">Voir</a>';
+                            echo		    '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">' . __('Voir Plus') . '</a>';
                         }
                         echo            '</div>'; // end of item-content
                         echo        '</div>'; // end of blurb
