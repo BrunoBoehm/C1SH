@@ -42,7 +42,14 @@ function cush_enqueue_scripts_styles() {
 	wp_enqueue_style( 'dashicons' );
 
 	wp_enqueue_script( 'c1sh-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-	wp_enqueue_script( 'c1sh-javascript', get_stylesheet_directory_uri() . '/js/c1sh-javascript.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	
+	wp_register_script( 'c1sh-javascript', get_stylesheet_directory_uri() . '/js/c1sh-javascript.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	$c1sh_javascript_translation_array = array(
+		// 'dropdown_text' => __( '', 'c1sh' ),
+		'dropdown_default_url' => get_permalink( get_page_by_title('Et Vous ?')->ID )
+	);
+	wp_localize_script( 'c1sh-javascript', 'c1sh_dropdown_data', $c1sh_javascript_translation_array );
+	wp_enqueue_script( 'c1sh-javascript');
 
 	// Remove sub-menu animation and delay.
 	// wp_deregister_script( 'superfish-args' );
