@@ -36,7 +36,7 @@ function cush_custom_loop() {
     // note post_per_page should be above the number in settings>reading>max_posts_per_page
     $args = array( 
         'post_type'         => $items_type,
-        'posts_per_page'    => 3,
+        'posts_per_page'    => 24,
         'paged'             => $paged
     );
 
@@ -45,26 +45,27 @@ function cush_custom_loop() {
 
     // The Loop
     if ( $the_query->have_posts() ) {
-        echo '<div class="feed feed-timeline">';
+        echo '<div class="feed feed-blurbs">';
         echo '<div class="wrap">';
         $i = 0;
         while ( $the_query->have_posts() ) {
             $the_query->the_post();
-            echo    '<div class="timeline-item">';
+            if ( $i == 0 || $i % 3 == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
             echo        '<div class="blurb clearfix">';    
             if ( has_post_thumbnail() ){ the_post_thumbnail( 'medium_large' ); }
             echo            '<div class="item-content">';
             echo                '<span class="item-date">' . get_the_date('M Y') . '</span>';
             echo                '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
             echo                '<p>' . get_the_excerpt() . '</p>';
+            echo		        '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">' . __('Voir Plus') . '</a>';
             echo            '</div>'; // end of item-content
             echo        '</div>'; // end of blurb
-            echo    '</div>'; // end of timeline-item or one-third
+            echo    '</div>'; // end of one-third
             $i++;
-        }
-        echo    '<div class="nav-previous alignleft">' . get_next_posts_link( 'Next Page', $the_query->max_num_pages ) . '</div>';
-        echo    '<div class="nav-next alignright">' . get_previous_posts_link( 'Previous Page' ) . '</div>';
+        } // end of have_post()
         echo '</div>'; // end of wrap
+        echo    '<div class="wrap"><div class="nav-previous alignleft">' . get_next_posts_link( 'Next Page', $the_query->max_num_pages ) . '</div>';
+        echo    '<div class="nav-next alignright">' . get_previous_posts_link( 'Previous Page' ) . '</div></div>';        
         echo '</div>'; // end of section
 
         wp_reset_postdata();
