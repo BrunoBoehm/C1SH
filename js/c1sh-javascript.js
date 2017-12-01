@@ -4,7 +4,7 @@
 
 function c1shRedirectToPath() {
     var target = document.getElementById("join-us-select").value;
-    // debugger;
+    debugger;
     // alert('about to redirect to ' + target);
     if ( target != '' ) {
         window.location.href=target;
