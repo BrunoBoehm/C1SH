@@ -38,7 +38,7 @@ if( have_rows('content_blocks') ){
                 if( get_sub_field('icon') ) {
                     echo '<img src="' . get_sub_field('icon')['url'] . '">';
                     echo '<h3>' . get_sub_field('title') . '</h3>';
-                } else {
+                } elseif ( get_sub_field('title') ) {
                     echo '<h2>' . get_sub_field('title') . '</h2>';
                 }
                 echo        get_sub_field('text');
