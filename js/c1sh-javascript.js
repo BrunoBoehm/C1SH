@@ -2,7 +2,13 @@
  * General functions
  */
 
-// function c1shRedirectToPath() {
-//     alert('about to redirect');
-//     location.href=document.getElementById("join-us-select").value;  
-// }
+function c1shRedirectToPath() {
+    var target = document.getElementById("join-us-select").value;
+    // debugger;
+    // alert('about to redirect to ' + target);
+    if ( target != '' ) {
+        window.location.href=target;
+    } else {
+        window.location.href="./et-vous";
+    }
+}
