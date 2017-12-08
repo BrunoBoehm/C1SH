@@ -197,3 +197,23 @@ function cush_signature_column_content( $column, $post_id ) {
 			break;
 	}
 }
+
+
+/**
+ * Ajax call for signatures
+ * 
+ * wp_ajax_ hook only fires for logged-in users
+ * wp_ajax_nopriv_ listens for Ajax requests that don't come from logged-in users
+ * 
+ * https://codex.wordpress.org/AJAX_in_Plugins
+ * 
+ */
+function cush_refresh_grille_from_ajax() {	
+	$result = cush_get_signatures('rand', 24, true);
+
+	header( "Content-Type: application/json" );
+	echo json_encode( array( 'result' => $result ) ); 
+	exit;
+}
+add_action( 'wp_ajax_nopriv_cush_refresh_grille_from_ajax', 'cush_refresh_grille_from_ajax' );
+add_action( 'wp_ajax_cush_refresh_grille_from_ajax', 'cush_refresh_grille_from_ajax' );

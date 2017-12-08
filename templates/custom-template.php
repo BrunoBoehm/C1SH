@@ -483,6 +483,13 @@ if( have_rows('content_blocks') ){
                 $signatures_number = get_sub_field('signatures_number');
                 $signatures = cush_get_signatures('rand', $signatures_number, true);
 
+                // adds ajax script to the page's footer (header wont't work) if this template part is called
+                add_action('wp_footer', 'add_ajax_url');
+                add_action('admin_enqueue_scripts', 'add_ajax_url', 11 );
+                function add_ajax_url() {
+                    echo "<script>var ajax_request_url = '".admin_url( 'admin-ajax.php' )."'</script>";
+                }
+
                 echo '<div class="signatures-list">';
                 echo    '<div class="wrap">';
                 $i = 0;
