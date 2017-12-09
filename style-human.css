@@ -435,6 +435,7 @@ h4 {
 h5 {
   font-size: 16px;
   font-size: 1.6rem;
+  text-transform: uppercase;
 }
 
 h6 {
@@ -2230,7 +2231,7 @@ p.media-caption {
 /* ## Signature Listing
 --------------------------------------------- */
 .nav-listing-signatures ol.nav {
-  width: 100;
+  width: 260px;
   margin: 0 auto;
 }
 .nav-listing-signatures ol.nav li {

@@ -499,7 +499,7 @@ if( have_rows('content_blocks') ){
                     echo    '<div class="list-single-signature">';
                     echo        '<div class="single-user-avatar"><img src="' . $signature->url_featured_img_small . '"></div>';
                     echo        '<div class="single-user-meta">';
-                    echo            '<h5>' . ucwords($signature->author) . '</h5>';
+                    echo            '<h5>' . $signature->author . '</h5>';
                     echo        '</div>';
                     echo    '</div>'; // end of .list-single-signature
                     echo '</div>'; // end of column

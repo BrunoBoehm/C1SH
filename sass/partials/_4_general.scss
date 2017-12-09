@@ -163,6 +163,7 @@ h4 {
 
 h5 {
 	@include font-size($font-size-s);
+	text-transform: uppercase;
 }
 
 h6 {
