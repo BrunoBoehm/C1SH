@@ -1421,13 +1421,22 @@ img.alignright,
 /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
-  background: #3E3E3E url("images/c1sh-rosace-black.png") no-repeat top center;
+  background-color: #3E3E3E;
   background-size: 50%;
   color: #EBEBEB;
   font-size: 14px;
   font-size: 1.4rem;
   clear: both;
   padding: 30px 0;
+  margin-top: 10px;
+}
+.home .footer-widgets {
+  margin-top: 0px;
+}
+@media (min-width: 860px) {
+  .footer-widgets {
+    background: #3E3E3E url("images/c1sh-rosace-black.png") no-repeat top center;
+  }
 }
 .footer-widgets .widget {
   padding-bottom: 10px;
@@ -1527,10 +1536,14 @@ img.alignright,
 }
 .site-footer p {
   margin-bottom: 0;
-  background: url(images/c1sh-appeldifference.png) no-repeat top center;
-  background-size: 50%;
-  padding-top: 140px;
-  height: 170px;
+}
+@media (min-width: 860px) {
+  .site-footer p {
+    background: url(images/c1sh-appeldifference.png) no-repeat top center;
+    background-size: 50%;
+    padding-top: 140px;
+    height: 170px;
+  }
 }
 
 /* # Content Area
