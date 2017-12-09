@@ -11,16 +11,16 @@
  * Modify archive query for Signature CPT
  *
  */
-add_action( 'pre_get_posts', 'modify_archive_signature_main_query' );
+// add_action( 'pre_get_posts', 'modify_archive_signature_main_query' );
 
-function modify_archive_signature_main_query( $query ) {
-    if ( !is_admin() && is_post_type_archive('signature') && is_main_query() ) {
-        $query->set( 'order', 'DESC' );
-        $query->set( 'post_status', array('publish') );
-        $query->set( 'posts_per_page', '12' );
-        $query->set( 'meta_key', '_thumbnail_id' );
-    }
-}
+// function modify_archive_signature_main_query( $query ) {
+//     if ( !is_admin() && is_post_type_archive('signature') && is_main_query() ) {
+//         $query->set( 'order', 'DESC' );
+//         $query->set( 'post_status', array('publish') );
+//         $query->set( 'posts_per_page', '12' );
+//         $query->set( 'meta_key', '_thumbnail_id' );
+//     }
+// }
 
 
 
