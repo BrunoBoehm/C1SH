@@ -134,7 +134,7 @@ h2 {
 	@include font-size($font-size-l);
 	text-transform: uppercase;
 	font-weight: $font-weight-normal;
-
+	margin-top: 20px;
 
 	&:after {
 		content: "";
