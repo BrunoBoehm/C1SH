@@ -1420,7 +1420,8 @@ img.alignright,
 /* # Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
-  background-color: #3E3E3E;
+  background: #3E3E3E url("images/c1sh-rosace-black.png") no-repeat top center;
+  background-size: 50%;
   color: #EBEBEB;
   font-size: 14px;
   font-size: 1.4rem;
@@ -1511,7 +1512,7 @@ img.alignright,
   }
 }
 
-/* # Site Footer
+/* # Site Footer - below footer-widgets
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
   background-color: #3E3E3E;
@@ -1525,6 +1526,10 @@ img.alignright,
 }
 .site-footer p {
   margin-bottom: 0;
+  background: url(images/c1sh-appeldifference.png) no-repeat top center;
+  background-size: 50%;
+  padding-top: 140px;
+  height: 170px;
 }
 
 /* # Content Area
