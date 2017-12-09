@@ -53,12 +53,13 @@ function cush_display_signatures_listing() {
     
     echo '<div class="signatures-list">';
     $i = 0;
+    $signature_placeholder = get_stylesheet_directory_uri() . "/images/c1sh-signature-placeholder.jpg";
     foreach ( $signatures as $signature ) {
         setup_postdata( $signature );
         $img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $signature->ID ), 'small-size' )[0];
         if ( $i == 0 || $i % 6 == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
         echo    '<div class="list-single-signature">';
-        echo        '<div class="single-user-avatar"><img src="' . $img_url . '"></div>';
+        echo        '<div class="single-user-avatar"><img src="' . ($img_url ?: $signature_placeholder ) . '"></div>';
         echo        '<div class="single-user-meta">';
         echo            '<h5>' . $signature->post_title . '</h5>';
         echo        '</div>';
