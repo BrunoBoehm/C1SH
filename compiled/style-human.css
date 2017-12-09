@@ -1543,7 +1543,7 @@ img.alignright,
 
 .tile-shadow {
   position: relative;
-  box-shadow: 0 2rem 5rem -2.5rem rgba(0, 0, 0, 0.1), 0rem 0.3rem 0.5rem -0.4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2rem 5rem -2.5rem rgba(0, 0, 0, 0.03), 0rem 0.3rem 0.5rem -0.4rem rgba(0, 0, 0, 0.03);
 }
 
 .blurb {
