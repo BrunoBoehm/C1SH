@@ -1,16 +1,11 @@
-# Genesis Sample Theme
+# Wordpress Theme for COMMEUNSEULHOMME
 
-Github project link: https://github.com/copyblogger/genesis-sample
+Based on Genesis Framework's genesis sample theme. Github project link: https://github.com/copyblogger/genesis-sample
 
+Developed by Lyketil.com
 
-## Installation Instructions
+## Booting Up
+CSS is sassified. Use grunt task to start compiling and minification tasks. More info in the Gruntfile.
+Type grunt in terminal to start watchers. Type CTRL+C to stop.
 
-1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
-2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Genesis Sample theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
-
-
-## Theme Support
-
-Please visit http://my.studiopress.com/help/ for theme support.
+Advanced Custom Field (ACF) plugin powers the custom page builder.
