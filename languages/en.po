@@ -1,0 +1,299 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Lyketil\n"
+"POT-Creation-Date: 2017-12-15 15:59+0100\n"
+"PO-Revision-Date: 2017-12-15 16:12+0100\n"
+"Language-Team: Lyketil <hello@lyketil.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:15
+msgid "Page not found"
+msgstr ""
+
+#: 404.php:20
+#, php-format
+msgid ""
+"The page you are looking for no longer exists. Perhaps you can return back "
+"to the site's <a href=\"%s\">homepage</a> and see if you can find what you "
+"are looking for. Or, you can try finding it by using the search form below."
+msgstr ""
+
+#: 404.php:27
+#, php-format
+msgid ""
+"The page you are looking for no longer exists. Perhaps you can return back "
+"to the site's <a href=\"%s\">homepage</a> and see if you can find what you "
+"are looking for. Or, you can try finding it with the information below."
+msgstr ""
+
+#: functions.php:59 functions.php:60
+msgid "Menu"
+msgstr ""
+
+#: functions.php:130
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:179 functions.php:181
+msgid "Actions"
+msgstr "Actions"
+
+#: functions.php:180 functions.php:182
+msgid "Action"
+msgstr "Action"
+
+#: functions.php:183 functions.php:218 functions.php:253
+#: lib/appel-signatures.php:38 lib/appel-signatures.php:39
+msgid "Ajouter"
+msgstr "Add"
+
+#: functions.php:184
+msgid "Ajouter une nouvelle action"
+msgstr "Add a new action"
+
+#: functions.php:185
+msgid "Nouvelle action"
+msgstr "New action"
+
+#: functions.php:186
+msgid "Editer action"
+msgstr "Edit action"
+
+#: functions.php:187
+msgid "Voir action"
+msgstr "See action"
+
+#: functions.php:188
+msgid "Voir les actions"
+msgstr "See all actions"
+
+#: functions.php:189
+msgid "Toutes les actions"
+msgstr "All actions"
+
+#: functions.php:190
+msgid "Rechercher les actions"
+msgstr "Search action"
+
+#: functions.php:214 functions.php:216
+msgid "Institutions"
+msgstr "Institutions"
+
+#: functions.php:215 functions.php:217
+msgid "Institution"
+msgstr "Institution"
+
+#: functions.php:219
+msgid "Ajouter une nouvelle institution"
+msgstr "Add institution"
+
+#: functions.php:220
+msgid "Nouvelle institution"
+msgstr "New institution"
+
+#: functions.php:221
+msgid "Editer institution"
+msgstr "Edit institution"
+
+#: functions.php:222
+msgid "Voir institution"
+msgstr "See institution"
+
+#: functions.php:223
+msgid "Voir les institutions"
+msgstr "See institutions"
+
+#: functions.php:224
+msgid "Toutes les institutions"
+msgstr "All institutions"
+
+#: functions.php:225
+msgid "Rechercher les institutions"
+msgstr "Search institutions"
+
+#: functions.php:249 functions.php:251
+msgid "Contagions"
+msgstr "Positive Contagions"
+
+#: functions.php:250 functions.php:252
+msgid "Contagion"
+msgstr "Positive Contagion"
+
+#: functions.php:254
+msgid "Ajouter une nouvelle contagion"
+msgstr "Add new contagion"
+
+#: functions.php:255
+msgid "Nouvelle contagion"
+msgstr "New contagion"
+
+#: functions.php:256
+msgid "Editer contagion"
+msgstr "Edit contagion"
+
+#: functions.php:257
+msgid "Voir contagion"
+msgstr "See contagion"
+
+#: functions.php:258
+msgid "Voir les contagions"
+msgstr "See all contagions"
+
+#: functions.php:259
+msgid "Toutes les contagions"
+msgstr "All contagions"
+
+#: functions.php:260
+msgid "Rechercher les contagions"
+msgstr "Search contagions"
+
+#: functions.php:389 templates/custom-template.php:114
+msgid "Lire Plus"
+msgstr "Read more"
+
+#: functions.php:396 index.php:60 templates/custom-template.php:264
+#: templates/custom-template.php:270 templates/custom-template.php:385
+#: templates/custom-template.php:393 templates/custom-template.php:510
+msgid "Voir Plus"
+msgstr "See more"
+
+#: lib/appel-signatures.php:34 lib/appel-signatures.php:36
+#: lib/appel-signatures.php:56
+msgid "Signatures"
+msgstr "Signatures"
+
+#: lib/appel-signatures.php:35
+msgid "Signature"
+msgstr "Signature"
+
+#: lib/appel-signatures.php:37
+msgid "Toutes les signatures"
+msgstr "All signatures"
+
+#: lib/appel-signatures.php:40
+msgid "Editer"
+msgstr "Edit"
+
+#: lib/appel-signatures.php:41
+msgid "Nouvelle signature manuelle"
+msgstr "New manual signature"
+
+#: lib/appel-signatures.php:42
+msgid "Voir"
+msgstr "See"
+
+#: lib/appel-signatures.php:43
+msgid "Rechercher"
+msgstr "Search"
+
+#: lib/appel-signatures.php:44
+msgid "Aucune signature trouvée"
+msgstr "No signature found"
+
+#: lib/appel-signatures.php:45
+msgid "Aucune signature dans la corbeille"
+msgstr "No signature"
+
+#: lib/appel-signatures.php:46
+msgid "Photo associée"
+msgstr "Linked picture"
+
+#: lib/appel-signatures.php:47
+msgid "Définir comme photo associée"
+msgstr "Set as linked picture"
+
+#: lib/appel-signatures.php:48
+msgid "Supprimer la photo associée"
+msgstr "Erase linked picture"
+
+#: lib/appel-signatures.php:49
+msgid "Utiliser comme photo associée"
+msgstr "Use as linked picture"
+
+#: lib/appel-signatures.php:50
+msgid "Archive des signatures"
+msgstr "Signature archives"
+
+#: lib/appel-signatures.php:51
+msgid "Insérer dans la signature"
+msgstr "Insert signature"
+
+#: lib/appel-signatures.php:52
+msgid "Uploader dans la signature"
+msgstr "Upload signature"
+
+#: lib/appel-signatures.php:171
+msgid "Nom"
+msgstr "First name"
+
+#: lib/appel-signatures.php:172
+msgid "Prénom"
+msgstr "Last name"
+
+#: lib/appel-signatures.php:173
+msgid "Email"
+msgstr "Email"
+
+#: lib/appel-signatures.php:174
+msgid "Image principale"
+msgstr "Thumnbail"
+
+#: lib/customize.php:64
+msgid ""
+"Change the default color for linked titles, menu links, post info links and "
+"more."
+msgstr ""
+
+#: lib/customize.php:65
+msgid "Link Color"
+msgstr ""
+
+#: lib/customize.php:85
+msgid "Change the default color for button hovers."
+msgstr ""
+
+#: lib/customize.php:86
+msgid "Accent Color"
+msgstr ""
+
+#: templates/hero-template.php:68
+msgid "Principe d'action"
+msgstr "Action principle"
+
+#: templates/video-cta-banner-template.php:14
+msgid "Vous êtes..."
+msgstr "You are…"
+
+#. Theme Name of the plugin/theme
+msgid "COMMEUNSEULHOMME"
+msgstr "STANDASONE"
+
+#. Theme URI of the plugin/theme
+msgid "https://www.commeunseulhomme.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Theme Wordpress de COMMEUNSEULHOMME."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Bruno Boehm, Lyketil"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.lyketil.com/"
+msgstr ""
