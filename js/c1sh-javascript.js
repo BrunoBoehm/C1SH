@@ -4,7 +4,7 @@
 
 function c1shRedirectToPath() {
     var target = document.getElementById("join-us-select").value;
-    debugger;
+    // debugger;
     // alert('about to redirect to ' + target);
     if ( target != '' ) {
         window.location.href=target;
@@ -58,3 +58,19 @@ jQuery(window).ready(function($) {
 		refreshTimeout = window.setInterval(refreshGallery, 10000);
 	});
 });
+
+// function emailUpdate( jQuery ) {
+//     var first_name = jQuery(".origin-name-surname input:first-of-type"),
+//     last_name = jQuery(".origin-name-surname input:nth-of-type(2)"),
+//     custom_message = jQuery(".custom-message textarea");
+
+//     custom_message.prepend('Cher ,\n');
+
+//     first_name.on("change", function(){
+//         // find first space in message
+//         var inside_textarea = custom_message.val();
+//         var position = inside_textarea.search(' ');
+//         custom_message.val([inside_textarea.slice(0, position), this.value, inside_textarea.slice(position)].join(''));
+//     });
+// }
+// jQuery( document ).ready( emailUpdate );
