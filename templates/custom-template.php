@@ -484,10 +484,11 @@ if( have_rows('content_blocks') ){
                 $signatures = cush_get_signatures('rand', $signatures_number, true);
 
                 // adds ajax script to the page's footer (header wont't work) if this template part is called
-                add_action('wp_footer', 'add_ajax_url');
+                add_action('wp_footer', 'add_ajax_scripts');
                 add_action('admin_enqueue_scripts', 'add_ajax_url', 11 );
-                function add_ajax_url() {
+                function add_ajax_scripts() {
                     echo "<script>var ajax_request_url = '".admin_url( 'admin-ajax.php' )."'</script>";
+                    echo '<script>jQuery(function(){ c1shRefreshSignatures() });</script>';
                 }
 
                 echo '<div class="signatures-list">';
