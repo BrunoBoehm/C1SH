@@ -2,7 +2,20 @@
 
 $banner = get_field('video_cta_banner', 'option');
 if ($banner) {
-    $menu_items = wp_get_nav_menu_items( 'et-vous' );
+
+    // Switch menu according to current language
+    // https://polylang.wordpress.com/documentation/documentation-for-developers/functions-reference/
+    if( function_exists('pll_current_language') ) {
+        $lang = pll_current_language();
+        switch($lang){
+            case 'en':
+                $menu_items = wp_get_nav_menu_items( 'and-you' );
+                break;
+            case 'fr':
+                $menu_items = wp_get_nav_menu_items( 'et-vous' );
+                break;    
+        }
+    };
 
     echo '<div class="video-cta-banner" id="cta-banner">';
     echo '<div class="wrap">';
