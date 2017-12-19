@@ -1,6 +1,9 @@
 <?php
 
-$banner = get_field('video_cta_banner', 'option');
+if (function_exists('pll_current_language')) {
+    $banner = get_field('video_cta_banner', pll_current_language()); 
+}
+
 if ($banner) {
 
     // Switch menu according to current language
