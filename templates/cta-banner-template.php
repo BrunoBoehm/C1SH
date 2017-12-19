@@ -1,6 +1,9 @@
 <?php
 
-$main_cta_banner = get_field('main_cta_banner', 'option');
+if (function_exists('pll_current_language')) {
+    $main_cta_banner = get_field('main_cta_banner', pll_current_language()); 
+}
+
 if ( $main_cta_banner ) {
     echo '<div class="main-cta-banner" style="background-image: url(' . $main_cta_banner['bg_img']['url'] . ');">';
     echo '<div class="wrap">';
