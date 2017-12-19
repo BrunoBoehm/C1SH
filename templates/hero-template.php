@@ -65,7 +65,7 @@ if( have_rows('hero_slider') ) {
             $categories = get_the_category();
             echo    '<div class="post-categories">';
             foreach ($categories as $category) {
-            echo        '<a href="' . get_category_link( $category->term_id ) . '" title="' . __( "Principe d'action", 'C1SH' ) . ' : ' . $category->name . '">' . $category->name . '</a>';
+            echo        '<a href="' . get_category_link( $category->term_id ) . '" title="' . __( "Principe d'action", 'c1sh' ) . ' : ' . $category->name . '">' . $category->name . '</a>';
             }
             echo    '</div>';
         }

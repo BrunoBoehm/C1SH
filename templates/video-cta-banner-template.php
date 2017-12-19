@@ -11,7 +11,7 @@ if ($banner) {
     echo 	'<div class="video-cta-banner-video-html">' . $banner['html'] . '</div>';
     echo    '<form class="join-us-form">';
     echo        '<select id="join-us-select">';
-    echo                '<option value="" selected disabled hidden>' . __("Vous êtes...", "C1SH") . '</option>';
+    echo                '<option value="" selected disabled hidden>' . __("Vous êtes...", "c1sh") . '</option>';
     foreach ($menu_items as $menu_item) {
         echo            '<option value="' . $menu_item->url . '" label="' . $menu_item->title . '" />';
     }

@@ -57,7 +57,7 @@ function cush_custom_loop() {
             echo                '<span class="item-date">' . get_the_date('M Y') . '</span>';
             echo                '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
             echo                '<p>' . get_the_excerpt() . '</p>';
-            echo		        '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">' . __('Voir Plus') . '</a>';
+            echo		        '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">' . __('Voir Plus', 'c1sh') . '</a>';
             echo            '</div>'; // end of item-content
             echo        '</div>'; // end of blurb
             echo    '</div>'; // end of one-third

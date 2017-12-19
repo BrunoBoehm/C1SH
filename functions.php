@@ -17,7 +17,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 
 //* Set Localization (do not remove)
-load_child_theme_textdomain( 'c1sh', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'c1sh' ) );
+load_child_theme_textdomain( 'c1sh', get_stylesheet_directory() . '/languages' );
 
 //* Add Image upload and Color select to WordPress Theme Customizer
 // require_once( get_stylesheet_directory() . '/lib/customize.php' );
@@ -176,18 +176,18 @@ function cush_custom_posts_init() {
 
 	// Action
 	$action_labels = array(
-		'name'               => __( 'Actions'),
-		'singular_name'      => __( 'Action'),
-		'menu_name'          => __( 'Actions'),
-		'name_admin_bar'     => __( 'Action'),
-		'add_new'            => __( 'Ajouter'),
-		'add_new_item'       => __( 'Ajouter une nouvelle action'),
-		'new_item'           => __( 'Nouvelle action'),
-		'edit_item'          => __( 'Editer action'),
-		'view_item'          => __( 'Voir action'),
-		'view_items'         => __( 'Voir les actions'),
-		'all_items'          => __( 'Toutes les actions'),
-		'search_items'       => __( 'Rechercher les actions')
+		'name'               => __( 'Actions', 'c1sh'),
+		'singular_name'      => __( 'Action', 'c1sh'),
+		'menu_name'          => __( 'Actions', 'c1sh'),
+		'name_admin_bar'     => __( 'Action', 'c1sh'),
+		'add_new'            => __( 'Ajouter', 'c1sh'),
+		'add_new_item'       => __( 'Ajouter une nouvelle action', 'c1sh'),
+		'new_item'           => __( 'Nouvelle action', 'c1sh'),
+		'edit_item'          => __( 'Editer action', 'c1sh'),
+		'view_item'          => __( 'Voir action', 'c1sh'),
+		'view_items'         => __( 'Voir les actions', 'c1sh'),
+		'all_items'          => __( 'Toutes les actions', 'c1sh'),
+		'search_items'       => __( 'Rechercher les actions', 'c1sh')
 	);
 
 	$action_args = array(
@@ -211,18 +211,18 @@ function cush_custom_posts_init() {
 
 	// Institution
 	$institution_labels = array(
-		'name'               => __( 'Institutions'),
-		'singular_name'      => __( 'Institution'),
-		'menu_name'          => __( 'Institutions'),
-		'name_admin_bar'     => __( 'Institution'),
-		'add_new'            => __( 'Ajouter'),
-		'add_new_item'       => __( 'Ajouter une nouvelle institution'),
-		'new_item'           => __( 'Nouvelle institution'),
-		'edit_item'          => __( 'Editer institution'),
-		'view_item'          => __( 'Voir institution'),
-		'view_items'         => __( 'Voir les institutions'),
-		'all_items'          => __( 'Toutes les institutions'),
-		'search_items'       => __( 'Rechercher les institutions')
+		'name'               => __( 'Institutions', 'c1sh'),
+		'singular_name'      => __( 'Institution', 'c1sh'),
+		'menu_name'          => __( 'Institutions', 'c1sh'),
+		'name_admin_bar'     => __( 'Institution', 'c1sh'),
+		'add_new'            => __( 'Ajouter', 'c1sh'),
+		'add_new_item'       => __( 'Ajouter une nouvelle institution', 'c1sh'),
+		'new_item'           => __( 'Nouvelle institution', 'c1sh'),
+		'edit_item'          => __( 'Editer institution', 'c1sh'),
+		'view_item'          => __( 'Voir institution', 'c1sh'),
+		'view_items'         => __( 'Voir les institutions', 'c1sh'),
+		'all_items'          => __( 'Toutes les institutions', 'c1sh'),
+		'search_items'       => __( 'Rechercher les institutions', 'c1sh')
 	);
 
 	$institution_args = array(
@@ -246,18 +246,18 @@ function cush_custom_posts_init() {
 
 	// Contagion
 	$contagion_labels = array(
-		'name'               => __( 'Contagions'),
-		'singular_name'      => __( 'Contagion'),
-		'menu_name'          => __( 'Contagions'),
-		'name_admin_bar'     => __( 'Contagion'),
-		'add_new'            => __( 'Ajouter'),
-		'add_new_item'       => __( 'Ajouter une nouvelle contagion'),
-		'new_item'           => __( 'Nouvelle contagion'),
-		'edit_item'          => __( 'Editer contagion'),
-		'view_item'          => __( 'Voir contagion'),
-		'view_items'         => __( 'Voir les contagions'),
-		'all_items'          => __( 'Toutes les contagions'),
-		'search_items'       => __( 'Rechercher les contagions')
+		'name'               => __( 'Contagions', 'c1sh'),
+		'singular_name'      => __( 'Contagion', 'c1sh'),
+		'menu_name'          => __( 'Contagions', 'c1sh'),
+		'name_admin_bar'     => __( 'Contagion', 'c1sh'),
+		'add_new'            => __( 'Ajouter', 'c1sh'),
+		'add_new_item'       => __( 'Ajouter une nouvelle contagion', 'c1sh'),
+		'new_item'           => __( 'Nouvelle contagion', 'c1sh'),
+		'edit_item'          => __( 'Editer contagion', 'c1sh'),
+		'view_item'          => __( 'Voir contagion', 'c1sh'),
+		'view_items'         => __( 'Voir les contagions', 'c1sh'),
+		'all_items'          => __( 'Toutes les contagions', 'c1sh'),
+		'search_items'       => __( 'Rechercher les contagions', 'c1sh')
 	);
 
 	$contagion_args = array(
@@ -386,14 +386,14 @@ function cush_related_articles_feed() {
 			echo        '<div class="item-content">';
 			echo 		    '<h4><a href="' . get_permalink($p) . '" title"' . $p->post_title . '" >' . $p->post_title . '</a></h4>';
 			echo 		    '<p>' . $p->post_excerpt . '</p>';
-			echo		    '<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">' . __('Lire Plus', 'C1SH') . '</a>';
+			echo		    '<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">' . __('Lire Plus', 'c1sh') . '</a>';
 			echo 	    '</div>';
 			echo 	'</div>';
 			echo '</div>';
 			$i++;
 		}
 
-		echo '<div class="feed-get-more"><a href="' . get_permalink( get_option( 'page_for_posts' ) ) . '" class="button btn-alt">' . __('Voir Plus') . '</a></div>';	
+		echo '<div class="feed-get-more"><a href="' . get_permalink( get_option( 'page_for_posts' ) ) . '" class="button btn-alt">' . __('Voir Plus', 'c1sh') . '</a></div>';	
 		echo '</div>';	// end of wrap
 		echo '</div>';	// end of post selection
 	}	

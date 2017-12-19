@@ -111,7 +111,7 @@ if( have_rows('content_blocks') ){
                             echo        '<div class="item-content">';
                             echo 		    '<h4><a href="' . get_permalink($p) . '" title"' . $p->post_title . '" >' . $p->post_title . '</a></h4>';
                             echo 		    '<p>' . $p->post_excerpt . '</p>';
-                            echo		    '<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">' . __('Lire Plus', 'C1SH') . '</a>';
+                            echo		    '<a href="' . get_permalink($p) . '" title="' . $p->post_title . '" class="read-more">' . __('Lire Plus', 'c1sh') . '</a>';
                             echo 	    '</div>';
                             echo 	'</div>';
                             echo '</div>';
@@ -261,13 +261,13 @@ if( have_rows('content_blocks') ){
                     }
                     echo                '<h4><a href="' . get_the_permalink($single_contagion->ID) . '">' . $single_contagion->post_title . '</a></h4>';
                     echo                '<p>' . $single_contagion->post_excerpt . '</p>';        
-                    echo		    '<a href="' . get_the_permalink($single_contagion->ID) . '" title="' . $single_contagion->post_title . '" class="read-more">' . __('Voir Plus') . '</a>';
+                    echo		    '<a href="' . get_the_permalink($single_contagion->ID) . '" title="' . $single_contagion->post_title . '" class="read-more">' . __('Voir Plus', 'c1sh') . '</a>';
                     echo            '</div>'; // end of item-content
                     echo        '</div>'; // end of blurb
                     echo '</div>'; // end of columns
                     $i++;
                 }  // end of has_rows
-                echo '<div class="feed-get-more"><a href="' . get_post_type_archive_link( 'contagion' ) . '" class="button btn-alt">' . __('Voir Plus') . '</a></div>';
+                echo '<div class="feed-get-more"><a href="' . get_post_type_archive_link( 'contagion' ) . '" class="button btn-alt">' . __('Voir Plus', 'c1sh') . '</a></div>';
                 echo '</div>'; // end of wrap
                 echo '</div>'; // end of feed
                 break;
@@ -382,7 +382,7 @@ if( have_rows('content_blocks') ){
                         echo                '</ul>';
                         }
                         if ( $layout_type == 'blurbs' ) {
-                            echo		    '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">' . __('Voir Plus') . '</a>';
+                            echo		    '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '" class="read-more">' . __('Voir Plus', 'c1sh') . '</a>';
                         }
                         echo            '</div>'; // end of item-content
                         echo        '</div>'; // end of blurb
@@ -390,7 +390,7 @@ if( have_rows('content_blocks') ){
                         $i++;
                     }
                     if ( $show_read_more == true ) {
-                    echo '<div class="feed-get-more"><a href="' . get_post_type_archive_link( $items_type ) . '" class="button btn-alt">' . __('Voir Plus') . '</a></div>';
+                    echo '<div class="feed-get-more"><a href="' . get_post_type_archive_link( $items_type ) . '" class="button btn-alt">' . __('Voir Plus', 'c1sh') . '</a></div>';
                     }
                     echo '</div>'; // end of wrap
                     echo '</div>'; // end of section
@@ -507,7 +507,7 @@ if( have_rows('content_blocks') ){
                 }
                 wp_reset_postdata();
                 echo    '<div class="clearfix"></div>';
-                echo    '<div class="feed-get-more"><a href="' . get_post_type_archive_link( 'signature' ) . '" class="button btn-alt">' . __('Voir Plus') . '</a></div>';
+                echo    '<div class="feed-get-more"><a href="' . get_post_type_archive_link( 'signature' ) . '" class="button btn-alt">' . __('Voir Plus', 'c1sh') . '</a></div>';
                 echo    '</div>'; // end of .wrap
                 echo '</div>'; // end of .signatures-list
                 break;
