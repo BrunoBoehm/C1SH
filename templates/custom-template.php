@@ -52,9 +52,11 @@ if( have_rows('content_blocks') ){
             * 
             */
             case 'quote_block':
+                $quote_image = get_sub_field('image');
+                // print_r($quote_image);
                 echo '<div class="quote-block">';
                 echo '<div class="wrap">';
-                echo 	'<img src="' . get_sub_field('image')['url'] . '">';
+                echo 	'<img src="' . $quote_image['url'] . '" title="' . $quote_image['title'] . '" alt="' . $quote_image['alt'] . '">';
                 echo 	get_sub_field('text') . '<span>' . get_sub_field('author') . '</span>';
                 echo '</div>';
                 echo '</div>';
@@ -73,7 +75,7 @@ if( have_rows('content_blocks') ){
                         the_row();
                         if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
                         echo 	'<div class="blurb tile-shadow">';
-                        echo 		'<img src="' . get_sub_field('image')['url'] . '">';
+                        echo 		'<img src="' . get_sub_field('image')['url'] . '" alt="' . get_sub_field('image')['alt'] . '" title="' . get_sub_field('image')['title'] . '">';
                         echo        '<div class="item-content">';
                         echo 		    '<h4><a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '">' . get_sub_field('title') . '</a></h4>';
                         echo 		    '<p>' . get_sub_field('text') . '</p>';
@@ -106,8 +108,9 @@ if( have_rows('content_blocks') ){
                         foreach($posts as $p) {
                             if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
                             // print_r($p);
+                            // print_r(wp_get_attachment_image(get_post_thumbnail_id($p->ID)));
                             echo 	'<div class="post blurb">';
-                            echo 		'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($p->ID)) . '" alt="" title="">';
+                            echo 		'<img src="' . wp_get_attachment_url(get_post_thumbnail_id($p->ID)) . '" alt="' . $p->post_excerpt . '" title="' . get_post( get_post_thumbnail_id($p->ID) )->post_title . '">';
                             echo        '<div class="item-content">';
                             echo 		    '<h4><a href="' . get_permalink($p) . '" title"' . $p->post_title . '" >' . $p->post_title . '</a></h4>';
                             echo 		    '<p>' . $p->post_excerpt . '</p>';
@@ -137,12 +140,12 @@ if( have_rows('content_blocks') ){
                         if ( $i == 0 ){ echo '<div class="one-half first">'; } else { echo '<div class="one-half">'; }
                         echo 	'<div class="cta-block">';
                         echo		'<div class="cta-block-item">';
-                        echo			'<img src="' . get_sub_field('image')['url'] . '" alt="' . get_sub_field('image')['alt'] . '" title="' . get_sub_field('image')['description'] . '">';
+                        echo			'<img src="' . get_sub_field('image')['url'] . '" alt="' . get_sub_field('image')['alt'] . '" title="' . get_sub_field('image')['title'] . '">';
                         echo		    '<div class="cta-block-content">';
                         echo			    '<h3>' . get_sub_field('title') . '</h3>';
                         echo			    '<p>' . get_sub_field('text') . '</p>';
                         if ( get_sub_field('link') ) {
-                            echo			'<a href="' . get_sub_field('link')['url'] . '" class="button">' . get_sub_field('link')['title'] . '</a>';
+                            echo			'<a href="' . get_sub_field('link')['url'] . '" title=' . get_sub_field('link')['title'] . ' class="button">' . get_sub_field('link')['title'] . '</a>';
                         }
                         echo		    '</div>';
                         echo		'</div>';
@@ -182,11 +185,11 @@ if( have_rows('content_blocks') ){
                 while( have_rows('list_item') ) {
                     the_row();
                     echo '<div class="list-item">';
-                    echo	'<img src="' . get_sub_field('image')['url'] . '">';
+                    echo	'<img src="' . get_sub_field('image')['url'] . '" alt="' . get_sub_field('image')['alt'] . '">';
                     echo	'<h4>' . get_sub_field('title') . '</h4>';
                     echo	'<p>' . get_sub_field('text') . '</p>';
                     if ( get_sub_field('link') ) {
-                        echo	'<a href="' . get_sub_field('link')['url'] . '">' . get_sub_field('link')['title'] . '</a>';	
+                        echo	'<a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '">' . get_sub_field('link')['title'] . '</a>';	
                     }
                     echo '</div>';
                 }
@@ -212,7 +215,7 @@ if( have_rows('content_blocks') ){
                     $show_company = get_field('show_company', "user_{$user_id}" );
 
                     echo    '<div class="list-single-user">';
-                    echo        '<div class="single-user-avatar"><img src="' . get_field('profile_picture', "user_{$user_id}" )['url'] . '"></div>';
+                    echo        '<div class="single-user-avatar"><img src="' . get_field('profile_picture', "user_{$user_id}" )['url'] . '" alt="' . get_field('profile_picture', "user_{$user_id}" )['alt'] . '" title="' . get_field('profile_picture', "user_{$user_id}" )['title'] . '"></div>';
                     echo        '<div class="single-user-meta">';
                     echo            '<h5>' . get_sub_field('single_user')['user_firstname'] . ' ' . get_sub_field('single_user')['user_lastname'] . '</h5>';
                     if ( $company && $show_company ) {
@@ -428,7 +431,7 @@ if( have_rows('content_blocks') ){
                 $image_caption = get_sub_field('image_caption');
 
                 echo '<div class="image-block">';
-                echo        '<img src="' . $image_object['url'] . '">';
+                echo        '<img src="' . $image_object['url'] . '" alt="' . $image_object['alt'] . '" title="' . $image_object['title'] . '">';
                 echo        '<p class="media-caption">' . $image_caption . '</p>';
                 echo '</div>';
                 break;                
@@ -446,7 +449,7 @@ if( have_rows('content_blocks') ){
                 foreach ($institutions as $institution){
                     if ( $i == 0 || $i % 6 == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
                     echo    '<div class="list-single-institution">';
-                    echo        '<div class="single-institution-logo"><a href="' . get_permalink($institution) . '" title="' . $institution->post_title . '"><img src="' . get_field('institution_logo', $institution->ID )['url'] . '"></a></div>';
+                    echo        '<div class="single-institution-logo"><a href="' . get_permalink($institution) . '" title="' . $institution->post_title . '"><img src="' . get_field('institution_logo', $institution->ID )['url'] . '" alt="' . get_field('institution_logo', $institution->ID )['alt'] . '"></a></div>';
                     if ( get_sub_field('show_company_names') ) {
                         echo        '<div class="single-institution-meta">';
                         echo            '<h6><a href="' . get_permalink($institution) . '" title="' . $institution->post_title . '">' . $institution->post_title . '</a></h6>';
@@ -498,7 +501,7 @@ if( have_rows('content_blocks') ){
                     setup_postdata( $signature );
                     if ( $i == 0 || $i % 6 == 0 ){ echo '<div class="one-sixth first">'; } else { echo '<div class="one-sixth">'; }
                     echo    '<div class="list-single-signature">';
-                    echo        '<div class="single-user-avatar"><img src="' . $signature->url_featured_img_small . '"></div>';
+                    echo        '<div class="single-user-avatar"><img src="' . $signature->url_featured_img_small . '" alt=""></div>';
                     echo        '<div class="single-user-meta">';
                     echo            '<h5>' . $signature->author . '</h5>';
                     echo        '</div>';
