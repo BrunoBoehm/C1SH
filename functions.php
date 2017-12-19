@@ -44,9 +44,23 @@ function cush_enqueue_scripts_styles() {
 	wp_enqueue_script( 'c1sh-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 	
 	wp_register_script( 'c1sh-javascript', get_stylesheet_directory_uri() . '/js/c1sh-javascript.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+
+	if( function_exists('pll_current_language') ) {
+		switch ( pll_current_language() ) {
+			case 'en':
+				$lang_redirect_url = get_permalink( get_page_by_path('and-you')->ID );
+				break;
+			case 'fr':
+				$lang_redirect_url = get_permalink( get_page_by_path('et-vous')->ID );
+				break;
+		}
+	} else {
+		$lang_redirect_url = get_permalink( gget_page_by_path('et-vous')->ID );
+	};
+
 	$c1sh_javascript_translation_array = array(
 		// 'dropdown_text' => __( '', 'c1sh' ),
-		'dropdown_default_url' => get_permalink( get_page_by_title('Et Vous ?')->ID )
+		'dropdown_default_url' => $lang_redirect_url
 	);
 	wp_localize_script( 'c1sh-javascript', 'c1sh_dropdown_data', $c1sh_javascript_translation_array );
 	wp_enqueue_script( 'c1sh-javascript');
@@ -142,28 +156,31 @@ function sp_footer_creds_filter( $creds ) {
 }
 
 //* Add ACF Options Page
-if( function_exists('acf_add_options_page') ) {
+if ( function_exists('acf_add_options_page') ) {
 	
-	acf_add_options_page(array(
+	// Main Settings Page
+	$parent = acf_add_options_page( array(
 		'page_title' 	=> 'Banners Settings',
 		'menu_title'	=> 'Banner Settings',
 		'menu_slug' 	=> 'banner-settings',
 		'capability'	=> 'edit_posts'
-	));;
-	acf_add_options_sub_page(array(
+	));
+
+	// Sub Option Pages
+	acf_add_options_sub_page( array(
 		'page_title' 	=> 'Video CTA Banner',
 		'menu_title'	=> 'Video CTA Banner',
-		'parent_slug'	=> 'banner-settings',
+		'parent'	=> $parent['menu_slug']
 	));
-	acf_add_options_sub_page(array(
+	acf_add_options_sub_page( array(
 		'page_title' 	=> 'KPI Banner',
 		'menu_title'	=> 'KPI Banner',
-		'parent_slug'	=> 'banner-settings',
+		'parent'	=> $parent['menu_slug']
 	));
-	acf_add_options_sub_page(array(
+	acf_add_options_sub_page( array(
 		'page_title' 	=> 'Join Us Banner',
 		'menu_title'	=> 'Join Us Banner',
-		'parent_slug'	=> 'banner-settings',
+		'parent'	=> $parent['menu_slug']
 	));
 }
 
