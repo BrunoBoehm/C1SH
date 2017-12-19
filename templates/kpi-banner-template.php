@@ -1,6 +1,9 @@
 <?php
 
-$kpi_banner = get_field('kpi_banner', 'option');
+if (function_exists('pll_current_language')) {
+    $kpi_banner = get_field('kpi_banner', pll_current_language()); 
+}
+
 if ( $kpi_banner ) {
     // var_dump($kpi_banner);
     $true_members_count = count_users()['avail_roles']['contributor'];
