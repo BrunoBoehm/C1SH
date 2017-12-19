@@ -139,14 +139,14 @@ h2 {
 	&:after {
 		content: "";
 		display: block;
-		width: 80px;
+		width: 130px;
 		margin: 15px auto 15px;
 
-		// background: url('images/c1sh-line.jpg') no-repeat;
-		// background-size: 80px;
-		// height: 20px;
+		background: url('images/c1sh-line-l.jpg') no-repeat;
+		background-size: 130px;
+		height: 10px;
 
-		border-top: 1px solid $primary-color;
+		// border-top: 1px solid $primary-color;
 	}
 }
 
