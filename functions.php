@@ -166,22 +166,48 @@ if ( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts'
 	));
 
-	// Sub Option Pages
-	acf_add_options_sub_page( array(
-		'page_title' 	=> 'Video CTA Banner',
-		'menu_title'	=> 'Video CTA Banner',
-		'parent'	=> $parent['menu_slug']
-	));
-	acf_add_options_sub_page( array(
-		'page_title' 	=> 'KPI Banner',
-		'menu_title'	=> 'KPI Banner',
-		'parent'	=> $parent['menu_slug']
-	));
-	acf_add_options_sub_page( array(
-		'page_title' 	=> 'Join Us Banner',
-		'menu_title'	=> 'Join Us Banner',
-		'parent'	=> $parent['menu_slug']
-	));
+	// Sub Option Pages, NOT Language specific
+	// acf_add_options_sub_page( array(
+	// 	'page_title' 	=> 'Video CTA Banner',
+	// 	'menu_title'	=> 'Video CTA Banner',
+	// 	'parent'	=> $parent['menu_slug']
+	// ));
+	// acf_add_options_sub_page( array(
+	// 	'page_title' 	=> 'KPI Banner',
+	// 	'menu_title'	=> 'KPI Banner',
+	// 	'parent'	=> $parent['menu_slug']
+	// ));
+	// acf_add_options_sub_page( array(
+	// 	'page_title' 	=> 'Join Us Banner',
+	// 	'menu_title'	=> 'Join Us Banner',
+	// 	'parent'	=> $parent['menu_slug']
+	// ));
+
+	// Sub Option Pages, Language specific
+	// Each options page has it’s own ID so fields names can be the same.
+	// https://support.advancedcustomfields.com/forums/topic/options-page-polylang/
+	$languages = array( 'fr', 'en' );
+
+	foreach( $languages as $lang ) {
+		acf_add_options_sub_page( array(
+			'page_title' 	=> 'Video CTA Banner (' . strtoupper( $lang ) . ')',
+			'menu_title'	=> 'Video CTA Banner (' . strtoupper( $lang ) . ')',
+			'post_id' 		=> $lang,
+			'parent'		=> $parent['menu_slug']
+		));
+		acf_add_options_sub_page( array(
+			'page_title' 	=> 'KPI Banner (' . strtoupper( $lang ) . ')',
+			'menu_title'	=> 'KPI Banner (' . strtoupper( $lang ) . ')',
+			'post_id' 		=> $lang,
+			'parent'		=> $parent['menu_slug']
+		));
+		acf_add_options_sub_page( array(
+			'page_title' 	=> 'Join Us Banner (' . strtoupper( $lang ) . ')',
+			'menu_title'	=> 'Join Us Banner (' . strtoupper( $lang ) . ')',
+			'post_id' 		=> $lang,
+			'parent'		=> $parent['menu_slug']
+		));
+	}
 }
 
 /**
