@@ -1,11 +1,11 @@
 /*!
-	Theme Name: COMMEUNSEULHOMME
+	Theme Name: C1SH-v1.0.4
 	Theme URI: https://www.commeunseulhomme.com/
 	Description: Theme Wordpress de COMMEUNSEULHOMME.
 	Author: Bruno Boehm, Lyketil
 	Author URI: https://www.lyketil.com/
 
-	Version: 1.0.3
+	Version: 1.0.4
 
 	Tags: responsive-layout, accessibility-ready, translation-ready
 
@@ -363,7 +363,7 @@ i {
 
 blockquote {
   margin: 40px 0;
-  color: #02ccff;
+  color: #02aad4;
   font-family: Georgia, serif;
 }
 
@@ -377,7 +377,7 @@ blockquote::before {
   left: -50px;
   position: relative;
   top: -40px;
-  color: #02ccff;
+  color: #02aad4;
 }
 
 /* ## Headings
@@ -1608,7 +1608,7 @@ img.alignright,
   padding: 7px 10px;
   margin-bottom: 2px;
   opacity: .94;
-  background-color: #02ccff;
+  background-color: #02aad4;
 }
 .blurb .item-content p {
   padding: 6px 30px 13px;
@@ -1731,7 +1731,7 @@ img.alignright,
 .entry-tags a {
   display: inline-block;
   color: #FFF;
-  background-color: #02ccff;
+  background-color: #02aad4;
   padding: 3px 10px;
   border-radius: 5px;
   margin: 2px 4px;
@@ -1803,7 +1803,7 @@ img.alignright,
 }
 .quote-block .wrap {
   max-width: 700px;
-  color: #02ccff;
+  color: #02aad4;
 }
 .quote-block .wrap p {
   text-align: justify;
@@ -1822,7 +1822,7 @@ img.alignright,
   position: absolute;
   left: 99px;
   top: -49px;
-  color: #02ccff;
+  color: #02aad4;
 }
 .quote-block .wrap span {
   font-style: italic;
@@ -2066,7 +2066,7 @@ img.alignright,
   display: inline-block;
   font-weight: 600;
   font-size: 3.6rem;
-  background-color: #02ccff;
+  background-color: #02aad4;
   color: #FFF;
   font-weight: 600;
 }
