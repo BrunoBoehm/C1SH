@@ -6,7 +6,7 @@ if (function_exists('pll_current_language')) {
 
 if ( $kpi_banner ) {
     // var_dump($kpi_banner);
-    $true_members_count = count_users()['avail_roles']['contributor'];
+    $true_members_count = count_users()['avail_roles']['contributor'] + wp_count_posts('signature')->publish;
     $true_actions_count = wp_count_posts('action')->publish;
     $true_stories_count = wp_count_posts('contagion')->publish;
 
