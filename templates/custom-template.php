@@ -413,7 +413,7 @@ if( have_rows('content_blocks') ){
                 $embed_code = get_sub_field('video_link');
                 $video_caption = get_sub_field('video_caption');
 
-                echo '<div class="video-block">';
+                echo '<div class="video-block" id="video-block">';
                 echo '<div class="wrap">';
                 echo        '<div class="embed-responsive">' . $embed_code . '</div>';
                 echo        '<p class="media-caption">' . $video_caption . '</p>';
