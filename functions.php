@@ -464,3 +464,29 @@ add_action( 'init' , 'cush_add_categories_to_attachments' );
 function cush_add_categories_to_attachments() {
     register_taxonomy_for_object_type( 'category', 'attachment' );
 }
+
+
+/**
+ * Add footer area for image
+ * 
+ * https://wpbeaches.com/create-footer-widget-area-genesis-child-theme/
+ * 
+ */
+add_action( 'widgets_init', 'cush_footer_area_widget' );
+function cush_footer_area_widget() {
+	genesis_register_sidebar( array(
+		'id'          	=> 'footercontent',
+		'name'        	=> __( 'Footer', 'c1sh' ),
+		'description' 	=> __( 'Footer area', 'c1sh' ),
+		'before_widget' => '<div class="footer-image">',
+		'after_widget' 	=> '</div>',
+	));
+}
+
+add_action( 'genesis_footer', 'cush_add_image_to_footer', 9 );
+function cush_add_image_to_footer() {
+	genesis_widget_area ('footercontent', array(
+        'before' => '<div class="footer-image-container">',
+        'after' => '</div>',
+    ));
+}
