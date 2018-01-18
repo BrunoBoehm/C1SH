@@ -14,7 +14,6 @@
 
 .footer-widgets {
 	background-color: $base-dark;
-	background-size: 50%;
 	color: $base-light;
 	@include font-size($font-size-xs);
 	clear: both;
@@ -26,7 +25,9 @@
 	}
 
 	@include breakpoint(sm) {
-		background: $base-dark url('images/c1sh-rosace-black.png') no-repeat top center;
+		background: $base-dark url('images/c1sh-rosace-black-xl.jpg') no-repeat top center;
+		background-size: 75%;
+		min-height: 450px;
 	}
 
 	.widget {
@@ -134,12 +135,10 @@
 
 	p {
 		margin-bottom: 0;
+	}
 
-		@include breakpoint(sm) {
-			background: url(images/c1sh-appeldifference.png) no-repeat top center;
-			background-size: 50%;
-			padding-top: 140px;
-			height: 170px;
-		}
+	.footer-image {
+		max-width: 530px;
+		margin: 0 auto 20px;
 	}
 }

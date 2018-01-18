@@ -1420,7 +1420,6 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 .footer-widgets {
   background-color: #3E3E3E;
-  background-size: 50%;
   color: #EBEBEB;
   font-size: 14px;
   font-size: 1.4rem;
@@ -1433,7 +1432,9 @@ img.alignright,
 }
 @media (min-width: 860px) {
   .footer-widgets {
-    background: #3E3E3E url("images/c1sh-rosace-black.png") no-repeat top center;
+    background: #3E3E3E url("images/c1sh-rosace-black-xl.jpg") no-repeat top center;
+    background-size: 75%;
+    min-height: 450px;
   }
 }
 .footer-widgets .widget {
@@ -1535,13 +1536,9 @@ img.alignright,
 .site-footer p {
   margin-bottom: 0;
 }
-@media (min-width: 860px) {
-  .site-footer p {
-    background: url(images/c1sh-appeldifference.png) no-repeat top center;
-    background-size: 50%;
-    padding-top: 140px;
-    height: 170px;
-  }
+.site-footer .footer-image {
+  max-width: 530px;
+  margin: 0 auto 20px;
 }
 
 /* # Content Area
