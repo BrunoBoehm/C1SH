@@ -490,3 +490,9 @@ function cush_add_image_to_footer() {
         'after' => '</div>',
     ));
 }
+
+// Done with Yoast
+// function cush_facebook_comment_moderator() {
+//     echo '<meta property="fb:app_id" content="220283458540313" />';
+// }
+// add_action( 'wp_head', 'cush_facebook_comment_moderator' );

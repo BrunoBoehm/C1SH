@@ -16,6 +16,8 @@ function cush_site_inner_attr( $attributes ) {
 
 // Build the page
 get_header();
+get_template_part( 'templates/opening-body-scripts' );
 get_template_part( 'templates/hero-template' );
 get_template_part( 'templates/custom-template' );
+get_template_part( 'templates/comment-template' );
 get_footer();
