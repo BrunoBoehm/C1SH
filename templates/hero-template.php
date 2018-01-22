@@ -9,7 +9,7 @@ if( have_rows('hero_slider') ) {
     while( have_rows('hero_slider') ) {
         the_row();
 
-        if ( is_page() &&  ! get_sub_field('title') ) {
+        if ( is_page() &&  ! get_sub_field('show_title') ) {
             echo '<div class="hero-section">';
         } else {
             echo '<div class="hero-section overlay">';
@@ -41,7 +41,8 @@ if( have_rows('hero_slider') ) {
         }    
 
         if ( get_sub_field('title') ) {
-            echo		'<h1>' . get_sub_field('title') . '</h1>';
+            echo		'<h1 ' . (get_sub_field('show_title') ? '' : 'class="title-hide"') . '>' . get_sub_field('title') . '</h1>';
+            // print_r(get_sub_field('show_title'));
         }
 
         if ( ! is_page() ) {    

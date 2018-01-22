@@ -1645,7 +1645,7 @@ img.alignright,
   min-height: 260px;
 }
 .page-template .hero-section {
-  padding: 25% 0 3%;
+  padding: 32% 0 1%;
 }
 @media (min-width: 860px) {
   .hero-section {
@@ -1686,6 +1686,7 @@ img.alignright,
 }
 .hero-section .wrap h1 {
   color: white;
+  text-transform: uppercase;
   max-width: 700px;
   margin: 0 auto 20px;
   font-size: 22px;
@@ -1694,9 +1695,14 @@ img.alignright,
 }
 @media (min-width: 860px) {
   .hero-section .wrap h1 {
-    font-size: 30px;
-    font-size: 3rem;
+    font-size: 36px;
+    font-size: 3.6rem;
   }
+}
+.hero-section .wrap h1.title-hide {
+  text-indent: -4000px;
+  height: 0px;
+  margin-top: -50px;
 }
 .hero-section .wrap .brand-logos .brand-logo {
   border-radius: 50px;
@@ -1773,7 +1779,8 @@ img.alignright,
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 75%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 /* ## Sections : Text Blocks
