@@ -227,7 +227,10 @@
 }
 
 .overlay {
-	@include overlay;
+	@include overlay-flat;
+	@include breakpoint(sm){
+		@include overlay;
+	}
 }
 
 /* ## Sections : Text Blocks
