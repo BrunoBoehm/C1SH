@@ -160,21 +160,27 @@
 		}
 
 		.brand-logos {
+			display: none;
+		}
+		@include breakpoint(sm){
+			.brand-logos {
+				display: block;
 
-			.brand-logo {
-				border-radius: 50px;
-				width: 80px;
-				height: 80px;
-				opacity: .8;
-				background-color: $white;
-				display: inline-block;
-				margin: 2px;
-
-				img {
+				.brand-logo {
+					border-radius: 50px;
 					width: 80px;
 					height: 80px;
-					padding: 15px;
-					object-fit: cover;
+					opacity: .8;
+					background-color: $white;
+					display: inline-block;
+					margin: 2px;
+	
+					img {
+						width: 80px;
+						height: 80px;
+						padding: 15px;
+						object-fit: cover;
+					}
 				}
 			}
 		}
@@ -195,6 +201,15 @@
 				border-top: 1px solid $white;
 				margin: 0 auto;
 				padding-top: 20px;
+			}
+		}
+
+		.post-categories {
+			display: none;
+		}
+		@include breakpoint(sm){
+			.post-categories {
+				display: block
 			}
 		}
 	}
