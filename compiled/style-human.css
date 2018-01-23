@@ -1628,15 +1628,11 @@ img.alignright,
 --------------------------------------------- */
 .hero-section {
   position: relative;
-  padding: 11% 0 7%;
   background-position: center;
   background-size: cover;
   transition: all .1s ease;
   text-align: center;
   min-height: 260px;
-}
-.page-template .hero-section {
-  padding: 32% 0 1%;
 }
 @media (min-width: 860px) {
   .hero-section {
@@ -1669,16 +1665,23 @@ img.alignright,
   object-position: center;
 }
 .hero-section .wrap {
-  position: relative;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
 }
 .hero-section .wrap h1 {
   color: white;
   text-transform: uppercase;
-  max-width: 700px;
+  text-align: center;
   margin: 0 auto 20px;
+  max-width: 700px;
   font-size: 22px;
   font-size: 2.2rem;
-  text-shadow: 1px 1px 2px rgba(62, 62, 62, 0.54);
+  text-shadow: 1px 1px 3px rgba(62, 62, 62, 0.54);
 }
 @media (min-width: 860px) {
   .hero-section .wrap h1 {
