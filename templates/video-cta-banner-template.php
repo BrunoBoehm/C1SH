@@ -29,7 +29,7 @@ if ($banner) {
     echo        '<select id="join-us-select">';
     echo                '<option value="" selected disabled hidden>' . __("Vous êtes...", "c1sh") . '</option>';
     foreach ($menu_items as $menu_item) {
-        echo            '<option value="' . $menu_item->url . '" label="' . $menu_item->title . '" />';
+        echo            '<option value="' . $menu_item->url . '" label="' . $menu_item->title . '">' . $menu_item->title . '</option>';
     }
     echo        '</select>';
     echo        '<input type="button" id="submit" value="' . $banner['btn_link']['title'] . '" onClick="c1shRedirectToPath()">';
