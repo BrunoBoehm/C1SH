@@ -2195,6 +2195,8 @@ img.alignright,
     height: 100px;
     left: -100px;
     top: 15px;
+    -webkit-animation: float 3s ease-in-out infinite;
+            animation: float 3s ease-in-out infinite;
   }
   .video-cta-banner .video-cta-banner__cta-block .button {
     margin-top: 50px;
