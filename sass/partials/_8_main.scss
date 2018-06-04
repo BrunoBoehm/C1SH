@@ -368,11 +368,12 @@
 }
 
 .three-blurbs--storyboard {
-	margin: -40px 0 40px;
+	margin: -40px 0 0;
 
 	.blurb img {
 		width: auto;
-		height: 150px;
+		height: 160px;
+		margin-top: 14px;
 	}
 
 	@include breakpoint(sm){
