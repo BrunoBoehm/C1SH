@@ -1887,6 +1887,10 @@ img.alignright,
   margin: 20px 0 40px;
 }
 
+.three-blurbs--storyboard {
+  margin: -40px 0 40px;
+}
+
 /* ## Sections : Post Selection
 --------------------------------------------- */
 .post-selection {

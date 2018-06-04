@@ -68,9 +68,13 @@ if( have_rows('content_blocks') ){
             * 
             */            
             case '3_blurbs':
-                echo '<div class="three-blurbs">';
+                if (get_sub_field('multiple_links_inside') ){
+                    echo '<div class="three-blurbs--storyboard">';
+                } else {
+                    echo '<div class="three-blurbs">';   
+                }
 
-                if ( get_sub_field('multiple_links_inside') == 1 ) {
+                if ( get_sub_field('multiple_links_inside') ) {
                     echo '<div class="wrap">';
                     $i = 0;
                     while( have_rows('3_blurbs') ) {
