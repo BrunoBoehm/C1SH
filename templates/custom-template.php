@@ -69,7 +69,9 @@ if( have_rows('content_blocks') ){
             */            
             case '3_blurbs':
                 echo '<div class="three-blurbs">';
-                echo '<div class="wrap">';
+
+                if ( get_sub_field('multiple_links_inside') == 1 ) {
+                    echo '<div class="wrap">';
                     $i = 0;
                     while( have_rows('3_blurbs') ) {
                         the_row();
@@ -77,7 +79,34 @@ if( have_rows('content_blocks') ){
                         echo 	'<div class="blurb tile-shadow">';
                         echo 		'<img src="' . get_sub_field('image')['url'] . '" alt="' . get_sub_field('image')['alt'] . '" title="' . get_sub_field('image')['title'] . '">';
                         echo        '<div class="item-content">';
-                        echo 		    '<h4><a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '">' . get_sub_field('title') . '</a></h4>';
+                        echo 		    '<p>' . get_sub_field('text') . '</p>';
+                        echo            '<div class="item-content__multiple-links clearfix">';
+                        if ( get_sub_field('multiple_links_image') ) {
+                            echo 		    '<img src="' . get_sub_field('multiple_links_image')['url'] . '" alt="' . get_sub_field('multiple_links_image')['alt'] . '" title="' . get_sub_field('multiple_links_image')['title'] . '">';
+                        }
+                        echo                get_sub_field('multiple_links');
+                        echo            '</div>';
+                        echo 	    '</div>';
+                        echo 	'</div>';
+                        echo '</div>';
+                        $i++;
+                    }
+                    // echo '<div class="clearfix"></div>';
+                    echo '</div>';
+                } else {
+                    echo '<div class="wrap">';
+                    $i = 0;
+                    while( have_rows('3_blurbs') ) {
+                        the_row();
+                        if ( $i == 0 ){ echo '<div class="one-third first">'; } else { echo '<div class="one-third">'; }
+                        echo 	'<div class="blurb tile-shadow">';
+                        echo 		'<img src="' . get_sub_field('image')['url'] . '" alt="' . get_sub_field('image')['alt'] . '" title="' . get_sub_field('image')['title'] . '">';
+                        echo        '<div class="item-content">';
+                        if ( get_sub_field('link') ) {
+                            echo 		'<h4><a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '">' . get_sub_field('title') . '</a></h4>';
+                        } else {
+                            echo 		'<h4>' . get_sub_field('title') . '</h4>';
+                        }
                         echo 		    '<p>' . get_sub_field('text') . '</p>';
                         if ( get_sub_field('link') ) {
                             echo		'<a href="' . get_sub_field('link')['url'] . '" title="' . get_sub_field('link')['title'] . '" class="read-more">' . get_sub_field('link')['title'] . '</a>';                            
@@ -87,8 +116,9 @@ if( have_rows('content_blocks') ){
                         echo '</div>';
                         $i++;
                     }
-                echo '<div class="clearfix"></div>';
-                echo '</div>';	
+                    // echo '<div class="clearfix"></div>';
+                    echo '</div>';	
+                }
                 echo '</div>';
                 break;
 

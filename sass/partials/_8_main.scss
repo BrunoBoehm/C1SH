@@ -88,6 +88,28 @@
 				background-color: $fifth-dark;
 			}
 		}
+
+		.item-content__multiple-links {
+			padding: 10px 40px;
+
+			img {
+				width: 30px;
+				height: 120px;
+				margin-right: 10px;
+				float: left;
+			}
+
+			ol {
+				text-align: left;
+				line-height: 24px;
+				color: $secondary-color;
+
+				a, a:hover, a:visited, a:active {
+					color: $secondary-color;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 

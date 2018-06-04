@@ -1605,6 +1605,24 @@ img.alignright,
   color: #3E3E3E;
   background-color: rgba(62, 62, 62, 0.02);
 }
+.blurb .item-content .item-content__multiple-links {
+  padding: 10px 40px;
+}
+.blurb .item-content .item-content__multiple-links img {
+  width: 30px;
+  height: 120px;
+  margin-right: 10px;
+  float: left;
+}
+.blurb .item-content .item-content__multiple-links ol {
+  text-align: left;
+  line-height: 24px;
+  color: #02aad4;
+}
+.blurb .item-content .item-content__multiple-links ol a, .blurb .item-content .item-content__multiple-links ol a:hover, .blurb .item-content .item-content__multiple-links ol a:visited, .blurb .item-content .item-content__multiple-links ol a:active {
+  color: #02aad4;
+  text-decoration: none;
+}
 
 /* ## Hero Sections
 --------------------------------------------- */
