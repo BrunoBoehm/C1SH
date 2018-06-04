@@ -23,11 +23,23 @@ if ($banner) {
     echo '<div class="video-cta-banner" id="cta-banner">';
     echo '<div class="wrap">';
     echo 	'<div class="video-cta-banner__video">' . $banner['video_link'] . '</div>';
+    if ( $banner['title'] ) {
     echo 	'<h3>' . $banner['title'] . '</h3>';
+    }
+    if ( $banner['html'] ) {
     echo 	'<div class="video-cta-banner__html">' . $banner['html'] . '</div>';
-
+    }
+    echo    '<div class="video-cta-banner__cta-block">';
+    if ( $banner['cta_image'] ) {
+    echo 	'<img src="' . $banner['cta_image']['url'] . '" alt="' . $banner['cta_image']['alt'] . '" title="' . $banner['cta_image']['title'] . '">';
+    }    
+    if ( $banner['btn_link'] ) {
     echo    '<a href="' . $banner['btn_link']['url'] . '" title="' . $banner['btn_link']['title'] . '" class="button button--primary">' . $banner['btn_link']['title'] . '</a>';
+    }
+    if ( $banner['btn_link_2'] ) {
     echo    '<a href="' . $banner['btn_link_2']['url'] . '" title="' . $banner['btn_link_2']['title'] . '" class="button button--secondary">' . $banner['btn_link_2']['title'] . '</a>';
+    }
+    echo    '</div>';
 
     // echo    '<form class="join-us-form">';
     // echo        '<select id="join-us-select">';

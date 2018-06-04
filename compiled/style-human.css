@@ -2133,6 +2133,32 @@ img.alignright,
 .video-cta-banner h3 {
   margin: 10px 0 20px;
 }
+.video-cta-banner .video-cta-banner__cta-block {
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+}
+.video-cta-banner .video-cta-banner__cta-block img {
+  display: none;
+}
+.video-cta-banner .video-cta-banner__cta-block .button {
+  margin-top: 20px;
+}
+@media (min-width: 860px) {
+  .video-cta-banner .video-cta-banner__cta-block {
+    width: 500px;
+  }
+  .video-cta-banner .video-cta-banner__cta-block img {
+    display: block;
+    position: absolute;
+    height: 100px;
+    left: -100px;
+    top: 15px;
+  }
+  .video-cta-banner .video-cta-banner__cta-block .button {
+    margin-top: 50px;
+  }
+}
 .video-cta-banner .button:first-of-type {
   margin-right: 20px;
 }

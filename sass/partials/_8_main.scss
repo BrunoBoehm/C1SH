@@ -647,6 +647,36 @@
 		margin: 10px 0 20px;
 	}
 
+	.video-cta-banner__cta-block {
+		width: 300px;
+		position: relative;
+		margin: 0 auto;
+
+		img {
+			display: none;
+		}
+
+		.button {
+			margin-top: 20px;
+		}
+
+		@include breakpoint(sm){
+			width: 500px;
+
+			img {
+				display: block;
+				position: absolute;
+				height: 100px;
+				left: -100px;
+				top: 15px;
+			}
+	
+			.button {
+				margin-top: 50px;
+			}
+		}
+	}
+
 	.button:first-of-type {
 		margin-right: 20px;
 	}
