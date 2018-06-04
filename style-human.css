@@ -1554,6 +1554,7 @@ img.alignright,
 .blurb {
   border: 1px solid rgba(62, 62, 62, 0.08);
   border-radius: 5px;
+  background-color: white;
   text-align: center;
   position: relative;
   margin: 20px 0;
@@ -1905,30 +1906,36 @@ img.alignright,
 .three-blurbs--storyboard {
   margin: -40px 0 40px;
 }
-.three-blurbs--storyboard .one-third:first-of-type .blurb::after,
-.three-blurbs--storyboard .one-third:nth-of-type(2) .blurb::after {
-  content: "";
-  background: url(images/illustration-arrow1.png) no-repeat;
-  display: block;
-  background-size: 80px;
-  height: 70px;
-  width: 100%;
-  position: absolute;
-  top: 108px;
-  left: 325px;
-  z-index: 50;
+.three-blurbs--storyboard .blurb img {
+  width: auto;
+  height: 150px;
 }
-.three-blurbs--storyboard .one-third:first-of-type .blurb::after {
-  -webkit-transform: translatey(1px) translatex(-2px);
-          transform: translatey(1px) translatex(-2px);
-  -webkit-animation: float 3s ease-in-out infinite;
-          animation: float 3s ease-in-out infinite;
-}
-.three-blurbs--storyboard .one-third:nth-of-type(2) .blurb::after {
-  -webkit-transform: translatey(-2px) translatex(1px);
-          transform: translatey(-2px) translatex(1px);
-  -webkit-animation: float 5s ease-in-out infinite;
-          animation: float 5s ease-in-out infinite;
+@media (min-width: 860px) {
+  .three-blurbs--storyboard .one-third:first-of-type .blurb::after,
+  .three-blurbs--storyboard .one-third:nth-of-type(2) .blurb::after {
+    content: "";
+    background: url(images/illustration-arrow1.png) no-repeat;
+    display: block;
+    background-size: 80px;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: 16%;
+    left: 92%;
+    z-index: 50;
+  }
+  .three-blurbs--storyboard .one-third:first-of-type .blurb::after {
+    -webkit-transform: translatey(1px) translatex(-2px);
+            transform: translatey(1px) translatex(-2px);
+    -webkit-animation: float 3s ease-in-out infinite;
+            animation: float 3s ease-in-out infinite;
+  }
+  .three-blurbs--storyboard .one-third:nth-of-type(2) .blurb::after {
+    -webkit-transform: translatey(-2px) translatex(1px);
+            transform: translatey(-2px) translatex(1px);
+    -webkit-animation: float 5s ease-in-out infinite;
+            animation: float 5s ease-in-out infinite;
+  }
 }
 
 @-webkit-keyframes float {

@@ -26,6 +26,7 @@
 .blurb {
 	border: $site-border;
 	border-radius: $site-radius;
+	background-color: white;
 	text-align: center;
 	position: relative;
 	margin: 20px 0;
@@ -369,28 +370,35 @@
 .three-blurbs--storyboard {
 	margin: -40px 0 40px;
 
-	.one-third:first-of-type .blurb::after,
-	.one-third:nth-of-type(2) .blurb::after {
-		content: "";
-		background: url(images/illustration-arrow1.png) no-repeat;
-		display: block;
-		background-size: 80px;
-		height: 70px;
-		width: 100%;
-		position: absolute;
-		top: 108px;
-		left: 325px;
-		z-index: 50;
+	.blurb img {
+		width: auto;
+		height: 150px;
 	}
 
-	.one-third:first-of-type .blurb::after {
-		transform: translatey(1px) translatex(-2px);
-		animation: float 3s ease-in-out infinite;
-	}
-
-	.one-third:nth-of-type(2) .blurb::after {
-		transform: translatey(-2px) translatex(1px);
-		animation: float 5s ease-in-out infinite;
+	@include breakpoint(sm){
+		.one-third:first-of-type .blurb::after,
+		.one-third:nth-of-type(2) .blurb::after {
+			content: "";
+			background: url(images/illustration-arrow1.png) no-repeat;
+			display: block;
+			background-size: 80px;
+			height: 70px;
+			width: 100%;
+			position: absolute;
+			top: 16%;
+			left: 92%;
+			z-index: 50;
+		}
+	
+		.one-third:first-of-type .blurb::after {
+			transform: translatey(1px) translatex(-2px);
+			animation: float 3s ease-in-out infinite;
+		}
+	
+		.one-third:nth-of-type(2) .blurb::after {
+			transform: translatey(-2px) translatex(1px);
+			animation: float 5s ease-in-out infinite;
+		}
 	}
 }
 
