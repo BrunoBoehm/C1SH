@@ -68,10 +68,12 @@ if( have_rows('content_blocks') ){
             * 
             */            
             case '3_blurbs':
-                if (get_sub_field('multiple_links_inside') ){
+                if ( get_sub_field('blurbs_layout') == 'indented' ){
                     echo '<div class="three-blurbs--storyboard">';
+                } elseif ( get_sub_field('blurbs_layout') == 'underwater' ) {
+                    echo '<div class="three-blurbs--texture">';   
                 } else {
-                    echo '<div class="three-blurbs">';   
+                    echo '<div class="three-blurbs">'; 
                 }
 
                 if ( get_sub_field('multiple_links_inside') ) {

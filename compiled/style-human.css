@@ -1920,6 +1920,14 @@ img.alignright,
   }
 }
 
+.three-blurbs--texture {
+  background: url("images/underwater-bg-50.jpg") no-repeat;
+  background-size: cover;
+}
+.three-blurbs--texture .blurb {
+  border: none;
+}
+
 @keyframes float {
   0% {
     transform: translatey(0px) translatex(0px) rotate(0deg);
