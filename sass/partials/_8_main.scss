@@ -368,6 +368,42 @@
 
 .three-blurbs--storyboard {
 	margin: -40px 0 40px;
+
+	.one-third:first-of-type .blurb::after,
+	.one-third:nth-of-type(2) .blurb::after {
+		content: "";
+		background: url(images/illustration-arrow1.png) no-repeat;
+		display: block;
+		background-size: 80px;
+		height: 70px;
+		width: 100%;
+		position: absolute;
+		top: 108px;
+		left: 325px;
+		z-index: 50;
+	}
+
+	.one-third:first-of-type .blurb::after {
+		transform: translatey(1px) translatex(-2px);
+		animation: float 3s ease-in-out infinite;
+	}
+
+	.one-third:nth-of-type(2) .blurb::after {
+		transform: translatey(-2px) translatex(1px);
+		animation: float 5s ease-in-out infinite;
+	}
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px) translatex(0px) rotate(0deg);
+	}
+	50% {
+		transform: translatey(3px) translatex(2px) rotate(3deg);
+	}
+	100% {
+		transform: translatey(0px) translatex(0px) rotate(0deg);
+	}
 }
 
 /* ## Sections : Post Selection
