@@ -1043,14 +1043,8 @@ img.alignright,
 .site-inner,
 .wrap {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1240px;
   padding: 0 5%;
-}
-@media (min-width: 860px) {
-  .site-inner,
-  .wrap {
-    padding: 0;
-  }
 }
 
 .site-inner {
@@ -1123,46 +1117,26 @@ img.alignright,
 /* ## Column Classes
 --------------------------------------------- */
 /* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
-.five-sixths,
-.four-sixths,
-.one-fourth,
-.one-half,
-.one-sixth,
-.one-third,
-.three-fourths,
-.three-sixths,
-.two-fourths,
-.two-sixths,
-.two-thirds {
+.five-sixths, .four-sixths, .one-fourth, .one-half, .one-sixth, .one-third, .three-fourths, .three-sixths, .two-fourths, .two-sixths, .two-thirds {
   margin: 0;
   width: 100%;
 }
 @media (min-width: 860px) {
-  .five-sixths,
-  .four-sixths,
-  .one-fourth,
-  .one-half,
-  .one-sixth,
-  .one-third,
-  .three-fourths,
-  .three-sixths,
-  .two-fourths,
-  .two-sixths,
-  .two-thirds {
+  .five-sixths, .four-sixths, .one-fourth, .one-half, .one-sixth, .one-third, .three-fourths, .three-sixths, .two-fourths, .two-sixths, .two-thirds {
     float: left;
     margin-left: 2.564102564102564%;
   }
-  .feed .five-sixths, .feed
-  .four-sixths, .feed
-  .one-fourth, .feed
-  .one-half, .feed
-  .one-sixth, .feed
-  .one-third, .feed
-  .three-fourths, .feed
-  .three-sixths, .feed
-  .two-fourths, .feed
-  .two-sixths, .feed
-  .two-thirds {
+  .feed .five-sixths,
+  .feed .four-sixths,
+  .feed .one-fourth,
+  .feed .one-half,
+  .feed .one-sixth,
+  .feed .one-third,
+  .feed .three-fourths,
+  .feed .three-sixths,
+  .feed .two-fourths,
+  .feed .two-sixths,
+  .feed .two-thirds {
     min-height: 400px;
   }
 }
@@ -1565,8 +1539,8 @@ img.alignright,
 
 .tile-shadow {
   position: relative;
-  -webkit-box-shadow: 0 2rem 5rem -2.5rem rgba(0, 0, 0, 0.03), 0rem 0.3rem 0.5rem -0.4rem rgba(0, 0, 0, 0.03);
-          box-shadow: 0 2rem 5rem -2.5rem rgba(0, 0, 0, 0.03), 0rem 0.3rem 0.5rem -0.4rem rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.08), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.08);
+          box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.08), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.08);
 }
 
 .blurb {
@@ -1770,9 +1744,7 @@ img.alignright,
   color: #FFF;
   display: block;
 }
-.post-categories a,
-.entry-categories a,
-.entry-tags a {
+.post-categories a, .entry-categories a, .entry-tags a {
   display: inline-block;
   color: #FFF;
   background-color: #02aad4;
@@ -1783,9 +1755,9 @@ img.alignright,
   font-weight: 600;
   opacity: .86;
 }
-.single-post .post-categories a, .single-post
-.entry-categories a, .single-post
-.entry-tags a {
+.single-post .post-categories a,
+.single-post .entry-categories a,
+.single-post .entry-tags a {
   background-color: rgba(62, 62, 62, 0.08);
   color: rgba(62, 62, 62, 0.54);
 }
