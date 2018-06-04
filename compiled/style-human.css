@@ -598,6 +598,14 @@ input[type="submit"].btn-alt,
   color: #E4003F;
   border: 1px solid #E4003F;
 }
+button.button--secondary,
+input[type="button"].button--secondary,
+input[type="reset"].button--secondary,
+input[type="submit"].button--secondary,
+.button.button--secondary {
+  background-color: #02aad4;
+  border: 1px solid #02aad4;
+}
 
 button:hover,
 input:hover[type="button"],
@@ -2063,6 +2071,9 @@ img.alignright,
 }
 .video-cta-banner h3 {
   margin: 10px 0 20px;
+}
+.video-cta-banner .button:first-of-type {
+  margin-right: 20px;
 }
 
 .join-us-form {
