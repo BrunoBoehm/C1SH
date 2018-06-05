@@ -502,13 +502,13 @@ if( have_rows('content_blocks') ){
 
             /*
             *
-            * Signature Form
+            * Form Block
             * 
             */                        
-            case 'signature_block':
-                echo '<div class="signature-block">';
+            case 'form_block':
+                echo '<div class="form-block">';
                 echo    '<div class="wrap">';
-                echo do_shortcode('[gravityform id="' . get_sub_field('signature_form') . '" title="false" description="false"]');    
+                echo do_shortcode('[gravityform id="' . get_sub_field('form_block') . '" title="false" description="false"]');    
                 echo    '</div>';
                 echo '</div>';
                 break;
