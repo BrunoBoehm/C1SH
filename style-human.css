@@ -2176,8 +2176,12 @@ img.alignright,
 /* ## Sections : Banners
 --------------------------------------------- */
 .video-cta-banner {
-  padding: 40px 0;
-  background-color: rgba(235, 235, 235, 0.38);
+  padding: 175px 0 80px;
+  margin-top: -80px;
+  background: rgba(235, 235, 235, 0.38);
+  background: url("images/illustration-map-black9.png") no-repeat top, -webkit-gradient(linear, left top, left bottom, from(#FFF), to(rgba(235, 235, 235, 0.38)));
+  background: url("images/illustration-map-black9.png") no-repeat top, linear-gradient(#FFF, rgba(235, 235, 235, 0.38));
+  background-size: contain;
   text-align: center;
 }
 .video-cta-banner h3 {

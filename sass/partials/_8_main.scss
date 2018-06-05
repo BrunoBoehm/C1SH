@@ -649,9 +649,12 @@
 --------------------------------------------- */
 
 .video-cta-banner {
-	padding: 40px 0;
-	background-color: $third-light;
-	text-align: center;
+	padding: 175px 0 80px;
+	margin-top: -80px;
+	background: $third-light;
+	background: url('images/illustration-map-black9.png') no-repeat top, linear-gradient($white, $third-light);
+	background-size: contain;	
+	text-align: center;  
 
 	h3 {
 		margin: 10px 0 20px;
