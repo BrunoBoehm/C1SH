@@ -517,9 +517,21 @@
 .custom-style--underwater {
 	background: url('images/underwater-bg-50.jpg') no-repeat;
 	background-size: cover;
-	padding: 50px 0;
+	padding: 110px 0 50px;
 	margin: 0;
 	
+	.text-block {
+		margin: 20px auto 0px;
+
+		img {
+			height: 120px;
+		}
+	}
+
+	.three-blurbs {
+		margin: 0px 0 40px;
+	}
+
 	.blurb {
 		border: none;
 	}
@@ -659,7 +671,7 @@
 --------------------------------------------- */
 
 .video-cta-banner {
-	padding: 175px 0 80px;
+	padding: 175px 0 100px;
 	margin-top: -80px;
 	background: $third-light;
 	background: url('images/illustration-map-black3.png') no-repeat top, linear-gradient($white, $third-light);
@@ -715,28 +727,36 @@
 	}
 }
 
+.banner-layout--callout {
+	max-width: 80%;
+	margin: -46px auto -100px;
+	z-index: 200;
+	position: relative;
+	
+	.kpi-banner {
+		z-index: 201;
+		border-radius: $site-radius;
+		box-shadow: 0 2rem 5rem -2.5rem $primary-dark, 0rem 0.3rem 0.5rem -0.4rem $primary-dark;
+	}
+}
+
 .kpi-banner {
-	padding: 40px 0;
+	padding: 20px 0;
 	text-align: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 35%;
 
 	.kpi-count {
-		border-radius: $site-radius;
-		min-width: 100px;
-		padding: 0;
-		margin: 20px auto;
-		display: inline-block;
-		font-weight: 600;
-		font-size: 3.6rem;
-		background-color: $secondary-color;
-		color: $white;
-		font-weight: 600;
+		font-weight: 900;
+		font-size: 5.6rem;
+		color: $secondary-color;
+		line-height: 50px;
 	}
 
 	.kpi-text {
 		padding: 0 20%;
+		margin: 0;
 	}
 }
 

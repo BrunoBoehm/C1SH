@@ -2056,8 +2056,17 @@ img.alignright,
 .custom-style--underwater {
   background: url("images/underwater-bg-50.jpg") no-repeat;
   background-size: cover;
-  padding: 50px 0;
+  padding: 110px 0 50px;
   margin: 0;
+}
+.custom-style--underwater .text-block {
+  margin: 20px auto 0px;
+}
+.custom-style--underwater .text-block img {
+  height: 120px;
+}
+.custom-style--underwater .three-blurbs {
+  margin: 0px 0 40px;
 }
 .custom-style--underwater .blurb {
   border: none;
@@ -2184,7 +2193,7 @@ img.alignright,
 /* ## Sections : Banners
 --------------------------------------------- */
 .video-cta-banner {
-  padding: 175px 0 80px;
+  padding: 175px 0 100px;
   margin-top: -80px;
   background: rgba(235, 235, 235, 0.38);
   background: url("images/illustration-map-black3.png") no-repeat top, -webkit-gradient(linear, left top, left bottom, from(#FFF), to(rgba(235, 235, 235, 0.38)));
@@ -2235,27 +2244,35 @@ img.alignright,
   margin-bottom: 20px;
 }
 
+.banner-layout--callout {
+  max-width: 80%;
+  margin: -46px auto -100px;
+  z-index: 200;
+  position: relative;
+}
+.banner-layout--callout .kpi-banner {
+  z-index: 201;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.87), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.87);
+          box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.87), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.87);
+}
+
 .kpi-banner {
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 35%;
 }
 .kpi-banner .kpi-count {
-  border-radius: 5px;
-  min-width: 100px;
-  padding: 0;
-  margin: 20px auto;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 3.6rem;
-  background-color: #02aad4;
-  color: #FFF;
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 5.6rem;
+  color: #02aad4;
+  line-height: 50px;
 }
 .kpi-banner .kpi-text {
   padding: 0 20%;
+  margin: 0;
 }
 
 .main-cta-banner {

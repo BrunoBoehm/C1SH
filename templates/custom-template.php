@@ -37,7 +37,9 @@ if( have_rows('content_blocks') ){
                 echo '<div class="wrap">';
                 if( get_sub_field('icon') ) {
                     echo '<img src="' . get_sub_field('icon')['url'] . '">';
-                    echo '<h3>' . get_sub_field('title') . '</h3>';
+                    if ( get_sub_field('title') ) { 
+                        echo '<h3>' . get_sub_field('title') . '</h3>';
+                     }
                 } elseif ( get_sub_field('title') ) {
                     echo '<h2>' . get_sub_field('title') . '</h2>';
                 }
@@ -202,7 +204,13 @@ if( have_rows('content_blocks') ){
             case 'custom_banner':
                 $banner_code = get_sub_field('custom_banner_slug');
                 if ( $banner_code == 'kpi_banner' ) {
-                    get_template_part('templates/kpi-banner-template');
+                    if ( get_sub_field('layout') == 'callout' ) {
+                        echo    '<div class="banner-layout--callout">';
+                        get_template_part('templates/kpi-banner-template');
+                        echo    '</div>';
+                    } else {
+                        get_template_part('templates/kpi-banner-template');
+                    }
                 } elseif( $banner_code == 'main_cta_banner' ) {
                     get_template_part('templates/cta-banner-template');
                 } elseif( $banner_code == 'video_cta_banner' ) {
