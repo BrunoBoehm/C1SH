@@ -1607,11 +1607,15 @@ img.alignright,
   background-color: rgba(62, 62, 62, 0.02);
 }
 .blurb .item-content .item-content__multiple-links {
-  padding: 10px 40px;
+  padding: 10px 0px;
+  margin: 0 auto;
+  display: block;
+  width: 80%;
 }
 .blurb .item-content .item-content__multiple-links img {
   width: 30px;
   height: 120px;
+  margin-top: 0;
   margin-right: 10px;
   float: left;
 }
