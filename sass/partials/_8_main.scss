@@ -858,7 +858,7 @@ p.media-caption {
 /* ## Signature Form Block
 --------------------------------------------- */
 
-.signature-block {
+.form-block {
 	margin-bottom: 40px;
 
 	.wrap {
@@ -870,6 +870,36 @@ p.media-caption {
 		}
 	}
 }
+
+.button--animate-around {
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		background: url(images/Fleche-J.gif) no-repeat;
+		width: 60px;
+		background-size: contain;
+		top: -21px;
+		left: -80px;
+		height: 100px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		background: url(images/Fleche-R.gif) no-repeat;
+		width: 60px;
+		background-size: contain;
+		top: -35px;
+		right: -52px;
+		height: 100px;
+	}	
+}
+
+
 
 /* ## Signature Listing
 --------------------------------------------- */

@@ -2353,15 +2353,41 @@ p.media-caption {
 
 /* ## Signature Form Block
 --------------------------------------------- */
-.signature-block {
+.form-block {
   margin-bottom: 40px;
 }
-.signature-block .wrap {
+.form-block .wrap {
   max-width: 700px;
 }
-.signature-block .wrap .gform_wrapper .top_label input.medium,
-.signature-block .wrap .gform_wrapper .top_label select.medium {
+.form-block .wrap .gform_wrapper .top_label input.medium,
+.form-block .wrap .gform_wrapper .top_label select.medium {
   width: 100%;
+}
+
+.button--animate-around {
+  position: relative;
+}
+.button--animate-around::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(images/Fleche-J.gif) no-repeat;
+  width: 60px;
+  background-size: contain;
+  top: -21px;
+  left: -80px;
+  height: 100px;
+}
+.button--animate-around::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: url(images/Fleche-R.gif) no-repeat;
+  width: 60px;
+  background-size: contain;
+  top: -35px;
+  right: -52px;
+  height: 100px;
 }
 
 /* ## Signature Listing
