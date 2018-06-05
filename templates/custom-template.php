@@ -552,6 +552,16 @@ if( have_rows('content_blocks') ){
                 echo '</div>'; // end of .signatures-list
                 break;
 
+            
+            /*
+            *
+            * Custom HTML Tag
+            * 
+            */
+            case 'custom_html_tag':
+                echo    get_sub_field('custom_html_tag');
+                break;     
+
             default:
                 break;
 
