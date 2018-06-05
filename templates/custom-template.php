@@ -523,6 +523,19 @@ if( have_rows('content_blocks') ){
 
             /*
             *
+            * Social Feed
+            * 
+            */                        
+            case 'social_feed':
+                echo '<div class="social-feed">';
+                echo    '<div class="wrap">';
+                echo        do_shortcode( get_sub_field('social_feed_shortcode') );    
+                echo    '</div>';
+                echo '</div>';
+                break;
+
+            /*
+            *
             * Signatures List
             * 
             */       

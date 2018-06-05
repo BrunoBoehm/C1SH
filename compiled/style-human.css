@@ -2017,6 +2017,9 @@ img.alignright,
 .custom-style--underwater {
   background: url("images/underwater-bg-50.jpg") no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  height: 100%;
   padding: 110px 0 50px;
   margin: 0;
 }
@@ -2147,6 +2150,12 @@ img.alignright,
     width: 6px;
     top: 10px;
   }
+}
+
+/* ## Sections : Social Feed (Shortcode based)
+--------------------------------------------- */
+.social-feed {
+  background-color: #f0f0f0;
 }
 
 /* ## Sections : Banners
