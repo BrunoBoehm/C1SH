@@ -678,6 +678,10 @@
     background-color: #f0f0f0;
 }
 
+.home .social-feed {
+	padding-top: 100px;
+}
+
 
 /* ## Sections : Banners
 --------------------------------------------- */
@@ -749,6 +753,33 @@
 		z-index: 201;
 		border-radius: $site-radius;
 		box-shadow: 0 2rem 5rem -2.5rem $primary-dark, 0rem 0.3rem 0.5rem -0.4rem $primary-dark;
+	}
+
+	&.social-kpi {
+		margin-top: 20px;
+	}
+}
+
+#social-kpi-banner .et_social_icons_container li {
+	background-color: transparent;
+
+	.et_social_icon {
+		color: $primary-dark;
+	}
+
+	.et_social_networkname {
+		color: $primary-dark;
+		font-size: 1.6rem;
+	}
+
+	.et_social_count {
+		color: $secondary-color;
+		font-weight: 900;
+    	font-size: 5.6rem;
+	}
+
+	.et_social_count_label{
+		font-size: 1.6rem;
 	}
 }
 

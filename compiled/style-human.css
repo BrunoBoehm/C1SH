@@ -2158,6 +2158,10 @@ img.alignright,
   background-color: #f0f0f0;
 }
 
+.home .social-feed {
+  padding-top: 100px;
+}
+
 /* ## Sections : Banners
 --------------------------------------------- */
 .video-cta-banner {
@@ -2220,6 +2224,28 @@ img.alignright,
   z-index: 201;
   border-radius: 5px;
   box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.87), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.87);
+}
+.banner-layout--callout.social-kpi {
+  margin-top: 20px;
+}
+
+#social-kpi-banner .et_social_icons_container li {
+  background-color: transparent;
+}
+#social-kpi-banner .et_social_icons_container li .et_social_icon {
+  color: rgba(62, 62, 62, 0.87);
+}
+#social-kpi-banner .et_social_icons_container li .et_social_networkname {
+  color: rgba(62, 62, 62, 0.87);
+  font-size: 1.6rem;
+}
+#social-kpi-banner .et_social_icons_container li .et_social_count {
+  color: #02aad4;
+  font-weight: 900;
+  font-size: 5.6rem;
+}
+#social-kpi-banner .et_social_icons_container li .et_social_count_label {
+  font-size: 1.6rem;
 }
 
 .kpi-banner {
