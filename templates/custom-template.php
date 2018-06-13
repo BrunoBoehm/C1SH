@@ -203,6 +203,11 @@ if( have_rows('content_blocks') ){
             */             
             case 'custom_banner':
                 $banner_code = get_sub_field('custom_banner_slug');
+
+                if (function_exists('pll_current_language')) {
+                    $kpi_banner = get_field('kpi_banner', pll_current_language()); 
+                }
+
                 if ( $banner_code == 'kpi_banner' ) {
                     if ( get_sub_field('layout') == 'callout' ) {
                         echo    '<div class="banner-layout--callout">';
@@ -215,6 +220,17 @@ if( have_rows('content_blocks') ){
                     get_template_part('templates/cta-banner-template');
                 } elseif( $banner_code == 'video_cta_banner' ) {
                     get_template_part('templates/video-cta-banner-template');
+                } elseif( $banner_code == 'kpi_social_banner' ){
+                    echo    '<div class="banner-layout--callout social-kpi" id="social-kpi-banner">';
+                    if ( $kpi_banner ) {
+                        echo '<div class="kpi-banner" style="background-image: url(' . $kpi_banner['bg_img']['url'] . '); background-color: ' . $kpi_banner['bg_color'] . ';">';
+                    } else {
+                        echo        '<div class="kpi-banner">';
+
+                    }
+                    echo            do_shortcode('[et_social_follow icon_style="simple" icon_shape="rectangle" icons_location="top" col_number="4" counts="true" counts_num="300" outer_color="dark" network_names="true"]');
+                    echo        '</div>';
+                    echo    '</div>';
                 }
                 break;
 
