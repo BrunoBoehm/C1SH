@@ -364,7 +364,7 @@ i {
 
 blockquote {
   margin: 40px 0;
-  color: #02aad4;
+  color: #06ceff;
   font-family: Georgia, serif;
 }
 
@@ -378,7 +378,7 @@ blockquote::before {
   left: -50px;
   position: relative;
   top: -40px;
-  color: #02aad4;
+  color: #06ceff;
 }
 
 /* ## Headings
@@ -605,8 +605,8 @@ input[type="button"].button--secondary,
 input[type="reset"].button--secondary,
 input[type="submit"].button--secondary,
 .button.button--secondary {
-  background-color: #02aad4;
-  border: 1px solid #02aad4;
+  background-color: #06ceff;
+  border: 1px solid #06ceff;
 }
 
 button:hover,
@@ -1595,7 +1595,7 @@ img.alignright,
   padding: 7px 10px;
   margin-bottom: 2px;
   opacity: .94;
-  background-color: #02aad4;
+  background-color: #06ceff;
 }
 .blurb .item-content p {
   padding: 6px 30px 13px;
@@ -1630,10 +1630,10 @@ img.alignright,
 .blurb .item-content .item-content__multiple-links ol {
   text-align: left;
   line-height: 24px;
-  color: #02aad4;
+  color: #06ceff;
 }
 .blurb .item-content .item-content__multiple-links ol a, .blurb .item-content .item-content__multiple-links ol a:hover, .blurb .item-content .item-content__multiple-links ol a:visited, .blurb .item-content .item-content__multiple-links ol a:active {
-  color: #02aad4;
+  color: #06ceff;
   text-decoration: none;
 }
 
@@ -1778,7 +1778,7 @@ img.alignright,
 .post-categories a, .entry-categories a, .entry-tags a {
   display: inline-block;
   color: #FFF;
-  background-color: #02aad4;
+  background-color: #06ceff;
   padding: 3px 10px;
   border-radius: 5px;
   margin: 2px 4px;
@@ -1871,7 +1871,7 @@ img.alignright,
 }
 .quote-block .wrap {
   max-width: 700px;
-  color: #02aad4;
+  color: #06ceff;
 }
 .quote-block .wrap p {
   text-align: justify;
@@ -1890,7 +1890,7 @@ img.alignright,
   position: absolute;
   left: 99px;
   top: -49px;
-  color: #02aad4;
+  color: #06ceff;
 }
 .quote-block .wrap span {
   font-style: italic;
@@ -1974,6 +1974,10 @@ img.alignright,
 }
 /* ## Sections : Post Selection
 --------------------------------------------- */
+.home .post-selection {
+  margin: 0px 0 15px;
+}
+
 .post-selection {
   margin: 40px 0 15px;
 }
@@ -2266,8 +2270,8 @@ img.alignright,
 .banner-layout--callout .kpi-banner {
   z-index: 201;
   border-radius: 5px;
-  -webkit-box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.87), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.87);
-          box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.87), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.87);
+  -webkit-box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.38), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.38);
+          box-shadow: 0 2rem 5rem -2.5rem rgba(62, 62, 62, 0.38), 0rem 0.3rem 0.5rem -0.4rem rgba(62, 62, 62, 0.38);
 }
 .banner-layout--callout.social-kpi {
   margin-top: 20px;
@@ -2284,7 +2288,7 @@ img.alignright,
   font-size: 1.6rem;
 }
 #social-kpi-banner .et_social_icons_container li .et_social_count {
-  color: #02aad4;
+  color: #06ceff;
   font-weight: 900;
   font-size: 5.6rem;
 }
@@ -2302,11 +2306,11 @@ img.alignright,
 .kpi-banner .kpi-count {
   font-weight: 900;
   font-size: 5.6rem;
-  color: #02aad4;
+  color: #06ceff;
   line-height: 50px;
 }
 .kpi-banner .kpi-text {
-  padding: 0 20%;
+  padding: 0 10%;
   margin: 0;
 }
 

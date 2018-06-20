@@ -422,6 +422,10 @@
 /* ## Sections : Post Selection
 --------------------------------------------- */
 
+.home .post-selection {
+	margin: 0px 0 15px;
+}
+
 .post-selection {
 	margin: 40px 0 15px;
 
@@ -752,7 +756,7 @@
 	.kpi-banner {
 		z-index: 201;
 		border-radius: $site-radius;
-		box-shadow: 0 2rem 5rem -2.5rem $primary-dark, 0rem 0.3rem 0.5rem -0.4rem $primary-dark;
+		box-shadow: 0 2rem 5rem -2.5rem $third-dark, 0rem 0.3rem 0.5rem -0.4rem $third-dark;
 	}
 
 	&.social-kpi {
@@ -798,7 +802,7 @@
 	}
 
 	.kpi-text {
-		padding: 0 20%;
+		padding: 0 10%;
 		margin: 0;
 	}
 }
