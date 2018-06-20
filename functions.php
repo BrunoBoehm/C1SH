@@ -32,7 +32,7 @@ include_once( get_stylesheet_directory() . '/lib/appel-signatures.php' );
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'C1SH' );
 define( 'CHILD_THEME_URL', 'http://www.lyketil.com/' );
-define( 'CHILD_THEME_VERSION', '1.1.0' );
+define( 'CHILD_THEME_VERSION', '1.2.0' );
 
 //* Enqueue Scripts and Styles
 add_action( 'wp_enqueue_scripts', 'cush_enqueue_scripts_styles' );
